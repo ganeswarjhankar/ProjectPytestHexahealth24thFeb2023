@@ -1,4 +1,8 @@
 import time
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
+
 
 
 
@@ -41,10 +45,17 @@ class CityHospitalClass:
 
         self.driver.find_element(By.XPATH, "//button[@id='LeadSubmitNewHome']").click()
 
-        Handles2 = self.driver.window_handles[0]
+        try:
 
-        ThankYou = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1").text
-        print("Book Appointment is Successfully done")
+            wait = WebDriverWait(self.driver, 10)
+            thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+            print(thank_you.is_displayed())
+
+
+
+        except (TimeoutException, NoSuchElementException):
+            print("failed 2nd Except")
+
         self.driver.back()
         self.driver.implicitly_wait(2)
         self.driver.refresh()
@@ -72,10 +83,17 @@ class CityHospitalClass:
 
         self.driver.find_element(By.XPATH, "//button[@id='LeadSubmitNewHome']").click()
 
-        Handles2 = self.driver.window_handles[0]
+        try:
 
-        ThankYou = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1").text
-        print("Book Appointment is Successfully done")
+            wait = WebDriverWait(self.driver, 10)
+            thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+            print(thank_you.is_displayed())
+
+
+
+        except (TimeoutException, NoSuchElementException):
+            print("failed 2nd Except")
+
         self.driver.back()
         self.driver.implicitly_wait(2)
         self.driver.refresh()
@@ -106,9 +124,18 @@ class CityHospitalClass:
 
         Handles2 = self.driver.window_handles[0]
         self.driver.implicitly_wait(2)
-        ThankYou = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1")
-        print(ThankYou.text)
-        print("Book Appointment is Successfully done")
+
+        try:
+
+            wait = WebDriverWait(self.driver, 10)
+            thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+            print(thank_you.is_displayed())
+
+
+
+        except (TimeoutException, NoSuchElementException):
+            print("failed 2nd Except")
+
         self.driver.back()
         self.driver.implicitly_wait(2)
         self.driver.refresh()

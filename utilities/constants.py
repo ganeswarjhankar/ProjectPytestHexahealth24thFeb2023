@@ -43,5 +43,31 @@ ProcedureCostCity = "https://www.hexahealth.com/treatment/inguinal-hernia-surger
 
 
 
+#random URL 20
+COST_MARKETING_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileCost.xlsx"
+SHEET_COST_URL='Sheet1'
 
-DoctorMarketing_URl = ""
+#Random URl 21
+HospitalMarketing_URl = "C:\\Users\\91928\\PycharmProjects\\MarketingWhatApp.xlsx"
+SheetHospiMarket_URL='Sheet1'
+#random URl 22
+DoctorMarketing_URl = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileDoctor.xlsx"
+SheetDoctorMar_URL='Sheet1'
+
+#random URl 23
+MarketingNormal_URl = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
+SHEET_NORMAL_URL='Sheet1'
+
+#random URl 24
+MARKETING_NORMAL_SURGERY_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
+SHEET_NORMAL_SURGERY='Sheet1'
+
+#random URL 24 part
+MARKETING_NORMAL_INSURANCE_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
+SHEET_NORMAL_INSURANCE='Sheet1'
+
+
+
+
+############MarketingDoctor_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileDoctor.xlsx"
+###########SheetMarDoctor_URL='Sheet1'

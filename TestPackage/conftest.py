@@ -8,6 +8,12 @@ from selenium.webdriver.chrome.service import Service
 
 from PageObjects.page1 import LoginPage
 from PageObjects.page2 import CityHospitalClass
+from PageObjects.page20 import MarketingCostClass
+from PageObjects.page21 import MarketingHospitalClass
+from PageObjects.page22 import MarketingDoctorClass
+from PageObjects.page23 import MarketingNormalClass
+from PageObjects.page24 import MarketingNormalSurgeryClass
+
 from PageObjects.page3 import DoctorClass
 from PageObjects.page4 import SearchPage
 from PageObjects.page5 import ConditionClass
@@ -84,6 +90,9 @@ def ContactUs_page(driver):
     return page
 
 
+
+
+
 #test_url9
 
 @pytest.fixture
@@ -108,6 +117,54 @@ def ProcedureCostCity_page(driver):
     return page
 
 
+
+#Test_url_20
+@pytest.fixture
+def costMarketing_URL(driver):
+    page = MarketingCostClass(driver)
+    page.open()
+    #page.costVariant()
+    return page
+
+#Test_url_21
+
+@pytest.fixture
+def hospitalMarketing_URl(driver):
+    page = MarketingHospitalClass(driver)
+    page.open()
+
+    #page.HospitalVariant()
+    return page
+
+
+#Test_url_22
+@pytest.fixture
+def doctorMarketing_URl(driver):
+    page = MarketingDoctorClass(driver)
+    page.open()
+    #page.DoctorVariant()
+    return page
+
+
+#Test_url_23
+@pytest.fixture
+def marketingNormal_URl(driver):
+    page = MarketingNormalClass(driver)
+    page.open()
+    #page.MarketingNormalForm1()
+####    page.CalculateSurgeryCost()
+####    page.CheckInsuranceCoverage()
+    return page
+
+
+#test_Url_24
+
+@pytest.fixture()
+def marketingNormalSurgeryClass_URL():
+    page = MarketingNormalSurgeryClass(driver)
+    page.open()
+    #page.CalculateSurgeryCost()
+    return page
 
 
 

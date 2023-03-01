@@ -9,18 +9,12 @@
 # test_contact_us.py
 #from page_objects import ContactUsPage
 
-def test_Marketing_Cost_data(driver,costMarketing_URL):
-    costMarketing_URL.cost_variant()
+def test_MarketingNormalSurgeryClass_URL(driver,marketingNormalSurgeryClass_URL):
+    marketingNormalSurgeryClass_URL.CalculateSurgeryCost()
 
+##    #MarketingNormalSurgeryClass_URL.MarketingNormalForm1()
 
-
-
-
-
-
-
-
-
+    #marketingNormalSurgeryClass_URL.CheckInsuranceCoverage()
 
 
 

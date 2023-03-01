@@ -11,6 +11,8 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
 
+from selenium.common.exceptions import TimeoutException,StaleElementReferenceException
+
 
 class SearchPage:
 
@@ -24,94 +26,130 @@ class SearchPage:
 
     def Doctormethod(self):
 
-        self.driver.maximize_window()
+        try:
 
 
-        self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Anu Jain")
-        self.driver.implicitly_wait(2)
+            self.driver.maximize_window()
 
-        # search_field1 = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, " Aman Priya Khanna ")))
-        # search_field1.click()
+            self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Anu Jain")
+            self.driver.implicitly_wait(2)
 
-        wait = WebDriverWait(self.driver, 20)
-        wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "Anu Jain")))
-        self.driver.implicitly_wait(5)
-        self.driver.find_element(By.LINK_TEXT, "Anu Jain").click()
+            # search_field1 = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, " Aman Priya Khanna ")))
+            # search_field1.click()
 
-        print("Doctor Search is Working successfully")
-        self.driver.implicitly_wait(5)
-        Handles1 = self.driver.window_handles[0]
-        self.driver.back()
-        self.driver.implicitly_wait(2)
-        self.driver.refresh()
+            wait = WebDriverWait(self.driver, 20)
+            wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "Anu Jain")))
+            self.driver.implicitly_wait(5)
+            self.driver.find_element(By.LINK_TEXT, "Anu Jain").click()
+
+            print("Doctor Search is Working successfully")
+            self.driver.implicitly_wait(5)
+            Handles1 = self.driver.window_handles[0]
+            self.driver.back()
+            self.driver.implicitly_wait(2)
+            self.driver.refresh()
+
+        except (TimeoutException,StaleElementReferenceException):
+            print("Search Failed")
+
+
+
+
 
     def Hospitalmethod(self):
         # self.driver = driver
         # self.driver.get("https://www.hexahealth.com/")
         #self.driver.implicitly_wait(5)
-        self.driver.maximize_window()
+        try:
 
-        # SearchBox = driver.find_element(By.XPATH,"//input[@id='txtArticls']").send_keys("Anu")
-        self.driver.implicitly_wait(5)
-        self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Apollo Hospital, Noida")
+            self.driver.maximize_window()
 
-        # search_field2 = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Apollo Hospital, Noida")))
-        # search_field2.click()
+            # SearchBox = driver.find_element(By.XPATH,"//input[@id='txtArticls']").send_keys("Anu")
+            self.driver.implicitly_wait(5)
+            self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Apollo Hospital, Noida")
 
-        wait = WebDriverWait(self.driver, 20)
-        wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "Apollo Hospital, Noida")))
-        self.driver.implicitly_wait(5)
-        self.driver.find_element(By.LINK_TEXT, "Apollo Hospital, Noida").click()
-        print("Hospital Apollo is been Searched successfully")
-        Handles2 = self.driver.window_handles[0]
-        self.driver.back()
-        self.driver.implicitly_wait(2)
+            # search_field2 = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Apollo Hospital, Noida")))
+            # search_field2.click()
 
-        self.driver.refresh()
+            wait = WebDriverWait(self.driver, 20)
+            wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "Apollo Hospital, Noida")))
+            self.driver.implicitly_wait(5)
+            self.driver.find_element(By.LINK_TEXT, "Apollo Hospital, Noida").click()
+            print("Hospital Apollo is been Searched successfully")
+            Handles2 = self.driver.window_handles[0]
+            self.driver.back()
+            self.driver.implicitly_wait(2)
+
+            self.driver.refresh()
+
+        except (TimeoutException,StaleElementReferenceException):
+            print("Search Failed")
+
+
+
+
+
 
     def TreatmentSearchmethod(self):
         # self.driver =driver
         # self.driver.get("https://www.hexahealth.com")
         #self.driver.implicitly_wait(5)
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(5)
+        try:
 
-        self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Piles Laser Treatment")
+            self.driver.maximize_window()
+            self.driver.implicitly_wait(5)
 
-        # search_field3 = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Piles Laser Treatment")))
-        # search_field3.click()
+            self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Piles Laser Treatment")
 
-        wait = WebDriverWait(self.driver, 20)
-        wait.until(expected_conditions.element_to_be_clickable((By.LINK_TEXT, "Piles Laser Treatment")))
-        self.driver.implicitly_wait(5)
-        self.driver.find_element(By.LINK_TEXT,"Piles Laser Treatment").click()
-        print("'Piles Laser Treatment'  is been Searched successfully")
-        Handles3 = self.driver.window_handles[0]
-        self.driver.back()
-        self.driver.implicitly_wait(2)
+            # search_field3 = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Piles Laser Treatment")))
+            # search_field3.click()
 
-        self.driver.refresh()
+            wait = WebDriverWait(self.driver, 20)
+            wait.until(expected_conditions.element_to_be_clickable((By.LINK_TEXT, "Piles Laser Treatment")))
+            self.driver.implicitly_wait(5)
+            self.driver.find_element(By.LINK_TEXT, "Piles Laser Treatment").click()
+            print("'Piles Laser Treatment'  is been Searched successfully")
+            Handles2 = self.driver.window_handles[0]
+            self.driver.back()
+            self.driver.implicitly_wait(2)
+
+            self.driver.refresh()
+
+        except (TimeoutException,StaleElementReferenceException):
+            print("Search Failed")
+
+
+
+
+
+
+
+
 
     def Conditionmethod(self):
         # self.driver.get("https://www.hexahealth.com/")
         #self.driver.implicitly_wait(5)
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(10)
 
-        self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Gallstones")
+        try:
+            self.driver.maximize_window()
+            self.driver.implicitly_wait(10)
 
-        # search_field4 = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.LINK_TEXT, "Gallstones")))
-        # search_field4.click()
+            self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Gallstones")
 
-        wait = WebDriverWait(self.driver, 20)
-        wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "Gallstones")))
-        BookApButton = self.driver.find_element(By.LINK_TEXT, "Gallstones")
-        self.driver.execute_script("arguments[0].click();", BookApButton)
+            #search_field4 = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, "//input[@id='txtArticls']")))
+            #search_field4.send("Gallstones")
 
+            wait = WebDriverWait(self.driver, 20)
+            wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "Gallstones")))
+            BookApButton = self.driver.find_element(By.LINK_TEXT, "Gallstones")
+            self.driver.execute_script("arguments[0].click();", BookApButton)
 
-        print("Condition as GallStones  is been Searched successfully")
-        Handles4 = self.driver.window_handles[0]
-        self.driver.back()
-        self.driver.implicitly_wait(2)
+            print("Condition as GallStones  is been Searched successfully")
+            Handles2 = self.driver.window_handles[0]
+            self.driver.back()
+            self.driver.implicitly_wait(2)
 
-        self.driver.refresh()
+            self.driver.refresh()
+
+        except (TimeoutException,StaleElementReferenceException):
+            print("Search Failed")

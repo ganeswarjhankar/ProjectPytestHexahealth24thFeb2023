@@ -9,19 +9,10 @@
 # test_contact_us.py
 #from page_objects import ContactUsPage
 
-def test_Marketing_Cost_data(driver,costMarketing_URL):
-    costMarketing_URL.cost_variant()
+def test_HospitalMarketing_URl(driver,hospitalMarketing_URl):
 
 
-
-
-
-
-
-
-
-
-
+    hospitalMarketing_URl.HospitalVariant()
 
 
     # process the data and perform the contact us action
