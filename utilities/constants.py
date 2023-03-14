@@ -66,6 +66,14 @@ SHEET_NORMAL_SURGERY='Sheet1'
 MARKETING_NORMAL_INSURANCE_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
 SHEET_NORMAL_INSURANCE='Sheet1'
 
+#random URL 25
+PROCEDURE_COST_INDIA ="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileProcedureCostCity.xlsx"
+SHEET_PROCEDURE_COSTINDIA ="COSTINDIA"
+#random URL 26
+PROCEDURE_COST_CITY ="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileProcedureCostCity.xlsx"
+SHEET_PROCEDURE_COSTCITY = "COSTCITY"
+#random URL 27
+
 
 
 

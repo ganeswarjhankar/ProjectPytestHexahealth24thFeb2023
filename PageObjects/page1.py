@@ -1,20 +1,25 @@
+import traceback
+
+from utilities import constants
+
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
-
-
-
 # page_objects.py
 from utilities import constants
-import time
+
 
 import urllib.request
 
 from selenium.webdriver.common.by import By
-# from selenium.webdriver.support import expected_conditions
-# from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
+
+
+
+
+
+
 
 
 class LoginPage:
@@ -74,11 +79,13 @@ class LoginPage:
             wait = WebDriverWait(self.driver, 10)
             thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
             print(thank_you.is_displayed())
+            print("Lead Is Generated")
 
 
 
         except (TimeoutException, NoSuchElementException):
             print("failed 2nd Except")
+            print(traceback.format_exc())
 
         self.driver.back()
         self.driver.implicitly_wait(2)
@@ -113,12 +120,26 @@ class LoginPage:
 
             wait = WebDriverWait(self.driver, 10)
             thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            print(thank_you.is_displayed())
+            #print(thank_you.is_displayed())
+            #print("Lead Is Generated")
+
+
+
+
+
+
+
+
+
 
 
 
         except (TimeoutException, NoSuchElementException):
             print("failed 2nd Except")
+
+        assert self.driver.find_element(By.CLASS_NAME, "thankyou-title")
+        assert "ThankYou" in self.driver.current_url
+
 
         self.driver.back()
         self.driver.implicitly_wait(2)
@@ -154,11 +175,14 @@ class LoginPage:
             wait = WebDriverWait(self.driver, 10)
             thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
             print(thank_you.is_displayed())
+            print("Lead Is Generated")
+
 
 
 
         except (TimeoutException, NoSuchElementException):
             print("failed 2nd Except")
+            print(traceback.format_exc())
 
         self.driver.back()
         self.driver.implicitly_wait(2)

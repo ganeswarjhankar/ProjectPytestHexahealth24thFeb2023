@@ -106,6 +106,7 @@ class DoctorClass:
 
             BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='leadSubmitDoctor2']")
             self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)
+            self.driver.implicitly_wait(5)
 
             # Wait for thank you message to be visible
             try:
@@ -113,11 +114,14 @@ class DoctorClass:
                 wait = WebDriverWait(self.driver, 10)
                 thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
                 print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
 
 
 
-            except (TimeoutException, NoSuchElementException):
-                print("failed 2nd Except")
+
+            except NoSuchElementException:
+
+                print("Message: no such element: Unable to locate element")
 
             self.driver.back()
             self.driver.implicitly_wait(2)
@@ -167,15 +171,22 @@ class DoctorClass:
             book_an_ap_button.click()
 
             # Wait for the Thank You message to appear and print it
-            thank_you = WebDriverWait(self.driver, 10).until(
-                EC.visibility_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            print(thank_you.text)
-            print("BookAppointmentButtonMethod success")
+            try:
 
-            # Go back to the previous page
+                wait = WebDriverWait(self.driver, 10)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
+
+
+
+            except (TimeoutException, NoSuchElementException):
+                print("failed 2nd Except")
+
             self.driver.back()
             self.driver.implicitly_wait(2)
             self.driver.refresh()
+
 
 
         except NoSuchElementException:
@@ -221,13 +232,22 @@ class DoctorClass:
             self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)
             # Lead4 in CRM
             self.driver.implicitly_wait(2)
-            Handles2 = self.driver.window_handles[0]
+            try:
 
-            ThankYou = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1").text
-            print("BookAppointmentMainForm is Successfully done")
+                wait = WebDriverWait(self.driver, 10)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
+
+
+
+            except (TimeoutException, NoSuchElementException):
+                print("Lead Is Not Generated")
+
             self.driver.back()
             self.driver.implicitly_wait(2)
             self.driver.refresh()
+
 
 
 

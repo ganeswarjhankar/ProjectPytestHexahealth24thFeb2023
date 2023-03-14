@@ -159,11 +159,92 @@ def marketingNormal_URl(driver):
 
 #test_Url_24
 
-@pytest.fixture()
-def marketingNormalSurgeryClass_URL():
+@pytest.fixture
+def marketingNormalSurgeryClass_URL(driver):
     page = MarketingNormalSurgeryClass(driver)
     page.open()
     #page.CalculateSurgeryCost()
+    return page
+
+
+#test_url25
+@pytest.fixture
+def marketingboard_URL(driver):
+    page = marketingboard(driver)
+    page.open()
+    return page
+
+#test_url26
+@pytest.fixture
+def marketingbrand_URL():
+    page = marketingbrand(driver)
+    page.open()
+    return page
+
+#test_url27
+@pytest.fixture
+def marketingCallPrimary_URL():
+    page = marketingCallPrimary(driver)
+    page.open()
+    return page
+
+
+#test_url28
+@pytest.fixture
+def marketingWhatsApp_URL():
+    page = marketingCallWhatsApp(driver)
+    page.open()
+    return page
+
+#test_url29
+@pytest.fixture
+def marketingCost_URL():
+    page=marketingCost(driver)
+    page.open()
+    return page
+
+
+#test_url30
+@pytest.fixture
+def marketingDisplay_URL():
+    page = marketingDisplay(driver)
+    page.open()
+    return page
+
+#test_url33
+@pytest.fixture
+def marketingIndex_URL():
+    page = marketingIndex(driver)
+    page.open()
+    return page
+
+
+#test_url34
+def marketingOnlyForm_URL():
+    page = marketingOnlyForm(driver)
+    page.open()
+    return page
+
+
+#test_url 35
+def marketingPDF_URL():
+    page = marketingPDF(driver)
+    page.open()
+    return page
+
+
+#test_url36
+
+def marketingpilot_URL():
+    page = marketingpilot(driver)
+    page.open()
+    return page
+
+
+#test_url37
+def marketingTopSticky_URL():
+    page = marketingTopSticky(driver)
+    page.open()
     return page
 
 

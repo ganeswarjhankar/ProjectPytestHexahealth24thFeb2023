@@ -23,42 +23,51 @@ class CityHospitalClass:
 
     def cityhospitalbookmethod1(self):
 
-        # self.driver.get("https://www.hexahealth.com/delhi/hospitals/cardiology")
-        #self.driver.implicitly_wait(5)
-        self.driver.maximize_window()
-
-
-        BookAppointmentButton = self.driver.find_element(By.XPATH, "//a[@class='link-appointment']").click()
-        self.driver.implicitly_wait(5)
-        self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Patient Name")
-        self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
-
-        BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
-        drop1 = Select(BengaluruCity)
-        drop1.select_by_visible_text("Bengaluru")
-
-        YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
-        drop2 = Select(YogaTreatment)
-        drop2.select_by_visible_text("Yoga")
-
-        self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test For City Doctor")
-
-        self.driver.find_element(By.XPATH, "//button[@id='LeadSubmitNewHome']").click()
-
         try:
 
-            wait = WebDriverWait(self.driver, 10)
-            thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            print(thank_you.is_displayed())
+            # self.driver.get("https://www.hexahealth.com/delhi/hospitals/cardiology")
+            # self.driver.implicitly_wait(5)
+            self.driver.maximize_window()
+
+            BookAppointmentButton = self.driver.find_element(By.XPATH, "//a[@class='link-appointment']").click()
+            self.driver.implicitly_wait(5)
+            self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Patient Name")
+            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
+
+            BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
+            drop1 = Select(BengaluruCity)
+            drop1.select_by_visible_text("Bengaluru")
+
+            YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
+            drop2 = Select(YogaTreatment)
+            drop2.select_by_visible_text("Yoga")
+
+            self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test For City Doctor")
+
+            self.driver.find_element(By.XPATH, "//button[@id='LeadSubmitNewHome']").click()
+
+            try:
+
+                wait = WebDriverWait(self.driver, 10)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
 
 
 
-        except (TimeoutException, NoSuchElementException):
-            print("failed 2nd Except")
+            except (TimeoutException, NoSuchElementException):
+                print("failed 2nd Except")
 
-        self.driver.back()
-        self.driver.implicitly_wait(2)
-        self.driver.refresh()
+            self.driver.back()
+            self.driver.implicitly_wait(2)
+            self.driver.refresh()
+
+        except NoSuchElementException:
+            print("Message: no such element: Unable to locate element")
+
+
+
+
 
     def cityhospitallistmethod2(self):
 
@@ -88,6 +97,7 @@ class CityHospitalClass:
             wait = WebDriverWait(self.driver, 10)
             thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
             print(thank_you.is_displayed())
+            print("Lead is Generated Successfully")
 
 
 
@@ -130,6 +140,7 @@ class CityHospitalClass:
             wait = WebDriverWait(self.driver, 10)
             thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
             print(thank_you.is_displayed())
+            print("Lead is Generated Successfully")
 
 
 

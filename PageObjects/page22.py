@@ -15,7 +15,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException,InvalidArgumentException
 
 
 
@@ -43,7 +43,7 @@ class MarketingDoctorClass:
                     wait = WebDriverWait(self.driver, 10)
 
                     lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
-                    lead_name.send_keys("Test GJ Doctor Variant")
+                    lead_name.send_keys("Test GJ Marketing Variant")
 
                     # self.driver.find_element(By.XPATH, "//input[@id='leadname5']").send_keys("Test GJ Doctor Variant")
                     # self.driver.implicitly_wait(2)
@@ -57,6 +57,7 @@ class MarketingDoctorClass:
                     try:
                         thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
                         print(thank_you.is_displayed())
+                        print("Lead is Generated Successfully")
                         #print(f"Book Appointment is Successfully done for {url}")
 
                         # wait = WebDriverWait(self.driver, 10)
@@ -67,7 +68,7 @@ class MarketingDoctorClass:
 
 
 
-                    except (TimeoutException, NoSuchElementException):
+                    except (TimeoutException, NoSuchElementException,InvalidArgumentException):
                         print("Exception with Timeout and No elements found")
 
                     self.driver.back()
@@ -75,7 +76,7 @@ class MarketingDoctorClass:
                     self.driver.refresh()
 
 
-                except:
+                except (TimeoutException, NoSuchElementException,InvalidArgumentException):
 
                     print("Except Block-Lead failed to Generate")
 

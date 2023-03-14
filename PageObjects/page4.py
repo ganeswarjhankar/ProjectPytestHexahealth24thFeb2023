@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
 
-from selenium.common.exceptions import TimeoutException,StaleElementReferenceException
+from selenium.common.exceptions import TimeoutException,StaleElementReferenceException,NoSuchElementException
 
 
 class SearchPage:
@@ -76,14 +76,19 @@ class SearchPage:
             self.driver.implicitly_wait(5)
             self.driver.find_element(By.LINK_TEXT, "Apollo Hospital, Noida").click()
             print("Hospital Apollo is been Searched successfully")
-            Handles2 = self.driver.window_handles[0]
+            Handles1 = self.driver.window_handles[0]
             self.driver.back()
             self.driver.implicitly_wait(2)
-
             self.driver.refresh()
 
-        except (TimeoutException,StaleElementReferenceException):
+        except (TimeoutException, StaleElementReferenceException):
             print("Search Failed")
+
+
+
+
+
+
 
 
 
@@ -109,14 +114,14 @@ class SearchPage:
             self.driver.implicitly_wait(5)
             self.driver.find_element(By.LINK_TEXT, "Piles Laser Treatment").click()
             print("'Piles Laser Treatment'  is been Searched successfully")
-            Handles2 = self.driver.window_handles[0]
+            Handles1 = self.driver.window_handles[0]
             self.driver.back()
             self.driver.implicitly_wait(2)
-
             self.driver.refresh()
 
-        except (TimeoutException,StaleElementReferenceException):
+        except (TimeoutException, StaleElementReferenceException):
             print("Search Failed")
+
 
 
 
@@ -145,11 +150,13 @@ class SearchPage:
             self.driver.execute_script("arguments[0].click();", BookApButton)
 
             print("Condition as GallStones  is been Searched successfully")
-            Handles2 = self.driver.window_handles[0]
+            Handles1 = self.driver.window_handles[0]
             self.driver.back()
             self.driver.implicitly_wait(2)
-
             self.driver.refresh()
 
-        except (TimeoutException,StaleElementReferenceException):
+        except (TimeoutException, StaleElementReferenceException):
             print("Search Failed")
+
+
+

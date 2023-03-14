@@ -25,7 +25,7 @@ class MarketingCostClass:
             self.driver.get(url)
             print([url])
             try:
-                print("Try block")
+
                 self.driver.maximize_window()
 
                 wait = WebDriverWait(self.driver, 10)
@@ -47,11 +47,12 @@ class MarketingCostClass:
                     wait = WebDriverWait(self.driver, 10)
                     thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
                     print(thank_you.is_displayed())
+                    print("Lead is Generated Successfully")
 
 
 
                 except (TimeoutException, NoSuchElementException):
-                    print("failed and Lead is Not created")
+                    print("Message: no such element: Unable to locate element")
 
                 self.driver.back()
                 self.driver.implicitly_wait(2)

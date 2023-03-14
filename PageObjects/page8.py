@@ -8,6 +8,13 @@ from selenium.webdriver.common.by import By
 #from selenium.webdriver.support import expected_conditions
 #from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
+
+
 
 
 class ContactUsPage:
@@ -21,34 +28,54 @@ class ContactUsPage:
 
     def ContactUs(self):
 
-        #self.driver.get("https://www.hexahealth.com/delhi/doctors/cardiologist")
-        self.driver.implicitly_wait(5)
-        self.driver.maximize_window()
+        try:
 
-        BookAppointmentButton = self.driver.find_element(By.XPATH, "//a[@class='link-appointment']").click()
-        self.driver.implicitly_wait(5)
-        self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Patient Name")
-        self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
+            # self.driver.get("https://www.hexahealth.com/delhi/doctors/cardiologist")
+            self.driver.implicitly_wait(5)
+            self.driver.maximize_window()
 
-        BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
-        drop1 = Select(BengaluruCity)
-        drop1.select_by_visible_text("Bengaluru")
+            BookAppointmentButton = self.driver.find_element(By.XPATH, "//a[@class='link-appointment']").click()
+            self.driver.implicitly_wait(5)
+            self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Patient Name")
+            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
 
-        YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
-        drop2 = Select(YogaTreatment)
-        drop2.select_by_visible_text("Yoga")
+            BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
+            drop1 = Select(BengaluruCity)
+            drop1.select_by_visible_text("Bengaluru")
 
-        self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test For City Doctor")
+            YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
+            drop2 = Select(YogaTreatment)
+            drop2.select_by_visible_text("Yoga")
 
-        self.driver.find_element(By.XPATH, "//button[@id='LeadSubmitNewHome']").click()
+            self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test For City Doctor")
 
-        Handles2 = self.driver.window_handles[0]
+            self.driver.find_element(By.XPATH, "//button[@id='LeadSubmitNewHome']").click()
+            self.driver.implicitly_wait(2)
 
-        ThankYou = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1").text
-        print("Book Appointment is Successfully done")
-        self.driver.back()
-        self.driver.implicitly_wait(2)
-        self.driver.refresh()
+            try:
+
+                wait = WebDriverWait(self.driver, 20)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
+
+
+
+
+            except NoSuchElementException:
+                print("Message: no such element: Unable to locate element")
+
+            self.driver.back()
+            self.driver.implicitly_wait(2)
+            self.driver.refresh()
+
+
+        except (NoSuchElementException,TimeoutException, InvalidArgumentException):
+            print("Failed with Error")
+
+
+
+
 
     def ContactUsWhatsapp(self):
 

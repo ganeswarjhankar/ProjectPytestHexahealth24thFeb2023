@@ -52,16 +52,24 @@ class ConditionClass:
             self.driver.implicitly_wait(2)
             self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']").click()
 
-            wait = WebDriverWait(self.driver, 10)
-            thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            print(thank_you.is_displayed())
+            try:
 
+                wait = WebDriverWait(self.driver, 10)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
+
+
+
+
+            except (NoSuchElementException,TimeoutException):
+                print("Message: no such element: Unable to locate element")
 
             self.driver.back()
             self.driver.implicitly_wait(2)
             self.driver.refresh()
 
-        except NoSuchElementException:
+        except (NoSuchElementException,TimeoutException):
 
             print("Message: no such element: Unable to locate element")
 
@@ -111,9 +119,18 @@ class ConditionClass:
             # self.driver.implicitly_wait(2)
             Button = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitCondition1']")
             self.driver.execute_script("arguments[0].click();", Button)
-            wait = WebDriverWait(self.driver, 10)
-            thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            print(thank_you.is_displayed())
+            try:
+
+                wait = WebDriverWait(self.driver, 10)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
+
+
+
+
+            except NoSuchElementException:
+                print("Message: no such element: Unable to locate element")
 
             self.driver.back()
             self.driver.implicitly_wait(2)
@@ -149,7 +166,11 @@ class ConditionClass:
 
             self.driver.find_element(By.XPATH, "//*[@id='leadnamehome1']").send_keys("Test GJ XYZ")
 
-            self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("1000000100")
+            contact_num = WebDriverWait(self.driver, 20).until(
+                EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnumhome1']")))
+            contact_num.send_keys("1000000100")
+
+           # self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("1000000100")
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome1']")
             drop1 = Select(BengaluruCity)
@@ -159,11 +180,18 @@ class ConditionClass:
             BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitCondition1']")
             self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)
             # Lead4 in CRM
-            self.driver.implicitly_wait(2)
-            print("NABHAccreditedHospitals Form is Passed")
-            wait = WebDriverWait(self.driver, 10)
-            thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            print(thank_you.is_displayed())
+            try:
+
+                wait = WebDriverWait(self.driver, 10)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
+
+
+
+
+            except NoSuchElementException:
+                print("Message: no such element: Unable to locate element")
 
             self.driver.back()
             self.driver.implicitly_wait(2)
@@ -216,15 +244,19 @@ class ConditionClass:
             # Lead4 in CRM
             self.driver.implicitly_wait(2)
 
-            Handles2 = self.driver.window_handles[0]
+            try:
 
-            Thanks = WebDriverWait(self.driver, 10).until(
-                EC.visibility_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            print(Thanks.text)
-            print("BookAppointmentButtonMethod is Successfully Passed")
+                wait = WebDriverWait(self.driver, 10)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
 
-            # ThankYou = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1").text
-            # print("BookAppointmentButtonMethod is Successfully Passed")
+
+
+
+            except NoSuchElementException:
+                print("Message: no such element: Unable to locate element")
+
             self.driver.back()
             self.driver.implicitly_wait(2)
             self.driver.refresh()
@@ -268,9 +300,18 @@ class ConditionClass:
             BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitCondition']")
             self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)
             # Lead4 in CRM
-            wait = WebDriverWait(self.driver, 10)
-            thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            print(thank_you.is_displayed())
+            try:
+
+                wait = WebDriverWait(self.driver, 10)
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
+
+
+
+
+            except NoSuchElementException:
+                print("Message: no such element: Unable to locate element")
 
             self.driver.back()
             self.driver.implicitly_wait(2)

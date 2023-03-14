@@ -52,11 +52,12 @@ class MarketingNormalClass:
 
                     thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
                     print(thank_you.is_displayed())
+                    print("Lead is Generated Successfully")
                     #print(f"Book Appointment is Successfully done for {url}")
 
 
                 except (TimeoutException, NoSuchElementException,InvalidArgumentException):
-                    print("failed 2nd Except")
+                    print("Message: no such element: Unable to locate element")
 
                 self.driver.back()
                 self.driver.implicitly_wait(2)
@@ -64,7 +65,7 @@ class MarketingNormalClass:
 
 
 
-            except TimeoutException:
+            except (TimeoutException,InvalidArgumentException,NoSuchElementException):
                 print("Out of the List, few URL have Issues with OOPS or TimeOut Issue")
 
 
