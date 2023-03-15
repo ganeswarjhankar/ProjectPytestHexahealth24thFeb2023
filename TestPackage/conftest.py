@@ -196,7 +196,7 @@ def marketingWhatsApp_URL():
     page.open()
     return page
 
-#test_url29
+#test_url29=20
 @pytest.fixture
 def marketingCost_URL():
     page=marketingCost(driver)
@@ -210,6 +210,11 @@ def marketingDisplay_URL():
     page = marketingDisplay(driver)
     page.open()
     return page
+
+#test_url31
+#test_url32
+
+
 
 #test_url33
 @pytest.fixture
