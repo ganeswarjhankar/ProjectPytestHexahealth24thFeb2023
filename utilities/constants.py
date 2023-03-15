@@ -74,16 +74,16 @@ PROCEDURE_COST_CITY ="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileProcedureC
 SHEET_PROCEDURE_COSTCITY = "COSTCITY"
 
 #random URL 25
-MARKETING_BOARD_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
+MARKETING_BOARD_URL = "https://www.hexahealth.com/marketing/board/lasik-bangalore"
 
 #random_URL 26
-MARKETING_BRAND_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
+MARKETING_BRAND_URL = "https://www.hexahealth.com/marketing/brand/hexa"
 
 #random_url27
-MARKETING_CALLPRIMARY_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
+MARKETING_CALLPRIMARY_URL = "https://www.hexahealth.com/marketing/callprimary/lasik-bangalore"
 
 #random_url28
-MARKETING_WHATSAPP_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
+MARKETING_WHATSAPP_URL="https://www.hexahealth.com/marketing/callwhatsapp/lasik-bangalore"
 
 #random_url29=20
 
@@ -114,8 +114,7 @@ MARKETING_REMARKS_URL="https://www.hexahealth.com/marketing/remarks/lasik-bangal
 #random_url38
 MARKETINGTOPSTICKY_URL = "https://www.hexahealth.com/marketing/topsticky/lasik-bangalore"
 
-
-
+#new changes added by ganeswar
 
 
 
