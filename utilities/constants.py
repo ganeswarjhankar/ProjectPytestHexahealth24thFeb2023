@@ -114,7 +114,7 @@ MARKETING_REMARKS_URL="https://www.hexahealth.com/marketing/remarks/lasik-bangal
 #random_url38
 MARKETINGTOPSTICKY_URL = "https://www.hexahealth.com/marketing/topsticky/lasik-bangalore"
 
-#new changes added by ganeswar
+#
 
 
 
