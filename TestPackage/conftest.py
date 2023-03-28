@@ -13,6 +13,8 @@ from PageObjects.page21 import MarketingHospitalClass
 from PageObjects.page22 import MarketingDoctorClass
 from PageObjects.page23 import MarketingNormalClass
 from PageObjects.page24 import MarketingNormalSurgeryClass
+from PageObjects.page25 import Marketing_Board_Class
+from PageObjects.page26 import Marketing_Brand_Class
 
 from PageObjects.page3 import DoctorClass
 from PageObjects.page4 import SearchPage
@@ -167,24 +169,26 @@ def marketingNormalSurgeryClass_URL(driver):
     return page
 
 
+
 #test_url25
 @pytest.fixture
 def marketingboard_URL(driver):
-    page = marketingboard(driver)
+    page = Marketing_Board_Class(driver)
     page.open()
     return page
 
 #test_url26
 @pytest.fixture
 def marketingbrand_URL():
-    page = marketingbrand(driver)
+    page =Marketing_Brand_Class(driver)
+
     page.open()
     return page
 
 #test_url27
 @pytest.fixture
 def marketingCallPrimary_URL():
-    page = marketingCallPrimary(driver)
+    page = marketing_CallPrimary_Class(driver)
     page.open()
     return page
 
@@ -192,14 +196,14 @@ def marketingCallPrimary_URL():
 #test_url28
 @pytest.fixture
 def marketingWhatsApp_URL():
-    page = marketingCallWhatsApp(driver)
+    page = marketing_CallWhatsApp_Class(driver)
     page.open()
     return page
 
 #test_url29=20
 @pytest.fixture
 def marketingCost_URL():
-    page=marketingCost(driver)
+    page=marketing_Cost_Class(driver)
     page.open()
     return page
 
@@ -207,7 +211,7 @@ def marketingCost_URL():
 #test_url30
 @pytest.fixture
 def marketingDisplay_URL():
-    page = marketingDisplay(driver)
+    page = marketing_Display_Class(driver)
     page.open()
     return page
 
@@ -219,21 +223,21 @@ def marketingDisplay_URL():
 #test_url33
 @pytest.fixture
 def marketingIndex_URL():
-    page = marketingIndex(driver)
+    page = marketing_Index_Class(driver)
     page.open()
     return page
 
 
 #test_url34
 def marketingOnlyForm_URL():
-    page = marketingOnlyForm(driver)
+    page = marketing_OnlyForm_Class(driver)
     page.open()
     return page
 
 
 #test_url 35
 def marketingPDF_URL():
-    page = marketingPDF(driver)
+    page = marketing_PDF_Class(driver)
     page.open()
     return page
 
@@ -241,14 +245,14 @@ def marketingPDF_URL():
 #test_url36
 
 def marketingpilot_URL():
-    page = marketingpilot(driver)
+    page = marketing_pilot_Class(driver)
     page.open()
     return page
 
 
 #test_url37
 def marketingTopSticky_URL():
-    page = marketingTopSticky(driver)
+    page = marketing_TopSticky_Class(driver)
     page.open()
     return page
 

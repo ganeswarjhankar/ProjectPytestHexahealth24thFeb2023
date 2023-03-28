@@ -20,7 +20,7 @@ from selenium.webdriver.support.ui import Select
 
 
 
-
+"""update loginpage class"""
 
 class LoginPage:
     def __init__(self, driver):

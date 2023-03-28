@@ -1,3 +1,4 @@
+import self as self
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
@@ -5,7 +6,12 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
 
 
-# page_objects.py
+
+
+
+
+
+
 from utilities import constants
 import time
 
@@ -44,10 +50,10 @@ DocButtons=driver.find_elements(By.XPATH,"//*[@id='BkApntdoc']")
 #for DocButton in DocButtons:
 
 
+class AllFunctions:
 
-
-
-
+    def AllFunctions2(self):
+        wait = WebDriverWait(self.driver, 10)
 
 
 
