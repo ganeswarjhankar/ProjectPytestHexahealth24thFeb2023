@@ -15,15 +15,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
 
 
-class Marketing_Board_Class:
-    def __init__(self, driver):
+class Marketing_CallPrimary_Class:
+    def __init__(self,driver):
         self.driver = driver
 
     def open(self):
-        df = pd.read_excel(constants.MARKETING_BOARD_URL, sheet_name=constants.MARKETING_BOARD_SHEET_URL)
+        df = pd.read_excel(constants.MARKETING_CALLPRIMARY_URL, sheet_name=constants.MARKETING_CALLPRIMARY_SHEET)
         self.urls = df.sample(3, replace=False)['URL']
 
-    def marketing_board_form1(self):
+    def marketing_CallPrimary_Method(self):
         for url in self.urls:
             self.driver.get(url)
             print([url])
@@ -38,7 +38,10 @@ class Marketing_Board_Class:
                 contact_num_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnum5']")))
                 contact_num_xpath.send_keys("1000000100")
 
-                self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit']").click()
+                Submit_Button_Xpath=wait.until(EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmit']")))
+                Submit_Button_Xpath.click()
+
+                #self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit']").click()
 
                 try:
 

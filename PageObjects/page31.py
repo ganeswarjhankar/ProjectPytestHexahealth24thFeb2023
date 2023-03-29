@@ -18,7 +18,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
 
 
-class Marketing_Brand_Class:
+class Marketing_Index_Class:
     def __init__(self, driver):
         self.driver = driver
 

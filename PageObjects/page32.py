@@ -1,3 +1,5 @@
+""""""
+
 from utilities import constants
 import time
 import urllib.request
@@ -18,15 +20,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
 
 
-class Marketing_Brand_Class:
+class marketing_OnlyForm_Class:
     def __init__(self, driver):
         self.driver = driver
 
     def open(self):
-        df = pd.read_excel(constants.MARKETING_BRAND_URL, sheet_name=constants.MARKETING_BRAND_SHEET)
+        df = pd.read_excel(constants.MARKETING_ONLYFORM_URL, sheet_name=constants.MARKETING_ONLYFORM_SHEET)
         self.urls = df.sample(2, replace=False)['URL']
 
-    def marketing_brand_method(self):
+    def marketing_onlyform_method(self):
         for url in self.urls:
             self.driver.get(url)
             print([url])

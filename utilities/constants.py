@@ -59,7 +59,7 @@ MarketingNormal_URl = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketing
 SHEET_NORMAL_URL='Sheet1'
 
 #random URl 24
-MARKETING_NORMAL_SURGERY_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
+MARKETING_NORMAL_SURGERY_URL = "https://www.hexahealth.com/marketing/lasik-bangalore"
 SHEET_NORMAL_SURGERY='Sheet1'
 
 #random URL 24 part
@@ -75,48 +75,61 @@ SHEET_PROCEDURE_COSTCITY = "COSTCITY"
 
 #random URL 25
 MARKETING_BOARD_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
-MARKETING_BOARD_SHEET_URL='Sheet_Board'
+MARKETING_BOARD_SHEET_URL='sheet1'
 
 #random_URL 26
 MARKETING_BRAND_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
-MARKETING_BRAND_SHEET = 'Sheet_Brand'
+MARKETING_BRAND_SHEET = 'Sheet_CallPrimary'
 #random_url27
-MARKETING_CALLPRIMARY_URL = "https://www.hexahealth.com/marketing/callprimary/lasik-bangalore"
-MARKETING_CALLPRIMARY_SHEET='sheet_CallPrimary'
+#https://www.hexahealth.com/marketing/callprimary/lasik-bangalore
+MARKETING_CALLPRIMARY_URL = "C:\\Users\\91928\\PycharmProjects\\Marketing_CallPrimary.xlsx"
+MARKETING_CALLPRIMARY_SHEET='sheet1'
 
 #random_url28
-MARKETING_WHATSAPP_URL="https://www.hexahealth.com/marketing/callwhatsapp/lasik-bangalore"
+#https://www.hexahealth.com/marketing/callwhatsapp/lasik-bangalore
+MARKETING_WHATSAPP_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
 MARKETING_WHATSAPP_SHEET='Sheet_WhatsApp'
 
 #random_url29=20
 
 #random_url30
-MARKETING_DISPLAY_URL="https://www.hexahealth.com/marketing/display/lasik-bangalore"
+#https://www.hexahealth.com/marketing/display/lasik-bangalore
+MARKETING_DISPLAY_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
 MARKETING_DISPLAY_SHEET='Sheet_Display'
 
-#random_url31
 
-#random_URL32
+
+#random_url31
+#https://www.hexahealth.com/marketing/index/lasik-bangalore
+MARKETING_INDEX_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
+MARKETINGINDEX_SHEET='Sheet_Index'
+
+#random_url32
+#https://www.hexahealth.com/marketing/onlyform/lasik-bangalore
+MARKETING_ONLYFORM_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
+MARKETING_ONLYFORM_SHEET='Sheet_OnlyForm'
+
 
 #random_url33
-MARKETING_INDEX_URL = "https://www.hexahealth.com/marketing/index/lasik-bangalore"
+#https://www.hexahealth.com/marketing/pdf/lasik-bangalore
+MARKETING_PDF_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
+MARKETING_PDF_SHEET='Sheet_PDF'
 
 #random_url34
-MARKETING_ONLYFORM_URL="https://www.hexahealth.com/marketing/onlyform/lasik-bangalore"
+#https://www.hexahealth.com/marketing/pilot/lasik-bangalore
+MARKETING_PILOT_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
+MARKETING_PILOT_SHEET='Sheet_Pilot'
 
-#random_url35
-MARKETING_PDF_URL = "https://www.hexahealth.com/marketing/pdf/lasik-bangalore"
+#random-Url35
+#https://www.hexahealth.com/marketing/remarks/lasik-bangalore
+MARKETING_REMARKS_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
+MARKETING_REMARKS_SHEET='Sheet_remarks'
+
 
 #random_url36
-MARKETING_PILOT_URL = "https://www.hexahealth.com/marketing/pilot/lasik-bangalore"
-
-#random-Url37
-
-MARKETING_REMARKS_URL="https://www.hexahealth.com/marketing/remarks/lasik-bangalore"
-
-
-#random_url38
-MARKETING_TOPSTICKY_URL = "https://www.hexahealth.com/marketing/topsticky/lasik-bangalore"
+#https://www.hexahealth.com/marketing/topsticky/lasik-bangalore
+MARKETING_TOPSTICKY_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
+MARKETING_TOPSTICKY_SHEET='Sheet_TopSticky'
 
 #
 

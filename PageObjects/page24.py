@@ -42,8 +42,7 @@ class MarketingNormalSurgeryClass:
                     self.driver.implicitly_wait(5)
 
                     wait = WebDriverWait(self.driver, 10)
-                    calculate_button = wait.until(
-                        EC.presence_of_element_located((By.XPATH, "//*[@id='surgerytBtn']/span")))
+                    calculate_button = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='surgerytBtn']/span")))
                     calculate_button.click()
 
                     # CalculateButton = self.driver.find_element(By.XPATH, "//*[@id='surgerytBtn']/span")
@@ -53,8 +52,10 @@ class MarketingNormalSurgeryClass:
                     # time.sleep(2)
                     # self.driver.find_element(By.XPATH, "//*[@id='surgerytBtn']/span").click()
 
-                    self.driver.find_element(By.XPATH, "//input[@id='leadname2']").send_keys(
-                        "Test GJ Normal Marketing ")
+                    lead_name_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname2']")))
+                    lead_name_xpath.send_keys("Test GJ Normal Marketing ")
+
+                    #self.driver.find_element(By.XPATH, "//input[@id='leadname2']").send_keys("Test GJ Normal Marketing ")
                     self.driver.find_element(By.XPATH, "//input[@id='contactnum2']").send_keys("1000000100")
                     self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit2']").click()
                     print("MarketingNormalForm1 is passed")

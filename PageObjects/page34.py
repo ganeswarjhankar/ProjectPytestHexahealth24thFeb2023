@@ -1,11 +1,14 @@
 from utilities import constants
 import time
 import urllib.request
-#import pandas as pd
+import pandas as pd
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
+from utilities import constants
+import time
+import urllib.request
 import pandas as pd
 
 from selenium.webdriver.common.by import By
@@ -15,36 +18,51 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
 
 
-class Marketing_Board_Class:
+class marketing_pilot_Class:
     def __init__(self, driver):
         self.driver = driver
 
     def open(self):
-        df = pd.read_excel(constants.MARKETING_BOARD_URL, sheet_name=constants.MARKETING_BOARD_SHEET_URL)
-        self.urls = df.sample(3, replace=False)['URL']
+        df = pd.read_excel(constants.MARKETING_PILOT_URL, sheet_name=constants.MARKETING_PILOT_SHEET)
+        self.urls = df.sample(2, replace=False)['URL']
 
-    def marketing_board_form1(self):
+    def marketing_pilot_method(self):
         for url in self.urls:
             self.driver.get(url)
             print([url])
+
             try:
 
                 self.driver.maximize_window()
+                self.driver.implicitly_wait(2)
 
                 wait = WebDriverWait(self.driver, 10)
-                lead_name_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
-                lead_name_xpath.send_keys("Test Gj Board test")
 
-                contact_num_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnum5']")))
-                contact_num_xpath.send_keys("1000000100")
+                name_text_xpath = self.driver.find_element(By.XPATH, "//input[@id='leadname5']")
+                name_text_xpath.send_keys("test Pilot Name")
 
-                self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit']").click()
+
+
+                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnum5']")))
+                contact_name.send_keys("1000000100")
+
+
+                submit_button = wait.until(
+                    EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmit']")))
+                submit_button.click()
 
                 try:
-
                     thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
                     print(thank_you.is_displayed())
                     print("Lead is Generated Successfully")
+                    # print(f"Book Appointment is Successfully done for {url}")
+
+                    # wait = WebDriverWait(self.driver, 10)
+                    # wait.until(EC.title_contains("Thank You"))
+                    # thank_you = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1").text
+                    # print("Thank You message is displayed")
+
+
 
 
                 except (TimeoutException, NoSuchElementException, InvalidArgumentException):
@@ -53,6 +71,7 @@ class Marketing_Board_Class:
                 self.driver.back()
                 self.driver.implicitly_wait(2)
                 self.driver.refresh()
+
 
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):
 

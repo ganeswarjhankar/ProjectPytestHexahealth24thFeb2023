@@ -15,8 +15,17 @@ from PageObjects.page23 import MarketingNormalClass
 from PageObjects.page24 import MarketingNormalSurgeryClass
 from PageObjects.page25 import Marketing_Board_Class
 from PageObjects.page26 import Marketing_Brand_Class
+from PageObjects.page27 import Marketing_CallPrimary_Class
+from PageObjects.page28 import Marketing_WhatsApp_Class
 
 from PageObjects.page3 import DoctorClass
+from PageObjects.page30 import Marketing_Display_Class
+from PageObjects.page32 import marketing_OnlyForm_Class
+from PageObjects.page33 import marketing_pdf_Class
+from PageObjects.page34 import marketing_pilot_Class
+from PageObjects.page35 import Marketing_Remark_Class
+from PageObjects.page36 import marketing_TopSticky_Class
+
 from PageObjects.page4 import SearchPage
 from PageObjects.page5 import ConditionClass
 from PageObjects.page6 import TreatmentClass
@@ -34,7 +43,7 @@ def pytest_addoption(parser):
 @pytest.fixture
 def driver(request):
     browser_name = request.config.getoption("browser_name")
-    S = Service("D:\\chromedriver.exe")
+    S = Service ("D:\\chromedriver.exe")
     driver = webdriver.Chrome(service=S)
     yield driver
     driver.quit()
@@ -172,37 +181,36 @@ def marketingNormalSurgeryClass_URL(driver):
 
 #test_url25
 @pytest.fixture
-def marketingboard_URL(driver):
+def marketingboard_url(driver):
     page = Marketing_Board_Class(driver)
     page.open()
     return page
 
 #test_url26
 @pytest.fixture
-def marketingbrand_URL():
+def marketingbrand_url(driver):
     page =Marketing_Brand_Class(driver)
-
     page.open()
     return page
 
 #test_url27
 @pytest.fixture
-def marketingCallPrimary_URL():
-    page = marketing_CallPrimary_Class(driver)
+def marketingCallPrimary_url(driver):
+    page = Marketing_CallPrimary_Class(driver)
     page.open()
     return page
 
 
 #test_url28
 @pytest.fixture
-def marketingWhatsApp_URL():
-    page = marketing_CallWhatsApp_Class(driver)
+def marketingwhatsapp_url(driver):
+    page = Marketing_WhatsApp_Class(driver)
     page.open()
     return page
 
 #test_url29=20
 @pytest.fixture
-def marketingCost_URL():
+def marketingCost_URL(driver):
     page=marketing_Cost_Class(driver)
     page.open()
     return page
@@ -210,48 +218,58 @@ def marketingCost_URL():
 
 #test_url30
 @pytest.fixture
-def marketingDisplay_URL():
-    page = marketing_Display_Class(driver)
+def marketingdisplay_url(driver):
+    page = Marketing_Display_Class(driver)
     page.open()
     return page
 
+
+"""The website is not in working condition """
 #test_url31
-#test_url32
-
-
-
-#test_url33
 @pytest.fixture
-def marketingIndex_URL():
+def marketingIndex_URL(driver):
     page = marketing_Index_Class(driver)
     page.open()
     return page
 
 
-#test_url34
-def marketingOnlyForm_URL():
+#test_url32
+@pytest.fixture
+def marketingonlyform_url(driver):
     page = marketing_OnlyForm_Class(driver)
     page.open()
     return page
 
 
-#test_url 35
-def marketingPDF_URL():
-    page = marketing_PDF_Class(driver)
+#test_url 33
+@pytest.fixture
+def marketingPDF_URL(driver):
+    page = marketing_pdf_Class(driver)
     page.open()
     return page
 
 
-#test_url36
-
-def marketingpilot_URL():
+#test_url34
+@pytest.fixture
+def marketingpilot_url(driver):
     page = marketing_pilot_Class(driver)
     page.open()
     return page
 
 
-#test_url37
-def marketingTopSticky_URL():
+#test_url35
+@pytest.fixture
+def marketingremark_url(driver):
+    page = marketing_remark_class(driver)
+    page.open()
+    return page
+
+
+
+
+#test_url36
+@pytest.fixture
+def marketingtopsticky_url(driver):
     page = marketing_TopSticky_Class(driver)
     page.open()
     return page
