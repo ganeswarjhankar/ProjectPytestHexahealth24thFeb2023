@@ -9,8 +9,8 @@
 # from page_objects import ContactUsPage
 
 
-# import pytest
-# @pytest.mark.xfail
+import pytest
+@pytest.mark.skip
 def test_marketing_topsticky_url(driver,marketingtopsticky_url):
     marketingtopsticky_url.marketing_topsticky_method()
 

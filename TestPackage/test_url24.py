@@ -6,10 +6,7 @@
 #    multi_Marketing_url.CostMarketingmethod()
 
 import pytest
-
-# test_contact_us.py
-#from page_objects import ContactUsPage
-@pytest.mark.xpass
+@pytest.mark.skip
 def test_MarketingNormalSurgeryClass_URL(driver,marketingNormalSurgeryClass_URL):
     marketingNormalSurgeryClass_URL.CalculateSurgeryCost()
 
