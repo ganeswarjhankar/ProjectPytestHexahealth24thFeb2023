@@ -22,6 +22,7 @@ class marketing_TopSticky_Class:
     def __init__(self, driver):
         self.driver = driver
 
+
     def open(self):
         df = pd.read_excel(constants.MARKETING_TOPSTICKY_URL, sheet_name=constants.MARKETING_TOPSTICKY_SHEET)
         self.urls = df.sample(2, replace=False)['URL']
@@ -30,35 +31,33 @@ class marketing_TopSticky_Class:
         for url in self.urls:
             self.driver.get(url)
             print([url])
+            self.verify_whatsapp_PAN()    ## calling the function method in the mid to execute
+
+
 
             try:
 
+
                 self.driver.maximize_window()
-                self.driver.implicitly_wait(2)
+                self.driver.implicitly_wait(5)
 
                 wait = WebDriverWait(self.driver, 10)
 
-                radio_Yes_button = self.driver.find_element(By.XPATH, "//input[@id='rYes']")
-                radio_Yes_button.click()
-
-                # lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
-                # lead_name.send_keys("Test GJ Marketing Variant")
+                lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
+                lead_name.send_keys("Test GJ Marketing Variant")
 
                 # self.driver.find_element(By.XPATH, "//input[@id='leadname5']").send_keys("Test GJ Doctor Variant")
                 # self.driver.implicitly_wait(2)
 
-                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnumhomem']")))
+                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnum5']")))
                 contact_name.send_keys("1000000100")
 
-                select_City = Select(self.driver.find_element(By.XPATH, "//select[@id='leadcitybrand']"))
-                select_City.select_by_visible_text("Gurugram ")
 
-                select_Treatment = Select(self.driver.find_element(By.XPATH, "//select[@id='treamentconditionbrand']"))
-                select_City.select_by_visible_text("Yoga ")
 
-                submit_button = wait.until(
-                    EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmitbrandPagemaster']")))
+                submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmit']")))
                 submit_button.click()
+
+
 
                 try:
                     thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
@@ -74,6 +73,8 @@ class marketing_TopSticky_Class:
 
 
 
+
+
                 except (TimeoutException, NoSuchElementException, InvalidArgumentException):
                     print("Exception with Timeout and No elements found")
 
@@ -85,3 +86,46 @@ class marketing_TopSticky_Class:
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):
 
                 print("Except Block-Lead failed to Generate")
+
+
+
+    def verify_whatsapp_PAN(self):
+
+        # self.driver.get("https://www.hexahealth.com")
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(5)
+        self.driver.find_element(By.XPATH, "//*[@id='whtsapHeaderBtn']").click()
+        # self.driver.switch_to.window(self.driver.window_handles[2])
+        msg = self.driver.find_element(By.XPATH, "//p[@class='_9vd5']")
+        print(msg.text)
+
+        # Get the current URL
+        current_url = self.driver.current_url
+        print(current_url)
+        # Verify that the current URL contains the expected value
+
+        ######################
+        # import urllib.request
+
+        # current_url = "https://api.example.com"
+
+        if "api." in current_url:
+            try:
+                response = urllib.request.urlopen(current_url)
+                if response.status == 200:
+                    print("Status Code 200 Ok")
+                else:
+                    print("Failed")
+            except urllib.error.URLError as e:
+                print("Failed:", e.reason)
+        else:
+            print("URL does not contain 'api.'")
+
+        self.driver.back()
+        self.driver.implicitly_wait(2)
+        self.driver.refresh()
+
+
+
+
+

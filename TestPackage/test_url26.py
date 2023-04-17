@@ -7,10 +7,9 @@
 
 # test_contact_us.py
 # from page_objects import ContactUsPage
+import pytest
+@pytest.mark.xfail
 
-
-# import pytest
-# @pytest.mark.xfail
 def test_marketing_brand_url(driver,marketingbrand_url):
     marketingbrand_url.marketing_brand_method()
 

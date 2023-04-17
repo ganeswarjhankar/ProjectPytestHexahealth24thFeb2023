@@ -120,8 +120,9 @@ class LoginPage:
 
             wait = WebDriverWait(self.driver, 10)
             thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
-            #print(thank_you.is_displayed())
-            #print("Lead Is Generated")
+            print(thank_you.is_displayed())
+            print("Lead Is Generated")
+
 
 
 

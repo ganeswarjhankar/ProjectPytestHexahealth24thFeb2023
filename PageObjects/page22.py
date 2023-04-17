@@ -37,10 +37,12 @@ class MarketingDoctorClass:
 
                 try:
 
+                    wait = WebDriverWait(self.driver, 10)
+
                     self.driver.maximize_window()
                     self.driver.implicitly_wait(2)
 
-                    wait = WebDriverWait(self.driver, 10)
+
 
                     lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
                     lead_name.send_keys("Test GJ Marketing Variant")

@@ -1,30 +1,26 @@
-from utilities import constants
-import time
-import urllib.request
 import pandas as pd
-
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-
-from utilities import constants
-import time
-import urllib.request
-import pandas as pd
-
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.ui import WebDriverWait
+
+from utilities import constants
+from utilities.BaseClass import BaseClass
 
 
-class Marketing_Brand_Class:
-    def __init__(self, driver):
-        self.driver = driver
+class Marketing_Brand_Class(BaseClass):
+
+
+
+
+
+
+
 
     def open(self):
         df = pd.read_excel(constants.MARKETING_BRAND_URL, sheet_name=constants.MARKETING_BRAND_SHEET)
-        self.urls = df.sample(2, replace=False)['URL']
+        self.urls = df.sample(1, replace=False)['URL']
 
     def marketing_brand_method(self):
         for url in self.urls:
@@ -33,12 +29,22 @@ class Marketing_Brand_Class:
 
             try:
 
-                self.driver.maximize_window()
-                self.driver.implicitly_wait(2)
+                self.RADIO_BUTTON = By.XPATH, "//*[@id='rNo']"
+                self.CONTACT_NUMBER = By.XPATH, "//*[@id='contactnumhomem']"
+                self.CITY_DROPDOWN = By.XPATH, "//select[@id='leadcitybrand']"
+                self.TREATMENT_DROPDOWN = By.XPATH, "//select[@id='treamentconditionbrand']"
+                self.SUBMIT_BUTTON = By.XPATH, "//button[@id='LeadSubmit']"
+                self.THANKYOU_MSG = By.XPATH, "/html/body/div/div/div/h1"
+
 
                 wait = WebDriverWait(self.driver, 10)
 
-                radio_Yes_button = self.driver.find_element(By.XPATH, "//input[@id='rYes']")
+                self.driver.maximize_window()
+                self.driver.implicitly_wait(2)
+
+
+
+                radio_Yes_button = self.driver.find_element(By.XPATH, "//*[@id='rNo']")
                 radio_Yes_button.click()
 
                 # lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
@@ -47,21 +53,23 @@ class Marketing_Brand_Class:
                 # self.driver.find_element(By.XPATH, "//input[@id='leadname5']").send_keys("Test GJ Doctor Variant")
                 # self.driver.implicitly_wait(2)
 
-                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnumhomem']")))
+                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnumhomem']")))
                 contact_name.send_keys("1000000100")
 
-                select_City = Select(self.driver.find_element(By.XPATH, "//select[@id='leadcitybrand']"))
+                gurugram_city=self.driver.find_element((By.XPATH, "//select[@id='leadcitybrand']"))
+                select_City = Select(gurugram_city)
                 select_City.select_by_visible_text("Gurugram ")
 
-                select_Treatment = Select(self.driver.find_element(By.XPATH, "//select[@id='treamentconditionbrand']"))
-                select_City.select_by_visible_text("Yoga ")
+                yoga_text=self.driver.find_element((By.XPATH, "//select[@id='treamentconditionbrand']"))
 
-                submit_button = wait.until(
-                    EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmitbrandPagemaster']")))
+                select_Treatment = Select(yoga_text)
+                select_City.select_by_visible_text("Yoga")
+
+                submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmit']")))
                 submit_button.click()
 
                 try:
-                    thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                    thank_you = wait.until(EC.presence_of_element_located(self.THANKYOU_MSG))
                     print(thank_you.is_displayed())
                     print("Lead is Generated Successfully")
                     # print(f"Book Appointment is Successfully done for {url}")

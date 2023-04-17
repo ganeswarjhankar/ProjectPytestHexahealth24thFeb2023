@@ -1,3 +1,6 @@
+"""This script is used to verify the display only the whatsapp icon is taken into consideration"""
+
+
 from utilities import constants
 import time
 import urllib.request

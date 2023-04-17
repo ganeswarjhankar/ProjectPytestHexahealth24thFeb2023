@@ -32,13 +32,13 @@ class Marketing_CallPrimary_Class:
                 self.driver.maximize_window()
 
                 wait = WebDriverWait(self.driver, 10)
-                lead_name_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
+                lead_name_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadname5']")))
                 lead_name_xpath.send_keys("Test Gj Board test")
 
-                contact_num_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnum5']")))
+                contact_num_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnum5']")))
                 contact_num_xpath.send_keys("1000000100")
 
-                Submit_Button_Xpath=wait.until(EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmit']")))
+                Submit_Button_Xpath=wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='LeadSubmit']")))
                 Submit_Button_Xpath.click()
 
                 #self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit']").click()
@@ -54,7 +54,7 @@ class Marketing_CallPrimary_Class:
                     print("Exception with Timeout and No elements found")
 
                 self.driver.back()
-                self.driver.implicitly_wait(2)
+                self.driver.implicitly_wait(5)
                 self.driver.refresh()
 
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):

@@ -38,7 +38,7 @@ class marketing_pilot_Class:
 
                 wait = WebDriverWait(self.driver, 10)
 
-                name_text_xpath = self.driver.find_element(By.XPATH, "//input[@id='leadname5']")
+                name_text_xpath = self.driver.find_element(By.XPATH, "//*[@id='leadname5']")
                 name_text_xpath.send_keys("test Pilot Name")
 
 

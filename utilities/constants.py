@@ -79,11 +79,11 @@ MARKETING_BOARD_SHEET_URL='sheet1'
 
 #random_URL 26
 MARKETING_BRAND_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
-MARKETING_BRAND_SHEET = 'Sheet_CallPrimary'
+MARKETING_BRAND_SHEET = 'sheet2'
 #random_url27
 #https://www.hexahealth.com/marketing/callprimary/lasik-bangalore
-MARKETING_CALLPRIMARY_URL = "C:\\Users\\91928\\PycharmProjects\\Marketing_CallPrimary.xlsx"
-MARKETING_CALLPRIMARY_SHEET='sheet1'
+MARKETING_CALLPRIMARY_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
+MARKETING_CALLPRIMARY_SHEET='Sheet_CallPrimary'
 
 #random_url28
 #https://www.hexahealth.com/marketing/callwhatsapp/lasik-bangalore

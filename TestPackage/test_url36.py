@@ -1,17 +1,13 @@
-# def test_multiUrlMarketing_page(driver, multi_Marketing_url):
-#    multi_Marketing_url.DoctorMarketingmethod()
-#    multi_Marketing_url.HospitalMarketingmethod()
-#    multi_Marketing_url.NormalMarketingmethod()
-#    multi_Marketing_url.CostMarketingmethod()
 
+#static method
 
-# test_contact_us.py
-# from page_objects import ContactUsPage
-
-
-import pytest
-@pytest.mark.skip
 def test_marketing_topsticky_url(driver,marketingtopsticky_url):
     marketingtopsticky_url.marketing_topsticky_method()
 
+
+    #marketingtopsticky_url.verify_whatsapp_PAN()
+
+
+
     # process the data and perform the contact us action
+

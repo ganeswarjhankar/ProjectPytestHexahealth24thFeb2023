@@ -1,8 +1,5 @@
+"""This is under skip format as the website is redirecting to the Developement form"""
 
-import pytest
-
-# test_contact_us.py
-#from page_objects import ContactUsPage
 
 
 import pytest

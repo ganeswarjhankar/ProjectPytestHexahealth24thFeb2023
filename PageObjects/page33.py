@@ -33,6 +33,48 @@ class marketing_pdf_Class:
             self.driver.get(url)
             print([url])
 
+            try:
+
+                self.driver.maximize_window()
+
+                wait = WebDriverWait(self.driver, 15)
+                lead_name_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadnamehome']")))
+                lead_name_xpath.send_keys("Test Gj PDF test")
+
+                contact_num_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnumhome']")))
+                contact_num_xpath.send_keys("1000000100")
+
+
+
+                Submit_Button_Xpath = self.driver.find_element_by_id('my-element')
+                self.driver.execute_script("arguments[0].click();", Submit_Button_Xpath)
+
+                #Submit_Button_Xpath=wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='LeadSubmitPDF']")))
+                #Submit_Button_Xpath.click()
+
+                #self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit']").click()
+
+                try:
+
+                    thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                    print(thank_you.is_displayed())
+                    print("Lead is Generated Successfully")
+
+
+                except (TimeoutException, NoSuchElementException, InvalidArgumentException):
+                    print("Exception with Timeout and No elements found")
+
+                self.driver.back()
+                self.driver.implicitly_wait(5)
+                self.driver.refresh()
+
+            except (TimeoutException, NoSuchElementException, InvalidArgumentException):
+
+                print("Except Block-Lead failed to Generate")
+
+
+
+
 
 
 

@@ -14,6 +14,7 @@ from PageObjects.page22 import MarketingDoctorClass
 from PageObjects.page23 import MarketingNormalClass
 from PageObjects.page24 import MarketingNormalSurgeryClass
 from PageObjects.page25 import Marketing_Board_Class
+
 from PageObjects.page26 import Marketing_Brand_Class
 from PageObjects.page27 import Marketing_CallPrimary_Class
 from PageObjects.page28 import Marketing_WhatsApp_Class
@@ -31,6 +32,7 @@ from PageObjects.page5 import ConditionClass
 from PageObjects.page6 import TreatmentClass
 from PageObjects.page7 import HexaHomepageClass
 from PageObjects.page8 import ContactUsPage
+from PageObjects.page9 import BlogPage
 
 
 def pytest_addoption(parser):
@@ -209,11 +211,11 @@ def marketingwhatsapp_url(driver):
     return page
 
 #test_url29=20
-@pytest.fixture
-def marketingCost_URL(driver):
-    page=marketing_Cost_Class(driver)
-    page.open()
-    return page
+#@pytest.fixture
+#def marketingCost_URL(driver):
+#    page=marketing_Cost_Class(driver)
+#    page.open()
+#    return page
 
 
 #test_url30
@@ -260,7 +262,7 @@ def marketingpilot_url(driver):
 #test_url35
 @pytest.fixture
 def marketingremark_url(driver):
-    page = marketing_remark_class(driver)
+    page = Marketing_Remark_Class(driver)
     page.open()
     return page
 

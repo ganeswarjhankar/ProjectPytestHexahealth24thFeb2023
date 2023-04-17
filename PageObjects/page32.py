@@ -36,12 +36,12 @@ class marketing_OnlyForm_Class:
             try:
 
                 self.driver.maximize_window()
-                self.driver.implicitly_wait(2)
+                self.driver.implicitly_wait(5)
 
                 wait = WebDriverWait(self.driver, 10)
 
-                radio_Yes_button = self.driver.find_element(By.XPATH, "//input[@id='rYes']")
-                radio_Yes_button.click()
+                name_text_xpath = self.driver.find_element(By.XPATH, "//*[@id='leadname5']")
+                name_text_xpath.click()
 
                 # lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
                 # lead_name.send_keys("Test GJ Marketing Variant")
@@ -49,24 +49,30 @@ class marketing_OnlyForm_Class:
                 # self.driver.find_element(By.XPATH, "//input[@id='leadname5']").send_keys("Test GJ Doctor Variant")
                 # self.driver.implicitly_wait(2)
 
-                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnumhomem']")))
+                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnum5']")))
                 contact_name.send_keys("1000000100")
 
-                select_City = Select(self.driver.find_element(By.XPATH, "//select[@id='leadcitybrand']"))
-                select_City.select_by_visible_text("Gurugram ")
+                #select_City = Select(self.driver.find_element(By.XPATH, "//*[@id='querymsg']"))
+                #select_City.select_by_visible_text("Gurugram ")
 
-                select_Treatment = Select(self.driver.find_element(By.XPATH, "//select[@id='treamentconditionbrand']"))
-                select_City.select_by_visible_text("Yoga ")
+                #select_Treatment = Select(self.driver.find_element(By.XPATH, "//select[@id='treamentconditionbrand']"))
+                #select_City.select_by_visible_text("Yoga ")
 
-                submit_button = wait.until(
-                    EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmitbrandPagemaster']")))
+                query_text_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='querymsg']")))
+                query_text_xpath.send_keys("Test Query By GJ")
+
+                submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='LeadSubmitOnlyForm']")))
                 submit_button.click()
 
                 try:
                     thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
                     print(thank_you.is_displayed())
                     print("Lead is Generated Successfully")
-                    # print(f"Book Appointment is Successfully done for {url}")
+
+                    welcome_message = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1")
+                    assert welcome_message.text == "Thank You", "Thank You not displayed"
+
+
 
                     # wait = WebDriverWait(self.driver, 10)
                     # wait.until(EC.title_contains("Thank You"))
@@ -77,13 +83,18 @@ class marketing_OnlyForm_Class:
 
 
                 except (TimeoutException, NoSuchElementException, InvalidArgumentException):
-                    print("Exception with Timeout and No elements found")
+                    print("Exception occured")
 
-                self.driver.back()
-                self.driver.implicitly_wait(2)
-                self.driver.refresh()
+                    self.driver.back()
+                    self.driver.implicitly_wait(2)
+                    self.driver.refresh()
+
+
+
+
+
+
 
 
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):
-
-                print("Except Block-Lead failed to Generate")
+                print("field missing issue")

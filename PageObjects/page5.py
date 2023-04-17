@@ -30,6 +30,8 @@ class ConditionClass:
         # self.driver.get("https://www.hexahealth.com/condition/piles")
         try:
 
+            wait = WebDriverWait(self.driver, 10)
+
             self.driver.implicitly_wait(5)
             self.driver.maximize_window()
 
@@ -48,9 +50,16 @@ class ConditionClass:
             drop2 = Select(YogaTreatment)
             drop2.select_by_visible_text("Yoga")
 
-            self.driver.find_element(By.XPATH, "//textarea[@id='leadquery']").send_keys("Query test")
-            self.driver.implicitly_wait(2)
-            self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']").click()
+            #self.driver.find_element(By.XPATH, "//textarea[@id='leadquery']").send_keys("Query test")
+            query_text_xpath=wait.until(EC.element_to_be_clickable((By.XPATH,"//textarea[@id='leadquery']")))
+            query_text_xpath.send_keys("Query test")
+
+
+
+            submit_button_xpath = wait.until(EC.element_to_be_clickable((By.XPATH, "//textarea[@id='leadquery']")))
+            submit_button_xpath.click()
+
+            #self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']").click()
 
             try:
 
@@ -96,10 +105,15 @@ class ConditionClass:
             self.driver.execute_script("arguments[0].click();", two)
             self.driver.implicitly_wait(2)
 
-            self.driver.find_element(By.XPATH, "//*[@id='leadnamehome1']").send_keys("Gj Test check")
-            self.driver.implicitly_wait(2)
+            #self.driver.find_element(By.XPATH, "//*[@id='leadnamehome1']").send_keys("Gj Test check")
+            #self.driver.implicitly_wait(2)
 
             wait = WebDriverWait(self.driver, 10)
+
+            lead_name_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadnamehome1']")))
+            lead_name_xpath.send_keys("Test Lead patient name")
+
+
 
             contact_num = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnumhome1']")))
             contact_num.send_keys("1000000100")

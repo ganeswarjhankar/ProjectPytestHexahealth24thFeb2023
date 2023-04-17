@@ -1,20 +1,12 @@
-from utilities import constants
-import time
-import urllib.request
 #import pandas as pd
 
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-from utilities import constants
-import time
-import urllib.request
 import pandas as pd
-
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
+
+from utilities import constants
 
 
 class MarketingNormalClass:
@@ -36,9 +28,11 @@ class MarketingNormalClass:
 
             try:
 
+                wait = WebDriverWait(self.driver, 10)
+
                 self.driver.maximize_window()
 
-                wait = WebDriverWait(self.driver, 10)
+
                 Lead_text = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
                 Lead_text.send_keys("Test GJ Test GJ Normal Marketing Automation Suite")
 
@@ -49,6 +43,8 @@ class MarketingNormalClass:
                 submit_button.click()
 
                 try:
+
+                    wait = WebDriverWait(self.driver, 10)
 
                     thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
                     print(thank_you.is_displayed())

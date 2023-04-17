@@ -1,3 +1,4 @@
+
 from utilities import constants
 import time
 import urllib.request
@@ -26,7 +27,7 @@ class Marketing_Remark_Class:
         df = pd.read_excel(constants.MARKETING_REMARKS_URL, sheet_name=constants.MARKETING_REMARKS_SHEET)
         self.urls = df.sample(2, replace=False)['URL']
 
-    def marketingremark_method(self):
+    def marketing_remark_method(self):
         for url in self.urls:
             self.driver.get(url)
             print([url])
@@ -38,17 +39,28 @@ class Marketing_Remark_Class:
 
                 wait = WebDriverWait(self.driver, 10)
 
-                name_text_xpath = self.driver.find_element(By.XPATH, "//input[@id='leadname5']")
-                name_text_xpath.send_keys("test Pilot Name")
+                #radio_Yes_button = self.driver.find_element(By.XPATH, "//input[@id='rYes']")
+                #radio_Yes_button.click()
 
+                lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
+                lead_name.send_keys("Test GJ Marketing Variant")
 
+                # self.driver.find_element(By.XPATH, "//input[@id='leadname5']").send_keys("Test GJ Doctor Variant")
+                # self.driver.implicitly_wait(2)
 
                 contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnum5']")))
                 contact_name.send_keys("1000000100")
 
+                query_name = wait.until(EC.presence_of_element_located((By.XPATH, "//textarea[@id='querymsg']")))
+                query_name.send_keys("Test Query")
 
-                submit_button = wait.until(
-                    EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmit']")))
+                #select_City = Select(self.driver.find_element(By.XPATH, "//select[@id='leadcitybrand']"))
+                #select_City.select_by_visible_text("Gurugram ")
+
+                #select_Treatment = Select(self.driver.find_element(By.XPATH, "//select[@id='treamentconditionbrand']"))
+                #select_City.select_by_visible_text("Yoga ")
+
+                submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmitRemarks']")))
                 submit_button.click()
 
                 try:

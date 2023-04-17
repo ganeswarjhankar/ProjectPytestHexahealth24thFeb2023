@@ -50,7 +50,7 @@ class SearchPage:
             self.driver.refresh()
 
         except (TimeoutException,StaleElementReferenceException):
-            print("Search Failed")
+            print("Search failed for Doctor")
 
 
 
@@ -82,7 +82,7 @@ class SearchPage:
             self.driver.refresh()
 
         except (TimeoutException, StaleElementReferenceException):
-            print("Search Failed")
+            print("Search Failed for Hospital")
 
 
 
@@ -110,17 +110,31 @@ class SearchPage:
             # search_field3.click()
 
             wait = WebDriverWait(self.driver, 20)
-            wait.until(expected_conditions.element_to_be_clickable((By.LINK_TEXT, "Piles Laser Treatment")))
+            text_box_linktext=wait.until(expected_conditions.element_to_be_clickable((By.LINK_TEXT, "Piles Laser Treatment")))
+
             self.driver.implicitly_wait(5)
-            self.driver.find_element(By.LINK_TEXT, "Piles Laser Treatment").click()
-            print("'Piles Laser Treatment'  is been Searched successfully")
+
+            text_link=wait.until(expected_conditions.element_to_be_clickable((By.LINK_TEXT, "Piles Laser Treatment")))
+            text_link.click()
+
+
+            #self.driver.find_element(By.LINK_TEXT, "Piles Laser Treatment").click()
+            #print("'Piles Laser Treatment'  is been Searched successfully")
             Handles1 = self.driver.window_handles[0]
+
+
+            #assert "HexaHealth" in self.driver.title
+
+
+
+
+
             self.driver.back()
             self.driver.implicitly_wait(2)
             self.driver.refresh()
 
         except (TimeoutException, StaleElementReferenceException):
-            print("Search Failed")
+            print("Search Failed for Treatment")
 
 
 
@@ -137,7 +151,7 @@ class SearchPage:
 
         try:
             self.driver.maximize_window()
-            self.driver.implicitly_wait(10)
+            self.driver.implicitly_wait(5)
 
             self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Gallstones")
 
@@ -156,7 +170,7 @@ class SearchPage:
             self.driver.refresh()
 
         except (TimeoutException, StaleElementReferenceException):
-            print("Search Failed")
+            print("Search Failed for condition")
 
 
 
