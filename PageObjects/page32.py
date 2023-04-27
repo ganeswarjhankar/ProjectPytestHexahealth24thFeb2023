@@ -36,12 +36,15 @@ class marketing_OnlyForm_Class:
             try:
 
                 self.driver.maximize_window()
-                self.driver.implicitly_wait(5)
+                #self.driver.implicitly_wait(5)
 
                 wait = WebDriverWait(self.driver, 10)
 
-                name_text_xpath = self.driver.find_element(By.XPATH, "//*[@id='leadname5']")
-                name_text_xpath.click()
+                #name_text_xpath = self.driver.find_element(By.XPATH, "//*[@id='leadname5']")
+                #name_text_xpath.click()
+
+                name_text_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadname5']")))
+                name_text_xpath.send_keys("Test GJ Marketing Variant")
 
                 # lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
                 # lead_name.send_keys("Test GJ Marketing Variant")
@@ -50,7 +53,7 @@ class marketing_OnlyForm_Class:
                 # self.driver.implicitly_wait(2)
 
                 contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnum5']")))
-                contact_name.send_keys("1000000100")
+                contact_name.send_keys("9000000100")
 
                 #select_City = Select(self.driver.find_element(By.XPATH, "//*[@id='querymsg']"))
                 #select_City.select_by_visible_text("Gurugram ")

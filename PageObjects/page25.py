@@ -32,7 +32,7 @@ class Marketing_Board_Class(BaseClass):
                 lead_name_xpath.send_keys("Test Gj Board test")
 
                 contact_num_xpath = wait.until(EC.presence_of_element_located(self.CONTACT_NUM))
-                contact_num_xpath.send_keys("1000000100")
+                contact_num_xpath.send_keys("9000000100")
 
                 submit_button_xpath = wait.until(EC.presence_of_element_located(self.SUBMIT_BUTTON))
                 submit_button_xpath.click()

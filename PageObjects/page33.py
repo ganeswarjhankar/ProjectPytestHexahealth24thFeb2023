@@ -42,12 +42,15 @@ class marketing_pdf_Class:
                 lead_name_xpath.send_keys("Test Gj PDF test")
 
                 contact_num_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnumhome']")))
-                contact_num_xpath.send_keys("1000000100")
+                contact_num_xpath.send_keys("9000000100")
 
 
+                submit_button_Xpath_new=self.driver.find_element(By.LINK_TEXT,"Download Now")
+                submit_button_Xpath_new.click()
 
-                Submit_Button_Xpath = self.driver.find_element_by_id('my-element')
-                self.driver.execute_script("arguments[0].click();", Submit_Button_Xpath)
+
+                #Submit_Button_Xpath = self.driver.find_element_by_id('my-element')
+                #self.driver.execute_script("arguments[0].click();", Submit_Button_Xpath)
 
                 #Submit_Button_Xpath=wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='LeadSubmitPDF']")))
                 #Submit_Button_Xpath.click()

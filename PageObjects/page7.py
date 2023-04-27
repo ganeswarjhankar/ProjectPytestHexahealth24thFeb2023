@@ -35,7 +35,7 @@ class HexaHomepageClass:
         BookAppointmentButton = self.driver.find_element(By.XPATH, "//a[@class='link-appointment']").click()
         self.driver.implicitly_wait(5)
         self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Patient Name")
-        self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
+        self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("9000000100")
 
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
         drop1 = Select(BengaluruCity)

@@ -35,7 +35,7 @@ class TreatmentClass:
             #self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Treatmentpage Name")
             self.driver.implicitly_wait(2)
 
-            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
+            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("9000000100")
 
             self.driver.implicitly_wait(2)
 
@@ -101,7 +101,7 @@ class TreatmentClass:
             lead_field.send_keys("Test GJ Treatment ")
             contact_field = WebDriverWait(self.driver, 20).until(
                 EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnum2']")))
-            contact_field.send_keys("1000000100")
+            contact_field.send_keys("9000000100")
 
             city_field = WebDriverWait(self.driver, 20).until(
                 EC.element_to_be_clickable((By.XPATH, "//*[@id='leadcity2']")))
@@ -159,7 +159,7 @@ class TreatmentClass:
 
         self.driver.find_element(By.XPATH, "//*[@id='leadnamehome1']").send_keys("Test GJ XYZ")
 
-        self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("1000000100")
+        self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("9000000100")
         self.driver.implicitly_wait(2)
 
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome1']")
@@ -206,7 +206,7 @@ class TreatmentClass:
         lead_field.send_keys("Test GJ Treatment ")
 
         contact_field = WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='contactnumhome1']")))
-        contact_field.send_keys("1000000100")
+        contact_field.send_keys("9000000100")
 
 
 
@@ -253,7 +253,7 @@ class TreatmentClass:
 
         self.driver.find_element(By.XPATH, "//*[@id='leadnamehome']").send_keys("Test GJ Treatment ")
         self.driver.implicitly_wait(2)
-        self.driver.find_element(By.XPATH, "//*[@id='contactnumhome']").send_keys("1000000100")
+        self.driver.find_element(By.XPATH, "//*[@id='contactnumhome']").send_keys("9000000100")
         self.driver.implicitly_wait(2)
 
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome']")

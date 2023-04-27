@@ -48,7 +48,7 @@ class Marketing_Index_Class:
                 # self.driver.implicitly_wait(2)
 
                 contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnumhomem']")))
-                contact_name.send_keys("1000000100")
+                contact_name.send_keys("9000000100")
 
                 select_City = Select(self.driver.find_element(By.XPATH, "//select[@id='leadcitybrand']"))
                 select_City.select_by_visible_text("Gurugram ")

@@ -56,7 +56,7 @@ class MarketingNormalSurgeryClass:
                     lead_name_xpath.send_keys("Test GJ Normal Marketing ")
 
                     #self.driver.find_element(By.XPATH, "//input[@id='leadname2']").send_keys("Test GJ Normal Marketing ")
-                    self.driver.find_element(By.XPATH, "//input[@id='contactnum2']").send_keys("1000000100")
+                    self.driver.find_element(By.XPATH, "//input[@id='contactnum2']").send_keys("9000000100")
                     self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit2']").click()
                     print("MarketingNormalForm1 is passed")
                     self.driver.implicitly_wait(5)

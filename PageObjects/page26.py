@@ -29,12 +29,12 @@ class Marketing_Brand_Class(BaseClass):
 
             try:
 
-                self.RADIO_BUTTON = By.XPATH, "//*[@id='rNo']"
-                self.CONTACT_NUMBER = By.XPATH, "//*[@id='contactnumhomem']"
-                self.CITY_DROPDOWN = By.XPATH, "//select[@id='leadcitybrand']"
-                self.TREATMENT_DROPDOWN = By.XPATH, "//select[@id='treamentconditionbrand']"
-                self.SUBMIT_BUTTON = By.XPATH, "//button[@id='LeadSubmit']"
-                self.THANKYOU_MSG = By.XPATH, "/html/body/div/div/div/h1"
+                #self.RADIO_BUTTON = By.XPATH, "//*[@id='rNo']"
+                #self.CONTACT_NUMBER = By.XPATH, "//*[@id='contactnumhomem']"
+                #self.CITY_DROPDOWN = By.XPATH, "//select[@id='leadcitybrand']"
+                #self.TREATMENT_DROPDOWN = By.XPATH, "//select[@id='treamentconditionbrand']"
+                #self.SUBMIT_BUTTON = By.XPATH, "//button[@id='LeadSubmit']"
+                #self.THANKYOU_MSG = By.XPATH, "/html/body/div/div/div/h1"
 
 
                 wait = WebDriverWait(self.driver, 10)
@@ -44,7 +44,7 @@ class Marketing_Brand_Class(BaseClass):
 
 
 
-                radio_Yes_button = self.driver.find_element(By.XPATH, "//*[@id='rNo']")
+                radio_Yes_button = self.driver.find_element(By.XPATH, "//*[@id='rYes']")
                 radio_Yes_button.click()
 
                 # lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
@@ -54,7 +54,7 @@ class Marketing_Brand_Class(BaseClass):
                 # self.driver.implicitly_wait(2)
 
                 contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnumhomem']")))
-                contact_name.send_keys("1000000100")
+                contact_name.send_keys("9000000100")
 
                 gurugram_city=self.driver.find_element((By.XPATH, "//select[@id='leadcitybrand']"))
                 select_City = Select(gurugram_city)
@@ -69,7 +69,7 @@ class Marketing_Brand_Class(BaseClass):
                 submit_button.click()
 
                 try:
-                    thank_you = wait.until(EC.presence_of_element_located(self.THANKYOU_MSG))
+                    thank_you = wait.until(EC.presence_of_element_located(By.XPATH,"/html/body/div/div/div/h1"))
                     print(thank_you.is_displayed())
                     print("Lead is Generated Successfully")
                     # print(f"Book Appointment is Successfully done for {url}")

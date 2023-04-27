@@ -37,7 +37,7 @@ class MarketingNormalClass:
                 Lead_text.send_keys("Test GJ Test GJ Normal Marketing Automation Suite")
 
                 contact_num = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnum5']")))
-                contact_num.send_keys("1000000100")
+                contact_num.send_keys("9000000100")
 
                 submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmit']")))
                 submit_button.click()

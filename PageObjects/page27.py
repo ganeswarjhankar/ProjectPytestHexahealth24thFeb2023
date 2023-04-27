@@ -36,7 +36,7 @@ class Marketing_CallPrimary_Class:
                 lead_name_xpath.send_keys("Test Gj Board test")
 
                 contact_num_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnum5']")))
-                contact_num_xpath.send_keys("1000000100")
+                contact_num_xpath.send_keys("9000000100")
 
                 Submit_Button_Xpath=wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='LeadSubmit']")))
                 Submit_Button_Xpath.click()

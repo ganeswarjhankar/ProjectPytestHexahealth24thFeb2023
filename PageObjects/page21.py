@@ -35,7 +35,7 @@ class MarketingHospitalClass:
                 self.driver.implicitly_wait(2)
                 self.driver.find_element(By.XPATH, "//input[@id='leadname5']").send_keys("Test GJ Marketing Variant")
                 self.driver.implicitly_wait(2)
-                self.driver.find_element(By.XPATH, "//input[@id='contactnum5']").send_keys("1000000100")
+                self.driver.find_element(By.XPATH, "//input[@id='contactnum5']").send_keys("9000000100")
                 self.driver.implicitly_wait(2)
                 self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit']").click()
 

@@ -66,15 +66,15 @@ class SearchPage:
 
             # SearchBox = driver.find_element(By.XPATH,"//input[@id='txtArticls']").send_keys("Anu")
             self.driver.implicitly_wait(5)
-            self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Apollo Hospital, Noida")
+            self.driver.find_element(By.XPATH, "//input[@id='txtArticls']").send_keys("Indraprastha Apollo Hospital")
 
             # search_field2 = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Apollo Hospital, Noida")))
             # search_field2.click()
 
             wait = WebDriverWait(self.driver, 20)
-            wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "Apollo Hospital, Noida")))
+            wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "Indraprastha Apollo Hospital")))
             self.driver.implicitly_wait(5)
-            self.driver.find_element(By.LINK_TEXT, "Apollo Hospital, Noida").click()
+            self.driver.find_element(By.LINK_TEXT, "Indraprastha Apollo Hospital").click()
             print("Hospital Apollo is been Searched successfully")
             Handles1 = self.driver.window_handles[0]
             self.driver.back()
@@ -119,8 +119,9 @@ class SearchPage:
 
 
             #self.driver.find_element(By.LINK_TEXT, "Piles Laser Treatment").click()
-            #print("'Piles Laser Treatment'  is been Searched successfully")
+
             Handles1 = self.driver.window_handles[0]
+            print("'Piles Laser Treatment'  is been Searched successfully")
 
 
             #assert "HexaHealth" in self.driver.title

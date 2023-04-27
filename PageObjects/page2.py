@@ -32,7 +32,7 @@ class CityHospitalClass:
             BookAppointmentButton = self.driver.find_element(By.XPATH, "//a[@class='link-appointment']").click()
             self.driver.implicitly_wait(5)
             self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Patient Name")
-            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
+            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("9000000100")
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
@@ -78,7 +78,7 @@ class CityHospitalClass:
         BookAppointmentButton = self.driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/div[2]/div/div[1]/div[1]/div[3]/a[2]/span").click()
         self.driver.implicitly_wait(5)
         self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Patient Name")
-        self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
+        self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("9000000100")
 
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
         drop1 = Select(BengaluruCity)
@@ -117,7 +117,7 @@ class CityHospitalClass:
         # BookAppointmentButton = self.driver.find_element(By.XPATH,"/html/body/div[1]/div[3]/div[2]/div/div[1]/div[1]/div[3]/a[2]/span").click()
         # self.driver.implicitly_wait(5)
         self.driver.find_element(By.XPATH, "//*[@id='leadnamehome']").send_keys("Test GJ Patient Name")
-        self.driver.find_element(By.XPATH, "//*[@id='contactnumhome']").send_keys("1000000100")
+        self.driver.find_element(By.XPATH, "//*[@id='contactnumhome']").send_keys("9000000100")
 
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity1']")
         drop1 = Select(BengaluruCity)

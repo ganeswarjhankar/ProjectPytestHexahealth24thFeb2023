@@ -1,7 +1,7 @@
 # conftest.py
 import pytest
 from selenium import webdriver
-#import requests
+# import requests
 
 
 from selenium.webdriver.chrome.service import Service
@@ -32,7 +32,7 @@ from PageObjects.page5 import ConditionClass
 from PageObjects.page6 import TreatmentClass
 from PageObjects.page7 import HexaHomepageClass
 from PageObjects.page8 import ContactUsPage
-from PageObjects.page9 import BlogPage
+
 
 
 def pytest_addoption(parser):
@@ -41,14 +41,14 @@ def pytest_addoption(parser):
     )
 
 
-
 @pytest.fixture
 def driver(request):
     browser_name = request.config.getoption("browser_name")
-    S = Service ("D:\\chromedriver.exe")
+    S = Service("D:\\chromedriver.exe")
     driver = webdriver.Chrome(service=S)
     yield driver
     driver.quit()
+
 
 @pytest.fixture
 def city_doctor(driver):
@@ -56,17 +56,20 @@ def city_doctor(driver):
     page.open()
     return page
 
+
 @pytest.fixture
 def city_hospital(driver):
     page = CityHospitalClass(driver)
     page.open()
     return page
 
+
 @pytest.fixture
 def doctor_page(driver):
     page = DoctorClass(driver)
     page.open()
     return page
+
 
 @pytest.fixture
 def search_page(driver):
@@ -103,99 +106,99 @@ def ContactUs_page(driver):
     return page
 
 
+# test_url9
 
-
-
-#test_url9
 
 @pytest.fixture
 def Blog_page(driver):
-    page = BlogPage(driver)
-    page.open()
-    return page
-
-#test_url10
-@pytest.fixture
-def ProcedureCostIndia_page(driver):
-    page = ProcedureCostIndiaPage(driver)
+    page = BlogClass(driver)
     page.open()
     return page
 
 
-#test_url11
-@pytest.fixture
-def ProcedureCostCity_page(driver):
-    page = ProcedureCostCityPage(driver)
-    page.open()
-    return page
+# test_url10
+# @pytest.fixture
+# def ProcedureCostIndia_page(driver):
+#    page = ProcedureCostIndiaPage(driver)
+#    page.open()
+#    return page
 
 
+# test_url11
+# @pytest.fixture
+# def ProcedureCostCity_page(driver):
+#    page = ProcedureCostCityPage(driver)
+#    page.open()
+#    return page
 
-#Test_url_20
+
+# Test_url_20
 @pytest.fixture
 def costMarketing_URL(driver):
     page = MarketingCostClass(driver)
     page.open()
-    #page.costVariant()
+    # page.costVariant()
     return page
 
-#Test_url_21
+
+# Test_url_21
 
 @pytest.fixture
 def hospitalMarketing_URl(driver):
     page = MarketingHospitalClass(driver)
     page.open()
 
-    #page.HospitalVariant()
+    # page.HospitalVariant()
     return page
 
 
-#Test_url_22
+# Test_url_22
 @pytest.fixture
 def doctorMarketing_URl(driver):
     page = MarketingDoctorClass(driver)
     page.open()
-    #page.DoctorVariant()
+    # page.DoctorVariant()
     return page
 
 
-#Test_url_23
+# Test_url_23
 @pytest.fixture
 def marketingNormal_URl(driver):
     page = MarketingNormalClass(driver)
     page.open()
-    #page.MarketingNormalForm1()
-####    page.CalculateSurgeryCost()
-####    page.CheckInsuranceCoverage()
+    # page.MarketingNormalForm1()
+    ####    page.CalculateSurgeryCost()
+    ####    page.CheckInsuranceCoverage()
     return page
 
 
-#test_Url_24
+# test_Url_24
 
 @pytest.fixture
 def marketingNormalSurgeryClass_URL(driver):
     page = MarketingNormalSurgeryClass(driver)
     page.open()
-    #page.CalculateSurgeryCost()
+    # page.CalculateSurgeryCost()
     return page
 
 
-
-#test_url25
+# test_url25
 @pytest.fixture
 def marketingboard_url(driver):
     page = Marketing_Board_Class(driver)
     page.open()
     return page
 
-#test_url26
+
+# test_url26
 @pytest.fixture
 def marketingbrand_url(driver):
-    page =Marketing_Brand_Class(driver)
+    page = Marketing_Brand_Class(driver)
     page.open()
     return page
 
-#test_url27
+
+# test_url27
 @pytest.fixture
 def marketingCallPrimary_url(driver):
     page = Marketing_CallPrimary_Class(driver)
@@ -203,22 +206,23 @@ def marketingCallPrimary_url(driver):
     return page
 
 
-#test_url28
+# test_url28
 @pytest.fixture
 def marketingwhatsapp_url(driver):
     page = Marketing_WhatsApp_Class(driver)
     page.open()
     return page
 
-#test_url29=20
-#@pytest.fixture
-#def marketingCost_URL(driver):
+
+# test_url29=20
+# @pytest.fixture
+# def marketingCost_URL(driver):
 #    page=marketing_Cost_Class(driver)
 #    page.open()
 #    return page
 
 
-#test_url30
+# test_url30
 @pytest.fixture
 def marketingdisplay_url(driver):
     page = Marketing_Display_Class(driver)
@@ -227,7 +231,9 @@ def marketingdisplay_url(driver):
 
 
 """The website is not in working condition """
-#test_url31
+
+
+# test_url31
 @pytest.fixture
 def marketingIndex_URL(driver):
     page = marketing_Index_Class(driver)
@@ -235,7 +241,7 @@ def marketingIndex_URL(driver):
     return page
 
 
-#test_url32
+# test_url32
 @pytest.fixture
 def marketingonlyform_url(driver):
     page = marketing_OnlyForm_Class(driver)
@@ -243,7 +249,7 @@ def marketingonlyform_url(driver):
     return page
 
 
-#test_url 33
+# test_url 33
 @pytest.fixture
 def marketingPDF_URL(driver):
     page = marketing_pdf_Class(driver)
@@ -251,7 +257,7 @@ def marketingPDF_URL(driver):
     return page
 
 
-#test_url34
+# test_url34
 @pytest.fixture
 def marketingpilot_url(driver):
     page = marketing_pilot_Class(driver)
@@ -259,7 +265,7 @@ def marketingpilot_url(driver):
     return page
 
 
-#test_url35
+# test_url35
 @pytest.fixture
 def marketingremark_url(driver):
     page = Marketing_Remark_Class(driver)
@@ -267,17 +273,12 @@ def marketingremark_url(driver):
     return page
 
 
-
-
-#test_url36
+# test_url36
 @pytest.fixture
 def marketingtopsticky_url(driver):
     page = marketing_TopSticky_Class(driver)
     page.open()
     return page
-
-
-
 
 
 @pytest.hookimpl(hookwrapper=True)
@@ -305,10 +306,3 @@ def pytest_runtest_makereport(item):
 
 def _capture_screenshot(driver, name):
     driver.get_screenshot_as_file(name)
-
-
-
-
-
-
-

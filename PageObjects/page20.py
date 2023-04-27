@@ -33,7 +33,7 @@ class MarketingCostClass:
                 radio_button.click()
 
                 contact_num = wait.until(EC.presence_of_element_located((By.ID, 'contactnumhomem')))
-                contact_num.send_keys("1000000100")
+                contact_num.send_keys("9000000100")
 
                 submit_button = wait.until(EC.presence_of_element_located((By.ID, 'LeadSubmitCostPageMaster')))
                 submit_button.click()

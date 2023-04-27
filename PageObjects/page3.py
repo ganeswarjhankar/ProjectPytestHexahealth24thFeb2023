@@ -30,7 +30,7 @@ class DoctorClass:
             self.driver.implicitly_wait(2)
             self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("test GJ ")
             self.driver.implicitly_wait(2)
-            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("1000000100")
+            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("9000000100")
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
@@ -97,7 +97,7 @@ class DoctorClass:
             # Wait for contact number field to be clickable
             contact_number_field = WebDriverWait(self.driver, 10).until(
                 EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnumdoctor2']")))
-            contact_number_field.send_keys("1000000100")
+            contact_number_field.send_keys("9000000100")
 
             # Wait for treatment condition field to be clickable
             treatment_condition_field = WebDriverWait(self.driver, 10).until(
@@ -158,7 +158,7 @@ class DoctorClass:
             # Wait for the contact number field to be visible and send keys
             contact_field = WebDriverWait(self.driver, 10).until(
                 EC.visibility_of_element_located((By.XPATH, "//*[@id='contactnumdoctor2']")))
-            contact_field.send_keys("1000000100")
+            contact_field.send_keys("9000000100")
 
             # Wait for the treatment condition field to be visible and send keys
             treatment_field = WebDriverWait(self.driver, 10).until(
@@ -219,7 +219,7 @@ class DoctorClass:
             # self.driver.find_element(By.XPATH, "//*[@id='leadSubmitDoctor']")
             # self.driver.execute_script("arguments[0].click();", NameTextBox)
 
-            self.driver.find_element(By.XPATH, "//*[@id='contactnumhome']").send_keys("1000000100")
+            self.driver.find_element(By.XPATH, "//*[@id='contactnumhome']").send_keys("9000000100")
             self.driver.implicitly_wait(2)
 
             self.driver.find_element(By.XPATH, "//*[@id='treatmentcondition']").send_keys("Mastectomy")

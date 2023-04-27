@@ -253,27 +253,27 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 17-Apr-2023 at 10:52:53 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 27-Apr-2023 at 10:43:01 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
         <td>BUILD_ID</td>
-        <td>136</td></tr>
+        <td>147</td></tr>
       <tr>
         <td>BUILD_NUMBER</td>
-        <td>136</td></tr>
+        <td>147</td></tr>
       <tr>
         <td>BUILD_TAG</td>
-        <td>jenkins-Pytestdemo2-136</td></tr>
+        <td>jenkins-Pytestdemo2-147</td></tr>
       <tr>
         <td>BUILD_URL</td>
-        <td><a href="http://localhost:8080/job/Pytestdemo2/136/" target="_blank">http://localhost:8080/job/Pytestdemo2/136/</a></td></tr>
+        <td><a href="http://localhost:8080/job/Pytestdemo2/147/" target="_blank">http://localhost:8080/job/Pytestdemo2/147/</a></td></tr>
       <tr>
         <td>CI</td>
         <td>true</td></tr>
       <tr>
         <td>EXECUTOR_NUMBER</td>
-        <td>0</td></tr>
+        <td>1</td></tr>
       <tr>
         <td>JENKINS_URL</td>
         <td><a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a></td></tr>
@@ -299,8 +299,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>WORKSPACE</td>
         <td>C:\Users\91928\PycharmProjects\PythonSeleniumFramework-master</td></tr></table>
     <h2>Summary</h2>
-    <p>0 tests ran in 9.02 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>42 tests ran in 797.44 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">42 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">6 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">2 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -310,4 +310,618 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable" col="duration">Duration</th>
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
-          <th colspan="4">No results found. Try to check the filters</th></tr></thead></table></body></html>
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">TestPackage/test_blog_page_url1.py::test_blog_page::setup</td>
+          <td class="col-duration">4.77</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div><div><img src="TestPackage/test_blog_page_url1.py_test_blog_page.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">file C:\Users\91928\PycharmProjects\PythonSeleniumFramework-master\TestPackage\test_blog_page_url1.py, line 7<br/>  def test_blog_page(driver, blog_page):<br/><span class="error">E       fixture &#x27;blog_page&#x27; not found</span><br/>&gt;       available fixtures: Blog_page, ContactUs_page, anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, city_doctor, city_hospital, condition_page, costMarketing_URL, doctest_namespace, doctorMarketing_URl, doctor_page, driver, extra, home_page, hospitalMarketing_URl, include_metadata_in_junit_xml, marketingCallPrimary_url, marketingIndex_URL, marketingNormalSurgeryClass_URL, marketingNormal_URl, marketingPDF_URL, marketingboard_url, marketingbrand_url, marketingdisplay_url, marketingonlyform_url, marketingpilot_url, marketingremark_url, marketingtopsticky_url, marketingwhatsapp_url, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, search_page, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, treatment_page<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Users\91928\PycharmProjects\PythonSeleniumFramework-master\TestPackage\test_blog_page_url1.py:7<br/></div></td></tr></tbody>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">TestPackage/test_blog_page_url2.py::test_condition_page::setup</td>
+          <td class="col-duration">4.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div><div><img src="TestPackage/test_blog_page_url2.py_test_condition_page.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">file C:\Users\91928\PycharmProjects\PythonSeleniumFramework-master\TestPackage\test_blog_page_url2.py, line 8<br/>  def test_condition_page(driver, blog_page):<br/><span class="error">E       fixture &#x27;blog_page&#x27; not found</span><br/>&gt;       available fixtures: Blog_page, ContactUs_page, anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, city_doctor, city_hospital, condition_page, costMarketing_URL, doctest_namespace, doctorMarketing_URl, doctor_page, driver, extra, home_page, hospitalMarketing_URl, include_metadata_in_junit_xml, marketingCallPrimary_url, marketingIndex_URL, marketingNormalSurgeryClass_URL, marketingNormal_URl, marketingPDF_URL, marketingboard_url, marketingbrand_url, marketingdisplay_url, marketingonlyform_url, marketingpilot_url, marketingremark_url, marketingtopsticky_url, marketingwhatsapp_url, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, search_page, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, treatment_page<br/>&gt;       use &#x27;pytest --fixtures [testpath]&#x27; for help on them.<br/><br/>C:\Users\91928\PycharmProjects\PythonSeleniumFramework-master\TestPackage\test_blog_page_url2.py:8<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">TestPackage/test_blog_page_url3.py::test_condition_page</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;C:\\Users\\91928\\PycharmProjects\\PythonSeleniumFramework-master\\TestPackage\\test_blog_page_url3.py&#x27;, 4, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">TestPackage/test_blog_page_url4.py::test_condition_page</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;C:\\Users\\91928\\PycharmProjects\\PythonSeleniumFramework-master\\TestPackage\\test_blog_page_url4.py&#x27;, 4, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">TestPackage/test_blog_page_url5.py::test_condition_page</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;C:\\Users\\91928\\PycharmProjects\\PythonSeleniumFramework-master\\TestPackage\\test_blog_page_url5.py&#x27;, 6, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">TestPackage/test_blog_page_url6.py::test_condition_page</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;C:\\Users\\91928\\PycharmProjects\\PythonSeleniumFramework-master\\TestPackage\\test_blog_page_url6.py&#x27;, 6, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">TestPackage/test_url24.py::test_MarketingNormalSurgeryClass_URL</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;C:\\Users\\91928\\PycharmProjects\\PythonSeleniumFramework-master\\TestPackage\\test_url24.py&#x27;, 9, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td class="col-name">TestPackage/test_url31.py::test_marketing_Index</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;C:\\Users\\91928\\PycharmProjects\\PythonSeleniumFramework-master\\TestPackage\\test_url31.py&#x27;, 6, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_ContactUs_page_url1.py::test_ContactUs_page</td>
+          <td class="col-duration">16.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_ContactUs_page_url2.py::test_ContactUs_page</td>
+          <td class="col-duration">11.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hi, I want to book an appointment with a cardiologist doctor specialityid=147 Tier-ID=1
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi%2C+I+want+to+book+an+appointment+with+a+cardiologist+doctor+specialityid%3D147+Tier-ID%3D1&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_city_doctor_url1.py::test_city_doctor</td>
+          <td class="col-duration">13.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead Is Generated
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_city_doctor_url2.py::test_city_doctor</td>
+          <td class="col-duration">13.57</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead Is Generated
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_city_doctor_url3.py::test_city_doctor</td>
+          <td class="col-duration">11.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead Is Generated
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_city_hospital_dept2_test_url1.py::test_city_hospital_dept2_test</td>
+          <td class="col-duration">12.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_city_hospital_dept2_test_url2.py::test_city_hospital_dept2_test</td>
+          <td class="col-duration">13.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_city_hospital_dept2_test_url3.py::test_city_hospital_dept2_test</td>
+          <td class="col-duration">12.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_condition_page_url1.py::test_condition_page</td>
+          <td class="col-duration">12.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_condition_page_url2.py::test_condition_page</td>
+          <td class="col-duration">12.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_condition_page_url3.py::test_condition_page</td>
+          <td class="col-duration">10.85</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_condition_page_url4.py::test_condition_page</td>
+          <td class="col-duration">16.44</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_condition_page_url5.py::test_condition_page</td>
+          <td class="col-duration">12.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_doctor_page_url1.py::test_doctor_page</td>
+          <td class="col-duration">13.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+BookAppointmentForm1 is created Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_doctor_page_url2.py::test_doctor_page</td>
+          <td class="col-duration">11.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_doctor_page_url3.py::test_doctor_page</td>
+          <td class="col-duration">12.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_doctor_page_url4.py::test_doctor_page</td>
+          <td class="col-duration">11.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_home_page_url1.py::test_home_page</td>
+          <td class="col-duration">16.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_home_page_url2.py::test_home_page</td>
+          <td class="col-duration">15.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hi, I want to connect with HexaHealth Care Expert
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi%2C+I+want+to+connect+with+HexaHealth+Care+Expert&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_search_page_url1.py::test_search_page</td>
+          <td class="col-duration">12.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Doctor Search is Working successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_search_page_url2.py::test_search_page</td>
+          <td class="col-duration">13.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hospital Apollo is been Searched successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_search_page_url3.py::test_search_page</td>
+          <td class="col-duration">13.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_search_page_url4.py::test_search_page</td>
+          <td class="col-duration">11.94</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Condition as GallStones  is been Searched successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_treatment_page_url1.py::test_treatment_page</td>
+          <td class="col-duration">14.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_treatment_page_url2.py::test_treatment_page</td>
+          <td class="col-duration">15.84</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>NABHAccreditedHospitals Form is Passed
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_treatment_page_url3.py::test_treatment_page</td>
+          <td class="col-duration">16.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_treatment_page_url4.py::test_treatment_page</td>
+          <td class="col-duration">13.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_treatment_page_url5.py::test_treatment_page</td>
+          <td class="col-duration">18.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>The Expert Doctor form is passed
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url20.py::test_Marketing_Cost_data</td>
+          <td class="col-duration">19.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/cost/circumcision-bangalore&#x27;]
+passed Lead is Generated
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/cost/liver-transplant-india&#x27;]
+passed Lead is Generated
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url21.py::test_HospitalMarketing_URl</td>
+          <td class="col-duration">18.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/phimosis-delhincr?city=Delhi&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/lasik-delhi?city=Delhi+NCR&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://hexahealth.com/campaigns/mtp.html?city=Mumbai&#x27;]
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url22.py::test_DoctorMarketing_URl</td>
+          <td class="col-duration">15.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/doctor/mtp-bangalore&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/doctor/laparoscopic-gallstones-bangalore&#x27;]
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url23.py::test_MarketingNormal_URl</td>
+          <td class="col-duration">18.59</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/hymenoplasty-bangalore&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/laparoscopic-gallstones-bangalore&#x27;]
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url25.py::test_marketing_board_form1</td>
+          <td class="col-duration">18.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/board/tummy-tuck-mumbai&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/board/laser-piles-bangalore&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/board/laser-fissure-bangalore&#x27;]
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url26.py::test_marketing_brand_url</td>
+          <td class="col-duration">7.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/brand/hexa&#x27;]
+Except Block-Lead failed to Generate
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url27.py::test_marketing_callPrimary</td>
+          <td class="col-duration">19.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/callprimary/laser-fistula-bangalore&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/callprimary/hymenoplasty-bangalore&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/callprimary/mtp-bangalore&#x27;]
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url28.py::test_marketing_WhatsApp</td>
+          <td class="col-duration">16.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/callwhatsapp/laser-fistula-bangalore&#x27;]
+Hi HexaHealth, I want to know about Fistula
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fistula&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+[&#x27;https://www.hexahealth.com/marketing/callwhatsapp/tummy-tuck-mumbai&#x27;]
+Hi HexaHealth, I want to know about TummyTuck
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+TummyTuck&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+[&#x27;https://www.hexahealth.com/marketing/callwhatsapp/lasik-bangalore&#x27;]
+Hi HexaHealth, I want to know about Lasik
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Lasik&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url30.py::test_marketing_Display</td>
+          <td class="col-duration">16.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/display/laser-fissure-bangalore&#x27;]
+Hi HexaHealth, I want to know about Fissure
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fissure&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+[&#x27;https://www.hexahealth.com/marketing/display/lasik-bangalore&#x27;]
+Hi HexaHealth, I want to know about Lasik
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Lasik&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+[&#x27;https://www.hexahealth.com/marketing/display/mtp-bangalore&#x27;]
+Hi HexaHealth, I want to know about MTP
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+MTP&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url32.py::test_marketing_onlyform</td>
+          <td class="col-duration">15.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/onlyform/laser-fistula-bangalore&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/onlyform/lasik-bangalore&#x27;]
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url33.py::test_marketing_pdf</td>
+          <td class="col-duration">7.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/pdf/laser-piles-bangalore&#x27;]
+Except Block-Lead failed to Generate
+[&#x27;https://www.hexahealth.com/marketing/pdf/laser-fistula-bangalore&#x27;]
+Except Block-Lead failed to Generate
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url34.py::test_marketing_pilot_url</td>
+          <td class="col-duration">16.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/pilot/laser-piles-bangalore&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/pilot/lasik-bangalore&#x27;]
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url35.py::test_marketing_remark_url</td>
+          <td class="col-duration">15.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/remarks/laser-vaginal-tightening-bangalore&#x27;]
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/remarks/mtp-bangalore&#x27;]
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url36.py::test_marketing_topsticky_url</td>
+          <td class="col-duration">22.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/topsticky/tummy-tuck-mumbai&#x27;]
+Hi HexaHealth, I want to know about TummyTuck
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+TummyTuck&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+True
+Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/topsticky/laparoscopic-gallstones-bangalore&#x27;]
+Hi HexaHealth, I want to know about Gallstones
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Gallstones&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody></table></body></html>

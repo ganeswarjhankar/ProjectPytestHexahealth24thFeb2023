@@ -49,7 +49,7 @@ class Marketing_Remark_Class:
                 # self.driver.implicitly_wait(2)
 
                 contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='contactnum5']")))
-                contact_name.send_keys("1000000100")
+                contact_name.send_keys("9000000100")
 
                 query_name = wait.until(EC.presence_of_element_located((By.XPATH, "//textarea[@id='querymsg']")))
                 query_name.send_keys("Test Query")
