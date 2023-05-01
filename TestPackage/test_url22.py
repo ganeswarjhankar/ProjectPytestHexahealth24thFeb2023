@@ -12,7 +12,7 @@ import pytest
 #from page_objects import ContactUsPage
 
 
-def test_DoctorMarketing_URl(driver,doctorMarketing_URl):
+def test_Doctor_Marketing_Variant(driver,doctorMarketing_URl):
     doctorMarketing_URl.DoctorVariant()
 
 

@@ -4,8 +4,8 @@
 
 import pytest
 
-pytest.mark.skip
-def test_condition_page(driver, blog_page):
 
-    blog_page.NABHAccreditedHospitals()
+def test_Blog_NABHAccreditedHospitals(driver, Blog_page):
+
+    Blog_page.NABHAccreditedHospitals()
 

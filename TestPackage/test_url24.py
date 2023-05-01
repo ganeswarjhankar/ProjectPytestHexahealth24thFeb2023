@@ -6,17 +6,15 @@
 #    multi_Marketing_url.CostMarketingmethod()
 
 import pytest
-@pytest.mark.skip
-def test_MarketingNormalSurgeryClass_URL(driver,marketingNormalSurgeryClass_URL):
+
+
+def test_SurgeryCost_marketing(driver,marketingNormalSurgeryClass_URL):
     marketingNormalSurgeryClass_URL.CalculateSurgeryCost()
 
-##    #MarketingNormalSurgeryClass_URL.MarketingNormalForm1()
-
-    #marketingNormalSurgeryClass_URL.CheckInsuranceCoverage()
 
 
 
-    # process the data and perform the contact us action
+
 
 
 

@@ -32,7 +32,7 @@ from PageObjects.page5 import ConditionClass
 from PageObjects.page6 import TreatmentClass
 from PageObjects.page7 import HexaHomepageClass
 from PageObjects.page8 import ContactUsPage
-
+from PageObjects.page9 import BlogClass
 
 
 def pytest_addoption(parser):

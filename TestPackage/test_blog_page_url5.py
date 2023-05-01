@@ -3,7 +3,7 @@
 import pytest
 
 
-@pytest.mark.skip
-def test_condition_page(driver, blog_page):
-    blog_page.Contactwhatsaap()
+
+def test_Blog_ContactUsWhatsapp(driver, Blog_page):
+    Blog_page.ContactUsWhatsapp()
 

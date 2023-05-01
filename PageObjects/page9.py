@@ -1,6 +1,8 @@
 # page_objects.py
 from utilities import constants
 
+import urllib.request
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -24,9 +26,9 @@ class BlogClass:
         self.driver = driver
 
     def open(self):
-        self.driver.get(constants.ConditionPage_URL)
+        self.driver.get(constants.BlogPage_URL)
 
-    def BookAppointmentForm1(self):
+    def BookAppointmentForm12(self):
         # self.driver.get("https://www.hexahealth.com/blog/best-age-to-get-pregnant")
         try:
 
@@ -56,7 +58,7 @@ class BlogClass:
 
 
 
-            submit_button_xpath = wait.until(EC.element_to_be_clickable((By.XPATH, "//textarea[@id='leadquery']")))
+            submit_button_xpath = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='LeadSubmitNewHome']")))
             submit_button_xpath.click()
 
             #self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']").click()
@@ -98,11 +100,11 @@ class BlogClass:
 
             self.driver.implicitly_wait(2)
 
-            one = self.driver.find_element(By.XPATH, "//*[@id='slick-slide-control20']")
+            one = self.driver.find_element(By.XPATH, "//*[@id='slick-slide-control51']")
             self.driver.execute_script("arguments[0].click();", one)
             self.driver.implicitly_wait(2)
-            two = self.driver.find_element(By.XPATH, "//*[@id='slick-slide21']/div[1]/div/div[2]/a[2]/span")
-            self.driver.execute_script("arguments[0].click();", two)
+            Two_Book_Button = self.driver.find_element(By.XPATH, "//*[@id='slick-slide51']/div[1]/div/div[2]/a[2]/span")
+            self.driver.execute_script("arguments[0].click();", Two_Book_Button)
             self.driver.implicitly_wait(2)
 
             #self.driver.find_element(By.XPATH, "//*[@id='leadnamehome1']").send_keys("Gj Test check")
@@ -110,20 +112,27 @@ class BlogClass:
 
             wait = WebDriverWait(self.driver, 10)
 
-            lead_name_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadnamehome1']")))
+            lead_name_xpath = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='leadname2']")))
             lead_name_xpath.send_keys("Test Lead patient name")
 
 
 
-            contact_num = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnumhome1']")))
-            contact_num.send_keys("1000000100")
+            contact_num = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnum2']")))
+            contact_num.send_keys("9000000100")
 
             #self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("1000000100")
             # self.driver.implicitly_wait(2)
 
-            BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome1']")
+            BengaluruCity = self.driver.find_element(By.XPATH, "//*[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
             drop1.select_by_visible_text("Bengaluru")
+
+            Treatment_xpath = self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']")
+            drop1 = Select(Treatment_xpath)
+            drop1.select_by_visible_text("Yoga")
+
+            query_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadquery']")))
+            query_xpath.send_keys("Query Test")
 
             # self.driver.find_element(By.XPATH, "//*[@id='leadcity2']").send_keys("Gurugram")
             # self.driver.implicitly_wait(2)
@@ -131,7 +140,7 @@ class BlogClass:
             # self.driver.implicitly_wait(2)
             # self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test check")
             # self.driver.implicitly_wait(2)
-            Button = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitCondition1']")
+            Button = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']")
             self.driver.execute_script("arguments[0].click();", Button)
             try:
 
@@ -165,34 +174,54 @@ class BlogClass:
 
 
 
-    def ConditionExpertDoctors(self):
+    def BlogExpertDoctors(self):
         # self.driver.get("https://www.hexahealth.com/condition/piles")
 
         try:
             self.driver.maximize_window()
             self.driver.implicitly_wait(5)
-            OneSlide = self.driver.find_element(By.XPATH, "//*[@id='slick-slide-control10']")
+            OneSlide = self.driver.find_element(By.XPATH, "//*[@id='slick-slide-control41']")
             self.driver.execute_script("arguments[0].click();", OneSlide)
             self.driver.implicitly_wait(2)
-            BookApButton = self.driver.find_element(By.XPATH, "//*[@id='slick-slide10']/div[1]/div/div[2]/a[2]/span")
+            BookApButton = self.driver.find_element(By.XPATH, "//*[@id='slick-slide41']/div[1]/div/div[2]/a[2]/span")
             self.driver.execute_script("arguments[0].click();", BookApButton)
             self.driver.implicitly_wait(2)
 
-            self.driver.find_element(By.XPATH, "//*[@id='leadnamehome1']").send_keys("Test GJ XYZ")
+            wait = WebDriverWait(self.driver, 10)
 
-            contact_num = WebDriverWait(self.driver, 20).until(
-                EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnumhome1']")))
-            contact_num.send_keys("1000000100")
+            lead_name_xpath = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='leadname2']")))
+            lead_name_xpath.send_keys("Test Lead patient name")
 
-           # self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("1000000100")
+            contact_num = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnum2']")))
+            contact_num.send_keys("9000000100")
 
-            BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome1']")
+            # self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("1000000100")
+            # self.driver.implicitly_wait(2)
+
+            BengaluruCity = self.driver.find_element(By.XPATH, "//*[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
             drop1.select_by_visible_text("Bengaluru")
 
-            self.driver.implicitly_wait(2)
-            BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitCondition1']")
-            self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)
+            Treatment_xpath = self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']")
+            drop1 = Select(Treatment_xpath)
+            drop1.select_by_visible_text("Yoga")
+
+            query_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadquery']")))
+            query_xpath.send_keys("Query Test")
+
+            # self.driver.find_element(By.XPATH, "//*[@id='leadcity2']").send_keys("Gurugram")
+            # self.driver.implicitly_wait(2)
+            # self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']").send_keys("Tips Procedure")
+            # self.driver.implicitly_wait(2)
+            # self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test check")
+            # self.driver.implicitly_wait(2)
+            Button = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']")
+            self.driver.execute_script("arguments[0].click();", Button)
+
+
+
+
+
             # Lead4 in CRM
             try:
 
@@ -233,30 +262,41 @@ class BlogClass:
             self.driver.implicitly_wait(5)
             self.driver.refresh()
             self.driver.implicitly_wait(2)
-            BookApButton = self.driver.find_element(By.XPATH, "//*[@id='slick-slide10']/div[1]/div/div[2]/a[2]")
+            BookApButton = self.driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/div/a")
             self.driver.execute_script("arguments[0].click();", BookApButton)
-            self.driver.implicitly_wait(2)
 
-            lead_field = WebDriverWait(self.driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, "//*[@id='leadnamehome1']")))
-            lead_field.send_keys("Test GJ Treatment ")
-            contact_field = WebDriverWait(self.driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnumhome1']")))
-            contact_field.send_keys("1000000100")
+            wait = WebDriverWait(self.driver, 10)
 
-            # self.driver.find_element(By.XPATH, "//*[@id='leadnamehome1']").send_keys("Test GJ Treatment ")
-            # self.driver.implicitly_wait(2)
+            lead_name_xpath = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='leadname2']")))
+            lead_name_xpath.send_keys("Test Lead patient name")
+
+            contact_num = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnum2']")))
+            contact_num.send_keys("9000000100")
+
             # self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("1000000100")
             # self.driver.implicitly_wait(2)
 
-            BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome1']")
+            BengaluruCity = self.driver.find_element(By.XPATH, "//*[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
             drop1.select_by_visible_text("Bengaluru")
 
-            BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitCondition1']")
-            self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)
-            # Lead4 in CRM
-            self.driver.implicitly_wait(2)
+            Treatment_xpath = self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']")
+            drop1 = Select(Treatment_xpath)
+            drop1.select_by_visible_text("Yoga")
+
+            query_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadquery']")))
+            query_xpath.send_keys("Query Test")
+
+            # self.driver.find_element(By.XPATH, "//*[@id='leadcity2']").send_keys("Gurugram")
+            # self.driver.implicitly_wait(2)
+            # self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']").send_keys("Tips Procedure")
+            # self.driver.implicitly_wait(2)
+            # self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test check")
+            # self.driver.implicitly_wait(2)
+            Button = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']")
+            self.driver.execute_script("arguments[0].click();", Button)
+
+
 
             try:
 
@@ -294,6 +334,7 @@ class BlogClass:
         # self.driver.get("https://www.hexahealth.com/treatment/piles-stapler-surgery")
 
         try:
+            wait = WebDriverWait(self.driver, 10)
             self.driver.maximize_window()
 
             self.driver.implicitly_wait(2)
@@ -302,17 +343,39 @@ class BlogClass:
             # self.driver.implicitly_wait(2)
 
             self.driver.implicitly_wait(2)
-            self.driver.find_element(By.XPATH, "//*[@id='leadnamehome']").send_keys("Test GJ Treatment ")
-            self.driver.implicitly_wait(2)
-            self.driver.find_element(By.XPATH, "//*[@id='contactnumhome']").send_keys("1000000100")
-            self.driver.implicitly_wait(2)
 
-            BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome']")
+            lead_name_xpath = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='leadnamehome']")))
+            lead_name_xpath.send_keys("Test Lead patient name")
+
+            contact_num = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='contactnumhome']")))
+            contact_num.send_keys("9000000100")
+
+            # self.driver.find_element(By.XPATH, "//*[@id='contactnumhome1']").send_keys("1000000100")
+            # self.driver.implicitly_wait(2)
+
+            BengaluruCity = self.driver.find_element(By.XPATH, "//*[@id='leadcity1']")
             drop1 = Select(BengaluruCity)
             drop1.select_by_visible_text("Bengaluru")
 
-            BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitCondition']")
-            self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)
+            Treatment_xpath = self.driver.find_element(By.XPATH, "//*[@id='treamentcondition']")
+            drop1 = Select(Treatment_xpath)
+            drop1.select_by_visible_text("Yoga")
+
+            #query_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadquery']")))
+            #query_xpath.send_keys("Query Test")
+
+            # self.driver.find_element(By.XPATH, "//*[@id='leadcity2']").send_keys("Gurugram")
+            # self.driver.implicitly_wait(2)
+            # self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']").send_keys("Tips Procedure")
+            # self.driver.implicitly_wait(2)
+            # self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test check")
+            # self.driver.implicitly_wait(2)
+            Button = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitBlog']")
+            self.driver.execute_script("arguments[0].click();", Button)
+
+
+
+
             # Lead4 in CRM
             try:
 
@@ -335,3 +398,39 @@ class BlogClass:
         except NoSuchElementException:
 
             print("Message: no such element: Unable to locate element")
+
+
+
+
+
+    def ContactUsWhatsapp(self):
+
+        # self.driver.get("https://www.hexahealth.com")
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(5)
+        self.driver.find_element(By.XPATH, "//*[@id='whtsapHeaderBtn']").click()
+        # self.driver.switch_to.window(self.driver.window_handles[2])
+        msg = self.driver.find_element(By.XPATH, "//p[@class='_9vd5']")
+        print(msg.text)
+
+        # Get the current URL
+        current_url = self.driver.current_url
+        print(current_url)
+        # Verify that the current URL contains the expected value
+
+        ######################
+        # import urllib.request
+
+        # current_url = "https://api.example.com"
+
+        if "api." in current_url:
+            try:
+                response = urllib.request.urlopen(current_url)
+                if response.status == 200:
+                    print("Status Code 200 Ok")
+                else:
+                    print("Failed")
+            except urllib.error.URLError as e:
+                print("Failed:", e.reason)
+        else:
+            print("URL does not contain 'api.'")

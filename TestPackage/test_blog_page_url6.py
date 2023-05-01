@@ -3,8 +3,13 @@
 import pytest
 
 
-@pytest.mark.skip
 
-def test_condition_page(driver, blog_page):
 
-    blog_page.BookAppointmentMainForm()
+def test_blog_BookAppointmentMainForm(driver, Blog_page):
+
+    Blog_page.BookAppointmentMainForm()
+
+
+
+
+

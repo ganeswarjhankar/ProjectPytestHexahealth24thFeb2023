@@ -3,6 +3,6 @@
 
 import pytest
 
-pytest.mark.skip
-def test_blog_page(driver, blog_page):
-    blog_page.BookAppointmentForm1()
+
+def test_blog_page(driver, Blog_page):
+    Blog_page.BookAppointmentForm12()

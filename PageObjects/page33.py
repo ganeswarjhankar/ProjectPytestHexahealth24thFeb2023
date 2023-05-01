@@ -45,8 +45,11 @@ class marketing_pdf_Class:
                 contact_num_xpath.send_keys("9000000100")
 
 
-                submit_button_Xpath_new=self.driver.find_element(By.LINK_TEXT,"Download Now")
-                submit_button_Xpath_new.click()
+
+
+                submit_button_Xpath_new=self.driver.find_element(By.XPATH,"//*[@id='LeadSubmitPDF']")
+                self.driver.execute_script("arguments[0].click();", submit_button_Xpath_new)
+
 
 
                 #Submit_Button_Xpath = self.driver.find_element_by_id('my-element')

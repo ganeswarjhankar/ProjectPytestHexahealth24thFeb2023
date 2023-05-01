@@ -1,19 +1,19 @@
+"""Insurance Coverage and Calculate Surgery """
 #def test_multiUrlMarketing_page(driver, multi_Marketing_url):
 #    multi_Marketing_url.DoctorMarketingmethod()
 #    multi_Marketing_url.HospitalMarketingmethod()
 #    multi_Marketing_url.NormalMarketingmethod()
 #    multi_Marketing_url.CostMarketingmethod()
 
+import pytest
 
 
-# test_contact_us.py
-#from page_objects import ContactUsPage
 
-def test_Marketing_Normal(driver,marketingNormal_URl):
+def test_CheckInsurance_marketing(driver,marketingNormalSurgeryClass_URL):
+    marketingNormalSurgeryClass_URL.CheckInsuranceCoverage()
 
-    marketingNormal_URl.MarketingNormalForm1()
-#    marketingNormal_URl.CalculateSurgeryCost()
-#    marketingNormal_URl.CheckInsuranceCoverage()
+
+    #marketingNormalSurgeryClass_URL.CheckInsuranceCoverage()
 
 
 

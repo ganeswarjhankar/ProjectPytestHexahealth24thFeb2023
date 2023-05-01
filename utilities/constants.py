@@ -59,7 +59,7 @@ MarketingNormal_URl = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketing
 SHEET_NORMAL_URL='Sheet1'
 
 #random URl 24
-MARKETING_NORMAL_SURGERY_URL = "https://www.hexahealth.com/marketing/lasik-bangalore"
+MARKETING_NORMAL_SURGERY_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingNormal.xlsx"
 SHEET_NORMAL_SURGERY='Sheet1'
 
 #random URL 24 part

@@ -9,7 +9,7 @@
 # test_contact_us.py
 #from page_objects import ContactUsPage
 
-def test_HospitalMarketing_URl(driver,hospitalMarketing_URl):
+def test_HospitalMarketing_Variant(driver,hospitalMarketing_URl):
 
 
     hospitalMarketing_URl.HospitalVariant()
