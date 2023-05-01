@@ -56,7 +56,7 @@ class Marketing_Brand_Class(BaseClass):
                 contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnumhomem']")))
                 contact_name.send_keys("9000000100")
 
-                gurugram_city=self.driver.find_element((By.XPATH, "//select[@id='leadcitybrand']"))
+                gurugram_city=self.driver.find_element((By.XPATH, "//*[@id='leadcitybrand']"))
                 select_City = Select(gurugram_city)
                 select_City.select_by_visible_text("Gurugram ")
 

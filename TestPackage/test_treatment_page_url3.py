@@ -1,6 +1,6 @@
 
 
-def test_treatment_page(driver, treatment_page):
+def test_treatment_BookAppointmentButton(driver, treatment_page):
 #    treatment_page.BookAppointmentForm1()
 #    treatment_page.NABHAccreditedHospitals()
     treatment_page.BookAppointmentButtonMethod()

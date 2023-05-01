@@ -1,6 +1,6 @@
 ####Ok Tested####
 
-def test_condition_page(driver, condition_page):
+def test_condition_BookAppointmentButtonMethod(driver, condition_page):
 #    condition_page.BookAppointmentForm1()
 #    condition_page.NABHAccreditedHospitals()
 #    condition_page.ConditionExpertDoctors()

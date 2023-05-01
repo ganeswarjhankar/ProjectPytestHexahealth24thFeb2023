@@ -1,4 +1,4 @@
-def test_search_page(driver, search_page):
+def test_search_HospitalPage(driver, search_page):
 #    search_page.Doctormethod()
 #    assert driver.title == "HexaHealth: Surgery Simplified | NABH Hospitals & Top Surgeons"
 #    assert driver.current_url =="https://www.hexahealth.com/"
