@@ -26,6 +26,7 @@ from PageObjects.page33 import marketing_pdf_Class
 from PageObjects.page34 import marketing_pilot_Class
 from PageObjects.page35 import Marketing_Remark_Class
 from PageObjects.page36 import marketing_TopSticky_Class
+from PageObjects.page37_Ayush import marketing_Ayush_Class
 
 from PageObjects.page4 import SearchPage
 from PageObjects.page5 import ConditionClass
@@ -46,8 +47,11 @@ def driver(request):
     browser_name = request.config.getoption("browser_name")
     S = Service("D:\\chromedriver.exe")
     driver = webdriver.Chrome(service=S)
+
     yield driver
     driver.quit()
+
+
 
 
 @pytest.fixture
@@ -281,6 +285,16 @@ def marketingtopsticky_url(driver):
     return page
 
 
+#test_url37
+@pytest.fixture
+def marketingAyush_url(driver):
+    page = marketing_Ayush_Class(driver)
+    page.open()
+    return page
+
+
+
+
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item):
     """
@@ -306,3 +320,9 @@ def pytest_runtest_makereport(item):
 
 def _capture_screenshot(driver, name):
     driver.get_screenshot_as_file(name)
+
+#def _capture_screenshot(driver, name):
+#    try:
+#        driver.get_screenshot_as_file(name)
+#    except Exception as e:
+#        print(f"Error capturing screenshot: {e}")

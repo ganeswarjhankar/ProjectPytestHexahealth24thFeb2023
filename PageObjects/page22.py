@@ -17,9 +17,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException,InvalidArgumentException
 
+from utilities.BaseClass import commonbaseclass
 
 
-class MarketingDoctorClass:
+class MarketingDoctorClass(commonbaseclass):
     def __init__(self, driver):
         self.driver = driver
 
@@ -34,6 +35,7 @@ class MarketingDoctorClass:
         for url in self.urls:
                 self.driver.get(url)
                 print([url])
+                self.verify_whatsapp_PAN() # verify the whatsaap functionality is working properly or not
 
                 try:
 

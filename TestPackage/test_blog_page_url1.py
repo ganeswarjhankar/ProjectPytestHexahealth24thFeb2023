@@ -1,7 +1,3 @@
-####Ok Tested####
-
-
-import pytest
 
 
 def test_blog_page(driver, Blog_page):

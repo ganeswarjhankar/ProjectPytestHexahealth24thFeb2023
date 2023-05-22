@@ -1,10 +1,13 @@
-##OK Tested###
+##OK Tested##
 
 #from utilities.constants import CITYHOSPITAL_URL
 
 
-#def test_city_hospital_dept2_test(driver,city_hospital ):
-#    city_hospital.cityhospitalbookmethod1()
+def test_marketing_ayush(driver,marketingAyush_url ):
+    marketingAyush_url.marketing_ayush_method()
+
+
+
 #    city_hospital.cityhospitallistmethod2()
 #    city_hospital.cityhospitalformmethod3()
 #    form_2.contactuswhatsapp()

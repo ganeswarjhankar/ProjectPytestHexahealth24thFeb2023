@@ -44,7 +44,7 @@ class Marketing_Brand_Class(BaseClass):
 
 
 
-                radio_Yes_button = self.driver.find_element(By.XPATH, "//*[@id='rYes']")
+                radio_Yes_button = self.driver.find_element(By.XPATH, "//*[@id='rNo']")
                 radio_Yes_button.click()
 
                 # lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
@@ -53,19 +53,19 @@ class Marketing_Brand_Class(BaseClass):
                 # self.driver.find_element(By.XPATH, "//input[@id='leadname5']").send_keys("Test GJ Doctor Variant")
                 # self.driver.implicitly_wait(2)
 
-                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='contactnumhomem']")))
+                contact_name = wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='contactnumhomem']")))
                 contact_name.send_keys("9000000100")
 
                 gurugram_city=self.driver.find_element((By.XPATH, "//*[@id='leadcitybrand']"))
                 select_City = Select(gurugram_city)
                 select_City.select_by_visible_text("Gurugram ")
 
-                yoga_text=self.driver.find_element((By.XPATH, "//select[@id='treamentconditionbrand']"))
+                yoga_text=self.driver.find_element((By.XPATH, "//*[@id='treamentconditionbrand']"))
 
                 select_Treatment = Select(yoga_text)
                 select_City.select_by_visible_text("Yoga")
 
-                submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@id='LeadSubmit']")))
+                submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='LeadSubmitbrandPagemaster']")))
                 submit_button.click()
 
                 try:

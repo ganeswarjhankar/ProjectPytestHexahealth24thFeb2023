@@ -22,7 +22,7 @@ class ContactUsPage:
         self.driver = driver
 
     def open(self):
-        self.driver.get(constants.CITYDOCTOR_URL)
+        self.driver.get(constants.ContactUS_URL)
 
 
 
@@ -30,26 +30,28 @@ class ContactUsPage:
 
         try:
 
-            # self.driver.get("https://www.hexahealth.com/delhi/doctors/cardiologist")
+            # self.driver.get("https://www.hexahealth.com/contact-us")
             self.driver.implicitly_wait(5)
             self.driver.maximize_window()
 
-            BookAppointmentButton = self.driver.find_element(By.XPATH, "//a[@class='link-appointment']").click()
-            self.driver.implicitly_wait(5)
-            self.driver.find_element(By.XPATH, "//*[@id='leadname2']").send_keys("Test GJ Patient Name")
-            self.driver.find_element(By.XPATH, "//*[@id='contactnum2']").send_keys("9000000100")
+            #BookAppointmentButton = self.driver.find_element(By.XPATH, "//a[@class='link-appointment']").click()
 
-            BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
-            drop1 = Select(BengaluruCity)
-            drop1.select_by_visible_text("Bengaluru")
+            self.driver.find_element(By.XPATH, "//*[@id='leadnamehome']").send_keys("Test GJ Patient Name")
+            self.driver.find_element(By.XPATH, "//*[@id='contactnumhome']").send_keys("9000000100")
 
-            YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
-            drop2 = Select(YogaTreatment)
-            drop2.select_by_visible_text("Yoga")
+            #BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
+            #drop1 = Select(BengaluruCity)
+            #drop1.select_by_visible_text("Bengaluru")
 
-            self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test For City Doctor")
+            #YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
+            #drop2 = Select(YogaTreatment)
+            #drop2.select_by_visible_text("Yoga")
 
-            self.driver.find_element(By.XPATH, "//button[@id='LeadSubmitNewHome']").click()
+            self.driver.find_element(By.XPATH,"//*[@id='conactEmail']").send_keys("Ganeswar.jhankar@hexahealth.com")
+
+            self.driver.find_element(By.XPATH, "//*[@id='leadqueryhome']").send_keys("Query Test For City Doctor")
+
+            self.driver.find_element(By.XPATH, "//*[@id='leadSubmitContact']").click()
             self.driver.implicitly_wait(2)
 
             try:

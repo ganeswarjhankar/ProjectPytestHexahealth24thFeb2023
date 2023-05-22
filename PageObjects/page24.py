@@ -117,8 +117,6 @@ class MarketingNormalSurgeryClass:
             contact_xpath = wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@id='contactnum2']")))
             contact_xpath.send_keys("9000000100")
 
-            #self.driver.find_element(By.XPATH, "//input[@id='leadname2']").send_keys("Test GJ Normal Marketing ")
-            #self.driver.find_element(By.XPATH, "//input[@id='contactnum2']").send_keys("9000000100")
             self.driver.find_element(By.XPATH, "//button[@id='LeadSubmit2']").click()
 
             try:
@@ -133,5 +131,39 @@ class MarketingNormalSurgeryClass:
             self.driver.refresh()
 
 
+    def ContactUsWhatsapp(self):
 
+        #https://www.hexahealth.com/marketing/kidney-stones-delhincr?city=Delhi+NCR
+
+        # self.driver.get("https://www.hexahealth.com")
+        self.driver.maximize_window()
+        self.driver.implicitly_wait(5)
+
+
+        self.driver.find_element(By.XPATH, "//*[@id='whtsapHeaderBtn']").click()
+        # self.driver.switch_to.window(self.driver.window_handles[2])
+        msg = self.driver.find_element(By.XPATH, "//p[@class='_9vd5']")
+        print(msg.text)
+
+        # Get the current URL
+        current_url = self.driver.current_url
+        print(current_url)
+        # Verify that the current URL contains the expected value
+
+        ######################
+        # import urllib.request
+
+        # current_url = "https://api.example.com"
+
+        if "api." in current_url:
+            try:
+                response = urllib.request.urlopen(current_url)
+                if response.status == 200:
+                    print("Status Code 200 Ok")
+                else:
+                    print("Failed")
+            except urllib.error.URLError as e:
+                print("Failed:", e.reason)
+        else:
+            print("URL does not contain 'api.'")
 

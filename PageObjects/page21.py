@@ -12,8 +12,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
+from utilities.BaseClass import commonbaseclass
 
-class MarketingHospitalClass:
+
+#https://www.hexahealth.com/marketing/labiaplasty-pune?city=Pune
+
+class MarketingHospitalClass(commonbaseclass):
     def __init__(self, driver):
         self.driver = driver
 
@@ -58,8 +62,6 @@ class MarketingHospitalClass:
 
             except:
                 print("Except Block-Lead failed to Generate")
-
-
 
 
 

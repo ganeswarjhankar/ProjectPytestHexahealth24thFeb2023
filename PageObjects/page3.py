@@ -1,4 +1,8 @@
 # page_objects.py
+import time
+
+from selenium.webdriver.support.select import Select
+
 from utilities import constants
 
 from selenium.webdriver.common.by import By
@@ -21,7 +25,7 @@ class DoctorClass:
         self.driver.get(constants.DoctorPage_URl)
 
     def BookAppointmentForm1(self):
-        #self.driver.get("https://www.hexahealth.com/delhi/doctor/dr-aman-priya-khanna-general-surgery")
+        # self.driver.get("https://www.hexahealth.com/delhi/doctor/dr-aman-priya-khanna-general-surgery")
         try:
             self.driver.implicitly_wait(5)
             self.driver.maximize_window()
@@ -43,15 +47,7 @@ class DoctorClass:
             self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Test Query check")
             self.driver.implicitly_wait(2)
 
-
-
-            self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']" ).click()
-
-
-
-
-
-
+            self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']").click()
 
             try:
 
@@ -63,8 +59,8 @@ class DoctorClass:
 
 
             except (TimeoutException, NoSuchElementException):
+                assert False
                 print("failed 2nd Except No Lead Is Generated")
-
 
             self.driver.back()
             self.driver.implicitly_wait(2)
@@ -75,11 +71,6 @@ class DoctorClass:
 
         except NoSuchElementException:
             print("Message: no such element: Unable to locate element")
-
-
-
-
-
 
     def NABHAccreditedHospitals(self):
         try:
@@ -103,6 +94,12 @@ class DoctorClass:
             treatment_condition_field = WebDriverWait(self.driver, 10).until(
                 EC.element_to_be_clickable((By.XPATH, "//*[@id='treamentcondition2']")))
             treatment_condition_field.send_keys("Mastectomy")
+
+            self.driver.implicitly_wait(5)
+
+            Hospital_drop = self.driver.find_element(By.XPATH, "//select[@id='hospitallist2']")
+            drop1 = Select(Hospital_drop)
+            drop1.select_by_index(1)
 
             BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='leadSubmitDoctor2']")
             self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)
@@ -133,14 +130,8 @@ class DoctorClass:
 
             print("Message: no such element: Unable to locate element")
 
-
-
-
-
-
-
     def BookAppointmentButtonMethod(self):
-        #self.driver.get("https://www.hexahealth.com/delhi/doctor/dr-aman-priya-khanna-general-surgery")
+        # self.driver.get("https://www.hexahealth.com/delhi/doctor/dr-aman-priya-khanna-general-surgery")
 
         try:
             self.driver.maximize_window()
@@ -164,6 +155,21 @@ class DoctorClass:
             treatment_field = WebDriverWait(self.driver, 10).until(
                 EC.visibility_of_element_located((By.XPATH, "//*[@id='treamentcondition2']")))
             treatment_field.send_keys("Mastectomy")
+
+            self.driver.implicitly_wait(5)  # Wait for up to 10 seconds for elements to appear
+
+            Hospital_drop = self.driver.find_element(By.XPATH, "//select[@id='hospitallist2']")
+            drop1 = Select(Hospital_drop)
+            drop1.select_by_index(1)
+            #drop1.select_by_visible_text("HealthFort Clinic")
+
+            #sel = self.driver.find_element(By.XPATH, "//select[@id='hospitallist']")
+            #dropdown=Select(sel)
+            # sel.select_by_index(1)
+            #dropdown.select_by_visible_text("HealthFort Clinic")
+
+
+
 
             # Wait for the Book An Appointment button to be clickable and click it
             book_an_ap_button = WebDriverWait(self.driver, 10).until(
@@ -193,18 +199,9 @@ class DoctorClass:
 
             print("Message: no such element: Unable to locate element")
 
-
-
-
-
-
-
-
-
-
     def BookAppointmentMainForm(self):
 
-        #self.driver.get("https://www.hexahealth.com/delhi/doctor/dr-aman-priya-khanna-general-surgery")
+        # self.driver.get("https://www.hexahealth.com/delhi/doctor/dr-aman-priya-khanna-general-surgery")
         try:
             self.driver.maximize_window()
             self.driver.implicitly_wait(5)
@@ -223,6 +220,12 @@ class DoctorClass:
             self.driver.implicitly_wait(2)
 
             self.driver.find_element(By.XPATH, "//*[@id='treatmentcondition']").send_keys("Mastectomy")
+
+            Hospital_drop = self.driver.find_element(By.XPATH, "//select[@id='hospitallist']")
+            drop1 = Select(Hospital_drop)
+            drop1.select_by_index(1)
+
+
 
             # BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome']")
             # drop1 = Select(BengaluruCity)
@@ -251,6 +254,6 @@ class DoctorClass:
 
 
 
-        except (NoSuchElementException,TimeoutException):
+        except (NoSuchElementException, TimeoutException):
 
             print("Message: no such element: Unable to locate element")

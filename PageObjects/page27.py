@@ -14,8 +14,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
 
+from utilities.BaseClass import commonbaseclass
 
-class Marketing_CallPrimary_Class:
+
+class Marketing_CallPrimary_Class(commonbaseclass):
     def __init__(self,driver):
         self.driver = driver
 
@@ -27,6 +29,7 @@ class Marketing_CallPrimary_Class:
         for url in self.urls:
             self.driver.get(url)
             print([url])
+            self.verify_whatsapp_PAN()
             try:
 
                 self.driver.maximize_window()
@@ -60,3 +63,6 @@ class Marketing_CallPrimary_Class:
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):
 
                 print("Except Block-Lead failed to Generate")
+
+
+

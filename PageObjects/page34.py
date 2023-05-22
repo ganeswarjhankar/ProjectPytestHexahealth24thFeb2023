@@ -17,8 +17,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, InvalidArgumentException
 
+from utilities.BaseClass import commonbaseclass
 
-class marketing_pilot_Class:
+
+class marketing_pilot_Class(commonbaseclass):
     def __init__(self, driver):
         self.driver = driver
 
@@ -30,6 +32,7 @@ class marketing_pilot_Class:
         for url in self.urls:
             self.driver.get(url)
             print([url])
+            self.verify_whatsapp_PAN()
 
             try:
 
@@ -76,3 +79,6 @@ class marketing_pilot_Class:
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):
 
                 print("Except Block-Lead failed to Generate")
+
+
+
