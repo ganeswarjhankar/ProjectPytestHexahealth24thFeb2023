@@ -9,14 +9,11 @@ from utilities import constants
 from utilities.BaseClass import BaseClass
 
 
-class Marketing_Brand_Class(BaseClass):
 
-
-
-
-
-
-
+class Marketing_Brand_Class:
+    def __init__(self, driver):
+        self.driver = driver
+        self.urls = []
 
     def open(self):
         df = pd.read_excel(constants.MARKETING_BRAND_URL, sheet_name=constants.MARKETING_BRAND_SHEET)
@@ -27,69 +24,36 @@ class Marketing_Brand_Class(BaseClass):
             self.driver.get(url)
             print([url])
 
+            self.driver.maximize_window()
+            wait = WebDriverWait(self.driver, 10)
+
+            radio_yes_button = self.driver.find_element(By.XPATH, "//*[@id='rNo']")
+            radio_yes_button.click()
+
+            contact_name = wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='contactnumhomem']")))
+            contact_name.send_keys("9000000100")
+
+            gurugram_city = Select(self.driver.find_element(By.XPATH, "//*[@id='leadcitybrand']"))
+            #gurugram_city.select_by_visible_text("Gurugram ")
+            gurugram_city.select_by_index(2)
+
+            yoga_text = Select(self.driver.find_element(By.XPATH, "//*[@id='treamentconditionbrand']"))
+
+            #yoga_text.select_by_visible_text("Yoga ")
+            yoga_text.select_by_index(2)
+
+            submit_button = wait.until(
+                EC.presence_of_element_located((By.XPATH, "//*[@id='LeadSubmitbrandPagemaster']")))
+            submit_button.click()
+
             try:
-
-                #self.RADIO_BUTTON = By.XPATH, "//*[@id='rNo']"
-                #self.CONTACT_NUMBER = By.XPATH, "//*[@id='contactnumhomem']"
-                #self.CITY_DROPDOWN = By.XPATH, "//select[@id='leadcitybrand']"
-                #self.TREATMENT_DROPDOWN = By.XPATH, "//select[@id='treamentconditionbrand']"
-                #self.SUBMIT_BUTTON = By.XPATH, "//button[@id='LeadSubmit']"
-                #self.THANKYOU_MSG = By.XPATH, "/html/body/div/div/div/h1"
-
-
-                wait = WebDriverWait(self.driver, 10)
-
-                self.driver.maximize_window()
-                self.driver.implicitly_wait(2)
-
-
-
-                radio_Yes_button = self.driver.find_element(By.XPATH, "//*[@id='rNo']")
-                radio_Yes_button.click()
-
-                # lead_name = wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='leadname5']")))
-                # lead_name.send_keys("Test GJ Marketing Variant")
-
-                # self.driver.find_element(By.XPATH, "//input[@id='leadname5']").send_keys("Test GJ Doctor Variant")
-                # self.driver.implicitly_wait(2)
-
-                contact_name = wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='contactnumhomem']")))
-                contact_name.send_keys("9000000100")
-
-                gurugram_city=self.driver.find_element((By.XPATH, "//*[@id='leadcitybrand']"))
-                select_City = Select(gurugram_city)
-                select_City.select_by_visible_text("Gurugram ")
-
-                yoga_text=self.driver.find_element((By.XPATH, "//*[@id='treamentconditionbrand']"))
-
-                select_Treatment = Select(yoga_text)
-                select_City.select_by_visible_text("Yoga")
-
-                submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='LeadSubmitbrandPagemaster']")))
-                submit_button.click()
-
-                try:
-                    thank_you = wait.until(EC.presence_of_element_located(By.XPATH,"/html/body/div/div/div/h1"))
-                    print(thank_you.is_displayed())
-                    print("Lead is Generated Successfully")
-                    # print(f"Book Appointment is Successfully done for {url}")
-
-                    # wait = WebDriverWait(self.driver, 10)
-                    # wait.until(EC.title_contains("Thank You"))
-                    # thank_you = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1").text
-                    # print("Thank You message is displayed")
-
-
-
-
-                except (TimeoutException, NoSuchElementException, InvalidArgumentException):
-                    print("Exception with Timeout and No elements found")
-
-                self.driver.back()
-                self.driver.implicitly_wait(2)
-                self.driver.refresh()
-
-
+                thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                print(thank_you.is_displayed())
+                print("Lead is Generated Successfully")
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):
+                print("Exception with Timeout and No elements found")
 
-                print("Except Block-Lead failed to Generate")
+            self.driver.back()
+            self.driver.implicitly_wait(2)
+            self.driver.refresh()
+

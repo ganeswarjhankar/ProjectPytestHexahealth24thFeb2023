@@ -46,11 +46,11 @@ class BlogClass:
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
-            drop1.select_by_visible_text("Bengaluru")
+            drop1.select_by_index(3)
 
             YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
             drop2 = Select(YogaTreatment)
-            drop2.select_by_visible_text("Yoga")
+            drop2.select_by_index(5)
 
             #self.driver.find_element(By.XPATH, "//textarea[@id='leadquery']").send_keys("Query test")
             query_text_xpath=wait.until(EC.element_to_be_clickable((By.XPATH,"//textarea[@id='leadquery']")))
@@ -125,11 +125,11 @@ class BlogClass:
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//*[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
-            drop1.select_by_visible_text("Bengaluru")
+            drop1.select_by_index(3)
 
             Treatment_xpath = self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']")
             drop1 = Select(Treatment_xpath)
-            drop1.select_by_visible_text("Yoga")
+            drop1.select_by_index(3)
 
             query_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadquery']")))
             query_xpath.send_keys("Query Test")
@@ -200,11 +200,11 @@ class BlogClass:
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//*[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
-            drop1.select_by_visible_text("Bengaluru")
+            drop1.select_by_index(3)
 
             Treatment_xpath = self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']")
             drop1 = Select(Treatment_xpath)
-            drop1.select_by_visible_text("Yoga")
+            drop1.select_by_index(3)
 
             query_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadquery']")))
             query_xpath.send_keys("Query Test")
@@ -278,11 +278,11 @@ class BlogClass:
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//*[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
-            drop1.select_by_visible_text("Bengaluru")
+            drop1.select_by_index(3)
 
             Treatment_xpath = self.driver.find_element(By.XPATH, "//*[@id='treamentcondition1']")
             drop1 = Select(Treatment_xpath)
-            drop1.select_by_visible_text("Yoga")
+            drop1.select_by_index(4)
 
             query_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadquery']")))
             query_xpath.send_keys("Query Test")
@@ -355,11 +355,11 @@ class BlogClass:
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//*[@id='leadcity1']")
             drop1 = Select(BengaluruCity)
-            drop1.select_by_visible_text("Bengaluru")
+            drop1.select_by_index(3)
 
             Treatment_xpath = self.driver.find_element(By.XPATH, "//*[@id='treamentcondition']")
             drop1 = Select(Treatment_xpath)
-            drop1.select_by_visible_text("Yoga")
+            drop1.select_by_index(4)
 
             #query_xpath = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='leadquery']")))
             #query_xpath.send_keys("Query Test")

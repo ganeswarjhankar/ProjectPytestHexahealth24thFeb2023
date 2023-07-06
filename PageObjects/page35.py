@@ -67,7 +67,7 @@ class Marketing_Remark_Class(commonbaseclass):
                 submit_button.click()
 
                 try:
-                    thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div/div/div/h1")))
+                    thank_you = wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div/div/h1")))
                     print(thank_you.is_displayed())
                     print("Lead is Generated Successfully")
                     # print(f"Book Appointment is Successfully done for {url}")

@@ -76,6 +76,7 @@ class marketing_pdf_Class:
 
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):
 
+
                 print("Except Block-Lead failed to Generate")
 
 

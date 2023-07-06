@@ -7,6 +7,8 @@ def test_city_hospital_(driver,city_hospital ):
 #    city_hospital.cityhospitalbookmethod1()
 #    city_hospital.cityhospitallistmethod2()
     city_hospital.cityhospitalformmethod3()
+
 #    form_2.contactuswhatsapp()
+
 
 # assert home_page.get_welcome_message() == "Welcome, user!"

@@ -39,11 +39,11 @@ class HexaHomepageClass:
 
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
         drop1 = Select(BengaluruCity)
-        drop1.select_by_visible_text("Bengaluru")
+        drop1.select_by_index(3)
 
         YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
         drop2 = Select(YogaTreatment)
-        drop2.select_by_visible_text("Yoga")
+        drop2.select_by_index(3)
 
         self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query Test For City Doctor")
 

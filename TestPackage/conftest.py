@@ -21,12 +21,15 @@ from PageObjects.page28 import Marketing_WhatsApp_Class
 
 from PageObjects.page3 import DoctorClass
 from PageObjects.page30 import Marketing_Display_Class
+from PageObjects.page31 import Marketing_Index_Class
 from PageObjects.page32 import marketing_OnlyForm_Class
 from PageObjects.page33 import marketing_pdf_Class
 from PageObjects.page34 import marketing_pilot_Class
 from PageObjects.page35 import Marketing_Remark_Class
 from PageObjects.page36 import marketing_TopSticky_Class
 from PageObjects.page37_Ayush import marketing_Ayush_Class
+from PageObjects.page38_VerifyImages import VerifyImages_Class
+from PageObjects.page38_faq_very_thin import marketing_faqverythin_Class
 
 from PageObjects.page4 import SearchPage
 from PageObjects.page5 import ConditionClass
@@ -238,9 +241,10 @@ def marketingdisplay_url(driver):
 
 
 # test_url31
+@pytest.mark.xfail
 @pytest.fixture
 def marketingIndex_URL(driver):
-    page = marketing_Index_Class(driver)
+    page = Marketing_Index_Class(driver)
     page.open()
     return page
 
@@ -293,6 +297,23 @@ def marketingAyush_url(driver):
     return page
 
 
+#test_url38
+@pytest.mark.xfail
+@pytest.fixture
+def marketing_faqverythin_url(driver):
+    page = marketing_faqverythin_Class(driver)
+    page.open()
+    return page
+
+
+
+
+@pytest.mark.xfail
+@pytest.fixture
+def verifyImages(driver):
+    page = VerifyImages_Class(driver)
+    page.open()
+    return page
 
 
 @pytest.hookimpl(hookwrapper=True)

@@ -17,7 +17,7 @@ class TreatmentClass:
     def open(self):
         self.driver.get(constants.TREATMENT_URL)
 
-
+#Get a FREE Second Opinion from Top Surgeons! Book an Appointment »
     def BookAppointmentForm1(self):
 
         try:
@@ -27,6 +27,7 @@ class TreatmentClass:
             self.driver.maximize_window()
 
             self.driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/div/a").click()
+            #"/html/body/div[1]/div[2]/div[1]/div/div/a"
             self.driver.implicitly_wait(2)
 
             lead_field = WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='leadname2']")))
@@ -41,13 +42,13 @@ class TreatmentClass:
 
             BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcity2']")
             drop1 = Select(BengaluruCity)
-            drop1.select_by_visible_text("Bengaluru")
+            drop1.select_by_index(3)
 
-            YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
-            drop2 = Select(YogaTreatment)
-            drop2.select_by_visible_text("Yoga")
+            #YogaTreatment = self.driver.find_element(By.XPATH, "//select[@id='treamentcondition1']")
+            #drop2 = Select(YogaTreatment)
+            #drop2.select_by_index(4)
 
-            self.driver.find_element(By.XPATH, "//textarea[@id='leadquery']").send_keys("Query test")
+            self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Query test")
             self.driver.implicitly_wait(2)
             self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitNewHome']").click()
             # Lead1 in CRM
@@ -107,9 +108,9 @@ class TreatmentClass:
                 EC.element_to_be_clickable((By.XPATH, "//*[@id='leadcity2']")))
             city_field.send_keys("Gurugram")
 
-            treament_field = WebDriverWait(self.driver, 20).until(
-                EC.element_to_be_clickable((By.XPATH, "//*[@id='treamentcondition1']")))
-            treament_field.send_keys("Tips Procedure ")
+            #treament_field = WebDriverWait(self.driver, 20).until(
+            #    EC.element_to_be_clickable((By.XPATH, "//*[@id='treamentcondition1']")))
+            #treament_field.send_keys("Tips Procedure ")
 
             query_field = WebDriverWait(self.driver, 20).until(
                 EC.element_to_be_clickable((By.XPATH, "//*[@id='leadquery']")))
@@ -164,7 +165,7 @@ class TreatmentClass:
 
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome1']")
         drop1 = Select(BengaluruCity)
-        drop1.select_by_visible_text("Bengaluru")
+        drop1.select_by_index(2)
 
         BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitTreatement1']")
         self.driver.execute_script("arguments[0].click();",BookAnAppointmentButton )
@@ -217,7 +218,7 @@ class TreatmentClass:
         self.driver.implicitly_wait(2)
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome1']")
         drop1 = Select(BengaluruCity)
-        drop1.select_by_visible_text("Bengaluru")
+        drop1.select_by_index(4)
 
         BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitTreatement1']")
         self.driver.execute_script("arguments[0].click();",BookAnAppointmentButton)
@@ -258,7 +259,7 @@ class TreatmentClass:
 
         BengaluruCity = self.driver.find_element(By.XPATH, "//select[@id='leadcityhome']")
         drop1 = Select(BengaluruCity)
-        drop1.select_by_visible_text("Bengaluru")
+        drop1.select_by_index(3)
 
         BookAnAppointmentButton = self.driver.find_element(By.XPATH, "//*[@id='LeadSubmitTreatement']")
         self.driver.execute_script("arguments[0].click();", BookAnAppointmentButton)

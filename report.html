@@ -253,21 +253,21 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 22-May-2023 at 10:58:08 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 06-Jul-2023 at 11:00:54 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
         <td>BUILD_ID</td>
-        <td>171</td></tr>
+        <td>201</td></tr>
       <tr>
         <td>BUILD_NUMBER</td>
-        <td>171</td></tr>
+        <td>201</td></tr>
       <tr>
         <td>BUILD_TAG</td>
-        <td>jenkins-Pytestdemo2-171</td></tr>
+        <td>jenkins-Pytestdemo2-201</td></tr>
       <tr>
         <td>BUILD_URL</td>
-        <td><a href="http://localhost:8080/job/Pytestdemo2/171/" target="_blank">http://localhost:8080/job/Pytestdemo2/171/</a></td></tr>
+        <td><a href="http://localhost:8080/job/Pytestdemo2/201/" target="_blank">http://localhost:8080/job/Pytestdemo2/201/</a></td></tr>
       <tr>
         <td>CI</td>
         <td>true</td></tr>
@@ -299,8 +299,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>WORKSPACE</td>
         <td>C:\Users\91928\PycharmProjects\PythonSeleniumFramework-master</td></tr></table>
     <h2>Summary</h2>
-    <p>51 tests ran in 1043.57 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">50 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">1 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>59 tests ran in 1018.98 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">57 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -314,55 +314,52 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
-          <td class="col-name">TestPackage/test_url37_ayush.py::test_marketing_ayush</td>
-          <td class="col-duration">28.01</td>
+          <td class="col-name">TestPackage/test_search_page_url2.py::test_search_HospitalPage</td>
+          <td class="col-duration">14.59</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div><div><img src="TestPackage/test_url37_ayush.py_test_marketing_ayush.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log">self = &lt;PageObjects.page37_Ayush.marketing_Ayush_Class object at 0x0000020350E167D0&gt;<br/><br/>    def marketing_ayush_method(self):<br/>        for url in self.urls:<br/>            self.driver.get(url)<br/>            print([url])<br/>            self.verify_whatsapp_PAN()    ## calling the function method in the mid to execute<br/>    <br/>            #element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,&quot;//input[@id=&#x27;contactnum1&#x27;]&quot;))<br/>    <br/>            #WebDriverWait(self.driver, 10).until(<br/>            #    EC.presence_of_element_located((By.XPATH, &quot;//input[@id=&#x27;contactnum1&#x27;]&quot;)))<br/>    <br/>    <br/>    <br/>    <br/>            try:<br/>                element = self.driver.find_element(By.XPATH, &quot;//input[@id=&#x27;contactnum1&#x27;]&quot;)<br/>                element2=self.driver.find_element(By.XPATH,&quot;//*[@id=&#x27;LeadSubmit1_marketing&#x27;]&quot;)<br/>                if element and element2.is_displayed():<br/>                    self.GetACallBack()<br/>                    self.CommonClosingProcess()<br/>    <br/>            except NoSuchElementException:<br/>                pass<br/>    <br/>    <br/>    <br/>    <br/>            try:<br/>                Checkinsurance_Button = self.driver.find_element(By.XPATH, &quot;//a[@id=&#x27;surgerytBtn&#x27;]&quot;)<br/>                if Checkinsurance_Button.is_displayed():<br/>                    self.CheckInsuranceCoverage()<br/>            except NoSuchElementException:<br/>                pass<br/>    <br/>            try:<br/>    <br/>                list_Doctors = self.driver.find_elements(By.XPATH, &quot;//a[@id=&#x27;BkApntdoc&#x27;]&quot;)<br/>    <br/>                if list_Doctors:<br/>                    for item in list_Doctors:<br/>                        item.click()<br/>    <br/>                        self.AllMarketing_List_Doctors()<br/>                        self.CommonClosingProcess()<br/>                        break<br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>            except:<br/>                print(&quot;list function is not working as expected&quot;)<br/>    <br/>    <br/>            self.driver.refresh()<br/>    <br/>    <br/>            try:<br/>    <br/>                self.driver.maximize_window()<br/>                self.driver.implicitly_wait(5)<br/>    <br/>                wait = WebDriverWait(self.driver, 10)<br/>    <br/>&gt;               lead_name = wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[@id=&#x27;leadname5&#x27;]&quot;)))<br/><br/>PageObjects\page37_Ayush.py:100: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;ab35e9ae60c4625bed9ea9363f41c030&quot;)&gt;<br/>method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x000002035029B600&gt;<br/>message = &#x27;&#x27;<br/><br/>    def until(self, method, message: str = &quot;&quot;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value does not evaluate to ``False``.<br/>    <br/>        :param method: callable(WebDriver)<br/>        :param message: optional message for :exc:`TimeoutException`<br/>        :returns: the result of the last call to `method`<br/>        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs<br/>        &quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.monotonic() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &quot;screen&quot;, None)<br/>                stacktrace = getattr(exc, &quot;stacktrace&quot;, None)<br/>            time.sleep(self._poll)<br/>            if time.monotonic() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message: </span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       Backtrace:</span><br/><span class="error">E       	GetHandleVerifier [0x00A18893+48451]</span><br/><span class="error">E       	(No symbol) [0x009AB8A1]</span><br/><span class="error">E       	(No symbol) [0x008B5058]</span><br/><span class="error">E       	(No symbol) [0x008E0467]</span><br/><span class="error">E       	(No symbol) [0x008E069B]</span><br/><span class="error">E       	(No symbol) [0x0090DD92]</span><br/><span class="error">E       	(No symbol) [0x008FA304]</span><br/><span class="error">E       	(No symbol) [0x0090C482]</span><br/><span class="error">E       	(No symbol) [0x008FA0B6]</span><br/><span class="error">E       	(No symbol) [0x008D7E08]</span><br/><span class="error">E       	(No symbol) [0x008D8F2D]</span><br/><span class="error">E       	GetHandleVerifier [0x00C78E3A+2540266]</span><br/><span class="error">E       	GetHandleVerifier [0x00CB8959+2801161]</span><br/><span class="error">E       	GetHandleVerifier [0x00CB295C+2776588]</span><br/><span class="error">E       	GetHandleVerifier [0x00AA2280+612144]</span><br/><span class="error">E       	(No symbol) [0x009B4F6C]</span><br/><span class="error">E       	(No symbol) [0x009B11D8]</span><br/><span class="error">E       	(No symbol) [0x009B12BB]</span><br/><span class="error">E       	(No symbol) [0x009A4857]</span><br/><span class="error">E       	BaseThreadInitThunk [0x769C7D59+25]</span><br/><span class="error">E       	RtlInitializeExceptionChain [0x77CDB74B+107]</span><br/><span class="error">E       	RtlClearBits [0x77CDB6CF+191]</span><br/><br/>..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py:95: TimeoutException<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;ab35e9ae60c4625bed9ea9363f41c030&quot;)&gt;<br/>marketingAyush_url = &lt;PageObjects.page37_Ayush.marketing_Ayush_Class object at 0x0000020350E167D0&gt;<br/><br/>    def test_marketing_ayush(driver,marketingAyush_url ):<br/>&gt;       marketingAyush_url.marketing_ayush_method()<br/><br/>TestPackage\test_url37_ayush.py:7: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;PageObjects.page37_Ayush.marketing_Ayush_Class object at 0x0000020350E167D0&gt;<br/><br/>    def marketing_ayush_method(self):<br/>        for url in self.urls:<br/>            self.driver.get(url)<br/>            print([url])<br/>            self.verify_whatsapp_PAN()    ## calling the function method in the mid to execute<br/>    <br/>            #element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,&quot;//input[@id=&#x27;contactnum1&#x27;]&quot;))<br/>    <br/>            #WebDriverWait(self.driver, 10).until(<br/>            #    EC.presence_of_element_located((By.XPATH, &quot;//input[@id=&#x27;contactnum1&#x27;]&quot;)))<br/>    <br/>    <br/>    <br/>    <br/>            try:<br/>                element = self.driver.find_element(By.XPATH, &quot;//input[@id=&#x27;contactnum1&#x27;]&quot;)<br/>                element2=self.driver.find_element(By.XPATH,&quot;//*[@id=&#x27;LeadSubmit1_marketing&#x27;]&quot;)<br/>                if element and element2.is_displayed():<br/>                    self.GetACallBack()<br/>                    self.CommonClosingProcess()<br/>    <br/>            except NoSuchElementException:<br/>                pass<br/>    <br/>    <br/>    <br/>    <br/>            try:<br/>                Checkinsurance_Button = self.driver.find_element(By.XPATH, &quot;//a[@id=&#x27;surgerytBtn&#x27;]&quot;)<br/>                if Checkinsurance_Button.is_displayed():<br/>                    self.CheckInsuranceCoverage()<br/>            except NoSuchElementException:<br/>                pass<br/>    <br/>            try:<br/>    <br/>                list_Doctors = self.driver.find_elements(By.XPATH, &quot;//a[@id=&#x27;BkApntdoc&#x27;]&quot;)<br/>    <br/>                if list_Doctors:<br/>                    for item in list_Doctors:<br/>                        item.click()<br/>    <br/>                        self.AllMarketing_List_Doctors()<br/>                        self.CommonClosingProcess()<br/>                        break<br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>            except:<br/>                print(&quot;list function is not working as expected&quot;)<br/>    <br/>    <br/>            self.driver.refresh()<br/>    <br/>    <br/>            try:<br/>    <br/>                self.driver.maximize_window()<br/>                self.driver.implicitly_wait(5)<br/>    <br/>                wait = WebDriverWait(self.driver, 10)<br/>    <br/>                lead_name = wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[@id=&#x27;leadname5&#x27;]&quot;)))<br/>                lead_name.send_keys(&quot;Test GJ Marketing Variant&quot;)<br/>    <br/>                # self.driver.find_element(By.XPATH, &quot;//input[@id=&#x27;leadname5&#x27;]&quot;).send_keys(&quot;Test GJ Doctor Variant&quot;)<br/>                # self.driver.implicitly_wait(2)<br/>    <br/>                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[@id=&#x27;contactnum5&#x27;]&quot;)))<br/>                contact_name.send_keys(&quot;9000000100&quot;)<br/>    <br/>    <br/>    <br/>                submit_button = wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[@id=&#x27;LeadSubmit&#x27;]&quot;)))<br/>                submit_button.click()<br/>    <br/>    <br/>    <br/>                try:<br/>    <br/>                    thank_you = wait.until(EC.presence_of_element_located((By.XPATH, &quot;/html/body/div/div/div/h1&quot;)))<br/>                    print(thank_you.is_displayed())<br/>                    print(&quot;Lead is Generated Successfully&quot;)<br/>                    # print(f&quot;Book Appointment is Successfully done for {url}&quot;)<br/>    <br/>                    # wait = WebDriverWait(self.driver, 10)<br/>                    # wait.until(EC.title_contains(&quot;Thank You&quot;))<br/>                    # thank_you = self.driver.find_element(By.XPATH, &quot;/html/body/div/div/div/h1&quot;).text<br/>                    # print(&quot;Thank You message is displayed&quot;)<br/>    <br/>    <br/>    <br/>    <br/>    <br/>    <br/>                except (TimeoutException, NoSuchElementException, InvalidArgumentException):<br/>                    assert False<br/>                    print(&quot;Exception with Timeout and No elements found&quot;)<br/>    <br/>                self.driver.back()<br/>                self.driver.implicitly_wait(2)<br/>                self.driver.refresh()<br/>    <br/>    <br/>            except (TimeoutException, NoSuchElementException, InvalidArgumentException):<br/>&gt;               assert False<br/><span class="error">E               AssertionError</span><br/><br/>PageObjects\page37_Ayush.py:143: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/ayush/laparoscopic-gallstones-bangalore&#x27;]
-Hi HexaHealth, I want to know about Gallstones
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Gallstones&amp;type=phone_number&amp;app_absent=0
-Status Code 200 Ok
-True
-Lead is Generated Successfully
-<br/></div></td></tr></tbody>
-      <tbody class="skipped results-table-row">
+            <div><div><img src="TestPackage/test_search_page_url2.py_test_search_HospitalPage.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;ab4d5a787a2dde2bf267d21e20ad1dac&quot;)&gt;<br/>search_page = &lt;PageObjects.page4.SearchPage object at 0x000001C89B5481D0&gt;<br/><br/>    def test_search_HospitalPage(driver, search_page):<br/>    #    search_page.Doctormethod()<br/>    #    assert driver.title == &quot;HexaHealth: Surgery Simplified | NABH Hospitals &amp; Top Surgeons&quot;<br/>    #    assert driver.current_url ==&quot;https://www.hexahealth.com/&quot;<br/>&gt;       search_page.Hospitalmethod()<br/><br/>TestPackage\test_search_page_url2.py:5: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>PageObjects\page4.py:77: in Hospitalmethod<br/>    self.driver.find_element(By.LINK_TEXT, &quot;Indraprastha Apollo Hospital&quot;).click()<br/>..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py:93: in click<br/>    self._execute(Command.CLICK_ELEMENT)<br/>..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py:403: in _execute<br/>    return self._parent.execute(command, params)<br/>..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py:440: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001C89B54B910&gt;<br/>response = {&#x27;status&#x27;: 400, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;element not interactable&quot;,&quot;message&quot;:&quot;element not interactable\\n  (Sessio...dInitThunk [0x76297D59+25]\\n\\tRtlInitializeExceptionChain [0x7728B74B+107]\\n\\tRtlClearBits [0x7728B6CF+191]\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&quot;status&quot;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&quot;value&quot;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&quot;value&quot;]<br/>                    status = value.get(&quot;error&quot;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&quot;message&quot;)<br/>                    else:<br/>                        message = value.get(&quot;message&quot;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif (<br/>            status in ErrorCode.INVALID_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER<br/>        ):<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&quot;value&quot;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &quot;message&quot; in value:<br/>            message = value[&quot;message&quot;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &quot;screen&quot; in value:<br/>            screen = value[&quot;screen&quot;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&quot;stackTrace&quot;) or value.get(&quot;stacktrace&quot;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&quot;\n&quot;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get(&quot;lineNumber&quot;, &quot;&quot;)<br/>                        file = frame.get(&quot;fileName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if line:<br/>                            file = f&quot;{file}:{line}&quot;<br/>                        meth = frame.get(&quot;methodName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if &quot;className&quot; in frame:<br/>                            meth = f&quot;{frame[&#x27;className&#x27;]}.{meth}&quot;<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &quot;data&quot; in value:<br/>                alert_text = value[&quot;data&quot;].get(&quot;text&quot;)<br/>            elif &quot;alert&quot; in value:<br/>                alert_text = value[&quot;alert&quot;].get(&quot;text&quot;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable</span><br/><span class="error">E         (Session info: chrome=114.0.5735.199)</span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       Backtrace:</span><br/><span class="error">E       	GetHandleVerifier [0x00638893+48451]</span><br/><span class="error">E       	(No symbol) [0x005CB8A1]</span><br/><span class="error">E       	(No symbol) [0x004D4F20]</span><br/><span class="error">E       	(No symbol) [0x005013A6]</span><br/><span class="error">E       	(No symbol) [0x004F9AAC]</span><br/><span class="error">E       	(No symbol) [0x0051A2BC]</span><br/><span class="error">E       	(No symbol) [0x004F9586]</span><br/><span class="error">E       	(No symbol) [0x0051A614]</span><br/><span class="error">E       	(No symbol) [0x0052C482]</span><br/><span class="error">E       	(No symbol) [0x0051A0B6]</span><br/><span class="error">E       	(No symbol) [0x004F7E08]</span><br/><span class="error">E       	(No symbol) [0x004F8F2D]</span><br/><span class="error">E       	GetHandleVerifier [0x00898E3A+2540266]</span><br/><span class="error">E       	GetHandleVerifier [0x008D8959+2801161]</span><br/><span class="error">E       	GetHandleVerifier [0x008D295C+2776588]</span><br/><span class="error">E       	GetHandleVerifier [0x006C2280+612144]</span><br/><span class="error">E       	(No symbol) [0x005D4F6C]</span><br/><span class="error">E       	(No symbol) [0x005D11D8]</span><br/><span class="error">E       	(No symbol) [0x005D12BB]</span><br/><span class="error">E       	(No symbol) [0x005C4857]</span><br/><span class="error">E       	BaseThreadInitThunk [0x76297D59+25]</span><br/><span class="error">E       	RtlInitializeExceptionChain [0x7728B74B+107]</span><br/><span class="error">E       	RtlClearBits [0x7728B6CF+191]</span><br/><br/>..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:245: ElementNotInteractableException<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Skipped</td>
+          <td class="col-result">Failed</td>
           <td class="col-name">TestPackage/test_url31.py::test_marketing_Index</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-duration">8.59</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">(&#x27;C:\\Users\\91928\\PycharmProjects\\PythonSeleniumFramework-master\\TestPackage\\test_url31.py&#x27;, 6, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+            <div><div><img src="TestPackage/test_url31.py_test_marketing_Index.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;PageObjects.page31.Marketing_Index_Class object at 0x000001C89B917490&gt;<br/><br/>    def Marketing_Index_Method(self):<br/>        for url in self.urls:<br/>            self.driver.get(url)<br/>            print([url])<br/>    <br/>            try:<br/>    <br/>                self.driver.maximize_window()<br/>                self.driver.implicitly_wait(2)<br/>    <br/>                wait = WebDriverWait(self.driver, 10)<br/>    <br/>&gt;               radio_Yes_button = self.driver.find_element(By.XPATH, &quot;//input[@id=&#x27;rYes&#x27;]&quot;)<br/><br/>PageObjects\page31.py:41: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;5fbfe1c8a76151e38c0d580ce3da82d2&quot;)&gt;<br/>by = &#x27;xpath&#x27;, value = &quot;//input[@id=&#x27;rYes&#x27;]&quot;<br/><br/>    def find_element(self, by=By.ID, value: Optional[str] = None) -&gt; WebElement:<br/>        &quot;&quot;&quot;Find an element given a By strategy and locator.<br/>    <br/>        :Usage:<br/>            ::<br/>    <br/>                element = driver.find_element(By.ID, &#x27;foo&#x27;)<br/>    <br/>        :rtype: WebElement<br/>        &quot;&quot;&quot;<br/>        if isinstance(by, RelativeBy):<br/>            elements = self.find_elements(by=by, value=value)<br/>            if not elements:<br/>                raise NoSuchElementException(f&quot;Cannot locate relative element with: {by.root}&quot;)<br/>            return elements[0]<br/>    <br/>        if by == By.ID:<br/>            by = By.CSS_SELECTOR<br/>            value = f&#x27;[id=&quot;{value}&quot;]&#x27;<br/>        elif by == By.CLASS_NAME:<br/>            by = By.CSS_SELECTOR<br/>            value = f&quot;.{value}&quot;<br/>        elif by == By.NAME:<br/>            by = By.CSS_SELECTOR<br/>            value = f&#x27;[name=&quot;{value}&quot;]&#x27;<br/>    <br/>&gt;       return self.execute(Command.FIND_ELEMENT, {&quot;using&quot;: by, &quot;value&quot;: value})[&quot;value&quot;]<br/><br/>..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py:830: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;5fbfe1c8a76151e38c0d580ce3da82d2&quot;)&gt;<br/>driver_command = &#x27;findElement&#x27;<br/>params = {&#x27;using&#x27;: &#x27;xpath&#x27;, &#x27;value&#x27;: &quot;//input[@id=&#x27;rYes&#x27;]&quot;}<br/><br/>    def execute(self, driver_command: str, params: dict = None) -&gt; dict:<br/>        &quot;&quot;&quot;Sends a command to be executed by a command.CommandExecutor.<br/>    <br/>        :Args:<br/>         - driver_command: The name of the command to execute as a string.<br/>         - params: A dictionary of named parameters to send with the command.<br/>    <br/>        :Returns:<br/>          The command&#x27;s JSON response loaded into a dictionary object.<br/>        &quot;&quot;&quot;<br/>        params = self._wrap_value(params)<br/>    <br/>        if self.session_id:<br/>            if not params:<br/>                params = {&quot;sessionId&quot;: self.session_id}<br/>            elif &quot;sessionId&quot; not in params:<br/>                params[&quot;sessionId&quot;] = self.session_id<br/>    <br/>        response = self.command_executor.execute(driver_command, params)<br/>        if response:<br/>&gt;           self.error_handler.check_response(response)<br/><br/>..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py:440: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001C89C17B0D0&gt;<br/>response = {&#x27;status&#x27;: 404, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;no such element&quot;,&quot;message&quot;:&quot;no such element: Unable to locate element: {\...dInitThunk [0x76297D59+25]\\n\\tRtlInitializeExceptionChain [0x7728B74B+107]\\n\\tRtlClearBits [0x7728B6CF+191]\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&quot;status&quot;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&quot;value&quot;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&quot;value&quot;]<br/>                    status = value.get(&quot;error&quot;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&quot;message&quot;)<br/>                    else:<br/>                        message = value.get(&quot;message&quot;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif (<br/>            status in ErrorCode.INVALID_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER<br/>        ):<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&quot;value&quot;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &quot;message&quot; in value:<br/>            message = value[&quot;message&quot;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &quot;screen&quot; in value:<br/>            screen = value[&quot;screen&quot;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&quot;stackTrace&quot;) or value.get(&quot;stacktrace&quot;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&quot;\n&quot;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get(&quot;lineNumber&quot;, &quot;&quot;)<br/>                        file = frame.get(&quot;fileName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if line:<br/>                            file = f&quot;{file}:{line}&quot;<br/>                        meth = frame.get(&quot;methodName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if &quot;className&quot; in frame:<br/>                            meth = f&quot;{frame[&#x27;className&#x27;]}.{meth}&quot;<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &quot;data&quot; in value:<br/>                alert_text = value[&quot;data&quot;].get(&quot;text&quot;)<br/>            elif &quot;alert&quot; in value:<br/>                alert_text = value[&quot;alert&quot;].get(&quot;text&quot;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&#x27;rYes&#x27;]&quot;}</span><br/><span class="error">E         (Session info: chrome=114.0.5735.199)</span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       Backtrace:</span><br/><span class="error">E       	GetHandleVerifier [0x00638893+48451]</span><br/><span class="error">E       	(No symbol) [0x005CB8A1]</span><br/><span class="error">E       	(No symbol) [0x004D5058]</span><br/><span class="error">E       	(No symbol) [0x00500467]</span><br/><span class="error">E       	(No symbol) [0x0050069B]</span><br/><span class="error">E       	(No symbol) [0x0052DD92]</span><br/><span class="error">E       	(No symbol) [0x0051A304]</span><br/><span class="error">E       	(No symbol) [0x0052C482]</span><br/><span class="error">E       	(No symbol) [0x0051A0B6]</span><br/><span class="error">E       	(No symbol) [0x004F7E08]</span><br/><span class="error">E       	(No symbol) [0x004F8F2D]</span><br/><span class="error">E       	GetHandleVerifier [0x00898E3A+2540266]</span><br/><span class="error">E       	GetHandleVerifier [0x008D8959+2801161]</span><br/><span class="error">E       	GetHandleVerifier [0x008D295C+2776588]</span><br/><span class="error">E       	GetHandleVerifier [0x006C2280+612144]</span><br/><span class="error">E       	(No symbol) [0x005D4F6C]</span><br/><span class="error">E       	(No symbol) [0x005D11D8]</span><br/><span class="error">E       	(No symbol) [0x005D12BB]</span><br/><span class="error">E       	(No symbol) [0x005C4857]</span><br/><span class="error">E       	BaseThreadInitThunk [0x76297D59+25]</span><br/><span class="error">E       	RtlInitializeExceptionChain [0x7728B74B+107]</span><br/><span class="error">E       	RtlClearBits [0x7728B6CF+191]</span><br/><br/>..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:245: NoSuchElementException<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>driver = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;5fbfe1c8a76151e38c0d580ce3da82d2&quot;)&gt;<br/>marketingIndex_URL = &lt;PageObjects.page31.Marketing_Index_Class object at 0x000001C89B917490&gt;<br/><br/>    def test_marketing_Index(driver,marketingIndex_URL):<br/>&gt;       marketingIndex_URL.Marketing_Index_Method()<br/><br/>TestPackage\test_url31.py:8: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;PageObjects.page31.Marketing_Index_Class object at 0x000001C89B917490&gt;<br/><br/>    def Marketing_Index_Method(self):<br/>        for url in self.urls:<br/>            self.driver.get(url)<br/>            print([url])<br/>    <br/>            try:<br/>    <br/>                self.driver.maximize_window()<br/>                self.driver.implicitly_wait(2)<br/>    <br/>                wait = WebDriverWait(self.driver, 10)<br/>    <br/>                radio_Yes_button = self.driver.find_element(By.XPATH, &quot;//input[@id=&#x27;rYes&#x27;]&quot;)<br/>                radio_Yes_button.click()<br/>    <br/>                # lead_name = wait.until(EC.presence_of_element_located((By.XPATH, &quot;//input[@id=&#x27;leadname5&#x27;]&quot;)))<br/>                # lead_name.send_keys(&quot;Test GJ Marketing Variant&quot;)<br/>    <br/>                # self.driver.find_element(By.XPATH, &quot;//input[@id=&#x27;leadname5&#x27;]&quot;).send_keys(&quot;Test GJ Doctor Variant&quot;)<br/>                # self.driver.implicitly_wait(2)<br/>    <br/>                contact_name = wait.until(EC.presence_of_element_located((By.XPATH, &quot;//input[@id=&#x27;contactnumhomem&#x27;]&quot;)))<br/>                contact_name.send_keys(&quot;9000000100&quot;)<br/>    <br/>                select_City = Select(self.driver.find_element(By.XPATH, &quot;//select[@id=&#x27;leadcitybrand&#x27;]&quot;))<br/>                select_City.select_by_visible_text(&quot;Gurugram &quot;)<br/>    <br/>                select_Treatment = Select(self.driver.find_element(By.XPATH, &quot;//select[@id=&#x27;treamentconditionbrand&#x27;]&quot;))<br/>                select_City.select_by_visible_text(&quot;Yoga &quot;)<br/>    <br/>                submit_button = wait.until(<br/>                    EC.presence_of_element_located((By.XPATH, &quot;//button[@id=&#x27;LeadSubmitbrandPagemaster&#x27;]&quot;)))<br/>                submit_button.click()<br/>    <br/>                try:<br/>                    thank_you = wait.until(EC.presence_of_element_located((By.XPATH, &quot;/html/body/div/div/div/h1&quot;)))<br/>                    print(thank_you.is_displayed())<br/>                    print(&quot;Lead is Generated Successfully&quot;)<br/>                    # print(f&quot;Book Appointment is Successfully done for {url}&quot;)<br/>    <br/>                    # wait = WebDriverWait(self.driver, 10)<br/>                    # wait.until(EC.title_contains(&quot;Thank You&quot;))<br/>                    # thank_you = self.driver.find_element(By.XPATH, &quot;/html/body/div/div/div/h1&quot;).text<br/>                    # print(&quot;Thank You message is displayed&quot;)<br/>    <br/>                except (TimeoutException, NoSuchElementException, InvalidArgumentException):<br/>                    print(&quot;Exception with Timeout and No elements found&quot;)<br/>                    assert False<br/>    <br/>                self.driver.back()<br/>                self.driver.implicitly_wait(2)<br/>                self.driver.refresh()<br/>    <br/>    <br/>            except (TimeoutException, NoSuchElementException, InvalidArgumentException):<br/>&gt;               assert False<br/><span class="error">E               AssertionError</span><br/><br/>PageObjects\page31.py:84: AssertionError<br/> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/index/laser-piles-bangalore&#x27;]
+<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_ContactUs_page_url1.py::test_ContactUs_Form</td>
-          <td class="col-duration">32.12</td>
+          <td class="col-duration">11.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Failed with Error
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+Lead is Generated Successfully
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_ContactUs_page_url2.py::test_ContactUsWhatsapp_page</td>
-          <td class="col-duration">13.38</td>
+          <td class="col-duration">9.65</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hi, I want to book an appointment with a cardiologist doctor specialityid=147 Tier-ID=1
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi%2C+I+want+to+book+an+appointment+with+a+cardiologist+doctor+specialityid%3D147+Tier-ID%3D1&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hi HexaHealth, I want to connect with HexaHealth Care Expert
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+connect+with+HexaHealth+Care+Expert&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_blog_page_url1.py::test_blog_page</td>
-          <td class="col-duration">17.67</td>
+          <td class="col-duration">13.82</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -373,7 +370,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_blog_page_url2.py::test_Blog_NABHAccreditedHospitals</td>
-          <td class="col-duration">14.63</td>
+          <td class="col-duration">15.95</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -384,7 +381,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_blog_page_url3.py::test_blog_ExpertDoctors</td>
-          <td class="col-duration">13.55</td>
+          <td class="col-duration">13.45</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -395,7 +392,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_blog_page_url4.py::test_blog_BookAppointmentButtonMethod</td>
-          <td class="col-duration">15.26</td>
+          <td class="col-duration">18.57</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -406,19 +403,19 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_blog_page_url5.py::test_Blog_ContactUsWhatsapp</td>
-          <td class="col-duration">12.81</td>
+          <td class="col-duration">12.87</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hi, I want to connect with HexaHealth Care Expert, Procedure-ID = 0
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi%2C+I+want+to+connect+with+HexaHealth+Care+Expert%2C+Procedure-ID+%3D+0&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hi, I want to connect with HexaHealth Care Expert, Procedure-ID = 0 Tier-ID=3
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi%2C+I+want+to+connect+with+HexaHealth+Care+Expert%2C+Procedure-ID+%3D+0+Tier-ID%3D3&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_blog_page_url6.py::test_blog_BookAppointmentMainForm</td>
-          <td class="col-duration">14.47</td>
+          <td class="col-duration">13.96</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -429,7 +426,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_city_doctor_url1.py::test_city_doctor_Form</td>
-          <td class="col-duration">12.30</td>
+          <td class="col-duration">13.65</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -440,7 +437,7 @@ Lead Is Generated
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_city_doctor_url2.py::test_city_doctor_list</td>
-          <td class="col-duration">14.14</td>
+          <td class="col-duration">12.91</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -451,7 +448,7 @@ Lead Is Generated
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_city_doctor_url3.py::test_city_doctor_Form</td>
-          <td class="col-duration">13.87</td>
+          <td class="col-duration">13.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -462,7 +459,7 @@ Lead Is Generated
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_city_hospital_dept2_test_url1.py::test_city_hospital_dept2_test</td>
-          <td class="col-duration">12.12</td>
+          <td class="col-duration">12.41</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -473,18 +470,17 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_city_hospital_dept2_test_url2.py::test_city_hospital_dept2_test</td>
-          <td class="col-duration">12.47</td>
+          <td class="col-duration">20.64</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
-Lead is Generated Successfully
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>failed 2nd Except
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_city_hospital_dept2_test_url3.py::test_city_hospital_</td>
-          <td class="col-duration">12.00</td>
+          <td class="col-duration">11.52</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -495,7 +491,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_condition_page_url1.py::test_condition_BookAppointmentForm1</td>
-          <td class="col-duration">14.56</td>
+          <td class="col-duration">13.06</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -506,7 +502,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_condition_page_url2.py::test_condition_NABHAccreditedHospitals</td>
-          <td class="col-duration">13.73</td>
+          <td class="col-duration">10.42</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -517,7 +513,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_condition_page_url3.py::test_condition_ExpertDoctors</td>
-          <td class="col-duration">14.39</td>
+          <td class="col-duration">12.72</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -528,7 +524,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_condition_page_url4.py::test_condition_BookAppointmentButtonMethod</td>
-          <td class="col-duration">16.09</td>
+          <td class="col-duration">12.95</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -539,7 +535,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_condition_page_url5.py::test_condition_BookAppointmentMainForm</td>
-          <td class="col-duration">13.03</td>
+          <td class="col-duration">10.40</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -550,7 +546,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_doctor_page_url1.py::test_doctor_BookAppointmentForm1</td>
-          <td class="col-duration">13.94</td>
+          <td class="col-duration">8.64</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -561,7 +557,7 @@ BookAppointmentForm1 is created Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_doctor_page_url2.py::test_doctor_NABHAccreditedHospitals</td>
-          <td class="col-duration">14.26</td>
+          <td class="col-duration">9.85</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -572,7 +568,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_doctor_page_url3.py::test_doctor_BookAppointmentButtonMethod</td>
-          <td class="col-duration">13.44</td>
+          <td class="col-duration">10.57</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -583,7 +579,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_doctor_page_url4.py::test_doctor_BookAppointmentMainForm</td>
-          <td class="col-duration">13.71</td>
+          <td class="col-duration">8.94</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -594,7 +590,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_home_page_url1.py::test_home_page</td>
-          <td class="col-duration">18.60</td>
+          <td class="col-duration">14.13</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -605,19 +601,30 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_home_page_url2.py::test_homePage_Whatsapp</td>
-          <td class="col-duration">15.39</td>
+          <td class="col-duration">11.80</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hi, I want to connect with HexaHealth Care Expert
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi%2C+I+want+to+connect+with+HexaHealth+Care+Expert&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hi HexaHealth, I want to connect with HexaHealth Care Expert
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+connect+with+HexaHealth+Care+Expert&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_hospital_page_url1.py::test_doctor_BookAppointmentForm1</td>
+          <td class="col-duration">9.50</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>True
+BookAppointmentForm1 is created Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_search_page_url1.py::test_search_Doctor_HomePage</td>
-          <td class="col-duration">11.86</td>
+          <td class="col-duration">14.21</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -626,28 +633,18 @@ Status Code 200 Ok
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">TestPackage/test_search_page_url2.py::test_search_HospitalPage</td>
-          <td class="col-duration">17.47</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Hospital Apollo is been Searched successfully
-<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_search_page_url3.py::test_search_Treatment_HomePage</td>
-          <td class="col-duration">13.40</td>
+          <td class="col-duration">34.86</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>&#x27;Piles Laser Treatment&#x27;  is been Searched successfully
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Search Failed for Treatment
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_search_page_url4.py::test_search_Condition_HomePage</td>
-          <td class="col-duration">13.69</td>
+          <td class="col-duration">13.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -657,7 +654,7 @@ Status Code 200 Ok
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_treatment_page_url1.py::test_treatment_BookAppointmentForm1</td>
-          <td class="col-duration">13.72</td>
+          <td class="col-duration">12.13</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -668,7 +665,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_treatment_page_url2.py::test_treatment_NABHAccreditedHospitals</td>
-          <td class="col-duration">13.79</td>
+          <td class="col-duration">11.78</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -680,7 +677,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_treatment_page_url3.py::test_treatment_BookAppointmentButton</td>
-          <td class="col-duration">13.29</td>
+          <td class="col-duration">11.60</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -691,7 +688,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_treatment_page_url4.py::test_treatment_BookAppointmentMainForm</td>
-          <td class="col-duration">12.72</td>
+          <td class="col-duration">11.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -702,7 +699,7 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_treatment_page_url5.py::test_treatment_ExpertDoctors</td>
-          <td class="col-duration">15.83</td>
+          <td class="col-duration">12.41</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -714,15 +711,15 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url20.py::test_Marketing_Cost_variant</td>
-          <td class="col-duration">17.09</td>
+          <td class="col-duration">14.39</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/cost/laser-fistula-bangalore&#x27;]
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/cost/hymenoplasty-bangalore&#x27;]
 passed Lead is Generated
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/cost/circumcision-bangalore&#x27;]
+[&#x27;https://www.hexahealth.com/marketing/cost/laparoscopic-gallstones-bangalore&#x27;]
 passed Lead is Generated
 True
 Lead is Generated Successfully
@@ -731,37 +728,36 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url21.py::test_HospitalMarketing_Variant</td>
-          <td class="col-duration">20.42</td>
+          <td class="col-duration">10.44</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://hexahealth.com/marketing/hymenoplasty-bangalore?city=bengaluru&#x27;]
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://hexahealth.com/marketing/knee-replacement-delhincr&#x27;]
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/laser-hemorrhoids-treatment-mumbai?city=Mumbai&#x27;]
+[&#x27;https://www.hexahealth.com/marketing/laser-vaginal-tightening-chandigarh?city=Chandigarh&#x27;]
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/lasik-lifetime-mumbai?city=Mumbai&#x27;]
-True
-Lead is Generated Successfully
+[&#x27;https://www.hexahealth.com/marketing/lasik-mumbai?city=Mumbai&#x27;]
+Except Block-Lead failed to Generate
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url22.py::test_Doctor_Marketing_Variant</td>
-          <td class="col-duration">25.03</td>
+          <td class="col-duration">16.57</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://hexahealth.com/marketing/doctor/hydrocele-mumbai?city=Mumbai&#x27;]
-Hi HexaHealth, I want to know about Hydrocele
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Hydrocele&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/doctor/circumcision-delhincr?city=Delhi+NCR&#x27;]
+Hi HexaHealth, I want to know about Circumcision
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Circumcision&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/doctor/circumcision-mumbai?city=mumbai&#x27;]
-Hi HexaHealth, I want to know about Circumcision
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Circumcision&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/doctor/balanitis-bangalore?city=bengaluru&#x27;]
+Hi HexaHealth, I want to know about Balanitis
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Balanitis&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
@@ -770,19 +766,19 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url23.py::test_Marketing_Normal</td>
-          <td class="col-duration">23.50</td>
+          <td class="col-duration">16.30</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/laparoscopic-gallstones-bangalore&#x27;]
-Hi HexaHealth, I want to know about Gallstones
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Gallstones&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/hymenoplasty-bangalore&#x27;]
+Hi HexaHealth, I want to know about Hymenoplasty
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Hymenoplasty&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/mtp-bangalore&#x27;]
-Hi HexaHealth, I want to know about MTP
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+MTP&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/laser-fistula-bangalore&#x27;]
+Hi HexaHealth, I want to know about Fistula
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fistula&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
@@ -791,14 +787,14 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url24.py::test_SurgeryCost_marketing</td>
-          <td class="col-duration">15.88</td>
+          <td class="col-duration">10.88</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/laser-fissure-bangalore&#x27;]
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/hymenoplasty-bangalore&#x27;]
 MarketingNormalForm1 is passed
 True
-[&#x27;https://www.hexahealth.com/marketing/mtp-bangalore&#x27;]
+[&#x27;https://www.hexahealth.com/marketing/laser-fistula-bangalore&#x27;]
 MarketingNormalForm1 is passed
 True
 <br/></div></td></tr></tbody>
@@ -806,30 +802,30 @@ True
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url24_part2.py::test_CheckInsurance_marketing</td>
-          <td class="col-duration">15.55</td>
+          <td class="col-duration">11.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/hymenoplasty-bangalore&#x27;]
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/tummy-tuck-mumbai&#x27;]
 True
-[&#x27;https://www.hexahealth.com/marketing/laser-fissure-bangalore&#x27;]
+[&#x27;https://www.hexahealth.com/marketing/laser-piles-bangalore&#x27;]
 True
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url25.py::test_marketing_board_form1</td>
-          <td class="col-duration">21.93</td>
+          <td class="col-duration">14.55</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/board/laparoscopic-gallstones-bangalore&#x27;]
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/board/laser-vaginal-tightening-bangalore&#x27;]
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/board/laser-vaginal-tightening-bangalore&#x27;]
+[&#x27;https://www.hexahealth.com/marketing/board/hymenoplasty-bangalore&#x27;]
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/board/lasik-bangalore&#x27;]
+[&#x27;https://www.hexahealth.com/marketing/board/laparoscopic-gallstones-bangalore&#x27;]
 True
 Lead is Generated Successfully
 <br/></div></td></tr></tbody>
@@ -837,36 +833,37 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url26.py::test_marketing_brand_url</td>
-          <td class="col-duration">7.64</td>
+          <td class="col-duration">10.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/brand/hexa&#x27;]
-Except Block-Lead failed to Generate
+True
+Lead is Generated Successfully
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url27.py::test_marketing_callPrimary</td>
-          <td class="col-duration">33.05</td>
+          <td class="col-duration">25.48</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/callprimary/laser-fissure-bangalore&#x27;]
-Hi HexaHealth, I want to know about Fissure
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fissure&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/callprimary/laser-piles-bangalore&#x27;]
+Hi HexaHealth, I want to know about Piles
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Piles&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/callprimary/lasik-bangalore&#x27;]
-Hi HexaHealth, I want to know about Lasik
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Lasik&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/callprimary/tummy-tuck-mumbai&#x27;]
+Hi HexaHealth, I want to know about TummyTuck
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+TummyTuck&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/callprimary/lasik-bangalore&#x27;]
-Hi HexaHealth, I want to know about Lasik
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Lasik&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/callprimary/laparoscopic-gallstones-bangalore&#x27;]
+Hi HexaHealth, I want to know about Gallstones
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Gallstones&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
@@ -875,56 +872,56 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url28.py::test_marketing_WhatsApp</td>
-          <td class="col-duration">19.07</td>
+          <td class="col-duration">18.89</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/callwhatsapp/mtp-bangalore&#x27;]
-Hi HexaHealth, I want to know about MTP
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+MTP&amp;type=phone_number&amp;app_absent=0
-Status Code 200 Ok
-[&#x27;https://www.hexahealth.com/marketing/callwhatsapp/tummy-tuck-mumbai&#x27;]
-Hi HexaHealth, I want to know about TummyTuck
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+TummyTuck&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/callwhatsapp/laser-piles-bangalore&#x27;]
+Hi HexaHealth, I want to know about Piles
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Piles&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 [&#x27;https://www.hexahealth.com/marketing/callwhatsapp/laser-fissure-bangalore&#x27;]
 Hi HexaHealth, I want to know about Fissure
 https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fissure&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+[&#x27;https://www.hexahealth.com/marketing/callwhatsapp/tummy-tuck-mumbai&#x27;]
+Hi HexaHealth, I want to know about TummyTuck
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+TummyTuck&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url30.py::test_marketing_Display</td>
-          <td class="col-duration">18.95</td>
+          <td class="col-duration">15.75</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/display/laser-fistula-bangalore&#x27;]
-Hi HexaHealth, I want to know about Fistula
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fistula&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/display/lasik-bangalore&#x27;]
+Hi HexaHealth, I want to know about Lasik
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Lasik&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
-[&#x27;https://www.hexahealth.com/marketing/display/mtp-bangalore&#x27;]
-Hi HexaHealth, I want to know about MTP
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+MTP&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/display/tummy-tuck-mumbai&#x27;]
+Hi HexaHealth, I want to know about TummyTuck
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+TummyTuck&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
-[&#x27;https://www.hexahealth.com/marketing/display/hymenoplasty-bangalore&#x27;]
-Hi HexaHealth, I want to know about Hymenoplasty
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Hymenoplasty&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/display/laser-vaginal-tightening-bangalore&#x27;]
+Hi HexaHealth, I want to know about Laser Vaginal Tightening
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Laser+Vaginal+Tightening&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url32.py::test_marketing_onlyform</td>
-          <td class="col-duration">14.68</td>
+          <td class="col-duration">10.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/onlyform/hymenoplasty-bangalore&#x27;]
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/onlyform/tummy-tuck-mumbai&#x27;]
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/onlyform/laser-fistula-bangalore&#x27;]
+[&#x27;https://www.hexahealth.com/marketing/onlyform/laser-vaginal-tightening-bangalore&#x27;]
 True
 Lead is Generated Successfully
 <br/></div></td></tr></tbody>
@@ -932,14 +929,14 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url33.py::test_marketing_pdf</td>
-          <td class="col-duration">13.81</td>
+          <td class="col-duration">8.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/pdf/lasik-bangalore&#x27;]
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/pdf/laser-fissure-bangalore&#x27;]
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/pdf/laparoscopic-gallstones-bangalore&#x27;]
+[&#x27;https://www.hexahealth.com/marketing/pdf/laser-fistula-bangalore&#x27;]
 True
 Lead is Generated Successfully
 <br/></div></td></tr></tbody>
@@ -947,19 +944,19 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url34.py::test_marketing_pilot_url</td>
-          <td class="col-duration">24.11</td>
+          <td class="col-duration">22.78</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/pilot/laser-vaginal-tightening-bangalore&#x27;]
-Hi HexaHealth, I want to know about Laser Vaginal Tightening
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Laser+Vaginal+Tightening&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/pilot/laser-fistula-bangalore&#x27;]
+Hi HexaHealth, I want to know about Fistula
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fistula&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/pilot/mtp-bangalore&#x27;]
-Hi HexaHealth, I want to know about MTP
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+MTP&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/pilot/hymenoplasty-bangalore&#x27;]
+Hi HexaHealth, I want to know about Hymenoplasty
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Hymenoplasty&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
@@ -968,19 +965,19 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url35.py::test_marketing_remark_url</td>
-          <td class="col-duration">22.86</td>
+          <td class="col-duration">20.82</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/remarks/laser-fistula-bangalore&#x27;]
-Hi HexaHealth, I want to know about Fistula
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fistula&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/remarks/tummy-tuck-mumbai&#x27;]
+Hi HexaHealth, I want to know about TummyTuck
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+TummyTuck&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/remarks/mtp-bangalore&#x27;]
-Hi HexaHealth, I want to know about MTP
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+MTP&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/remarks/hymenoplasty-bangalore&#x27;]
+Hi HexaHealth, I want to know about Hymenoplasty
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Hymenoplasty&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
@@ -989,20 +986,100 @@ Lead is Generated Successfully
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">TestPackage/test_url36.py::test_marketing_topsticky_url</td>
-          <td class="col-duration">18.16</td>
+          <td class="col-duration">21.77</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/topsticky/tummy-tuck-mumbai&#x27;]
-Hi HexaHealth, I want to know about TummyTuck
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+TummyTuck&amp;type=phone_number&amp;app_absent=0
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/topsticky/lasik-bangalore&#x27;]
+Hi HexaHealth, I want to know about Lasik
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Lasik&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
-[&#x27;https://www.hexahealth.com/marketing/topsticky/laser-piles-bangalore&#x27;]
-Hi HexaHealth, I want to know about Piles
-https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Piles&amp;type=phone_number&amp;app_absent=0
+[&#x27;https://www.hexahealth.com/marketing/topsticky/laser-fistula-bangalore&#x27;]
+Hi HexaHealth, I want to know about Fistula
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fistula&amp;type=phone_number&amp;app_absent=0
 Status Code 200 Ok
 True
 Lead is Generated Successfully
-<br/></div></td></tr></tbody></table></body></html>
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url37_ayush.py::test_marketing_ayush</td>
+          <td class="col-duration">18.70</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/ayush/hymenoplasty-bangalore&#x27;]
+Hi HexaHealth, I want to know about Hymenoplasty
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Hymenoplasty&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url38_FaqVeryThin.py::test_marketing_faqverythin_url</td>
+          <td class="col-duration">19.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>[&#x27;https://www.hexahealth.com/marketing/faqverythin/laser-fissure-bangalore&#x27;]
+Hi HexaHealth, I want to know about Fissure
+https://api.whatsapp.com/send/?phone=918860688606&amp;text=Hi+HexaHealth%2C+I+want+to+know+about+Fissure&amp;type=phone_number&amp;app_absent=0
+Status Code 200 Ok
+[&#x27;https://www.hexahealth.com/marketing/faqverythin/laser-fissure-bangalore&#x27;]
+MarketingNormalForm1 is passed
+True
+[&#x27;https://www.hexahealth.com/marketing/faqverythin/laser-fissure-bangalore&#x27;]
+True
+True
+Lead is Generated Successfully
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url38_VerifyImages.py::test_verify_images</td>
+          <td class="col-duration">9.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url39_FaqThin.py::test_marketing_topsticky_url</td>
+          <td class="col-duration">3.70</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url40_SuperThin.py::test_marketing_topsticky_url</td>
+          <td class="col-duration">3.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url41_Thin.py::test_marketing_topsticky_url</td>
+          <td class="col-duration">3.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">TestPackage/test_url42_VeryThin.py::test_marketing_topsticky_url</td>
+          <td class="col-duration">3.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

@@ -3,9 +3,9 @@
 
 
 import pytest
-@pytest.mark.skip
-def test_marketing_Index(driver,marketingindex_url):
-    marketingindex_url.Marketing_Index_Method()
+
+def test_marketing_Index(driver,marketingIndex_URL):
+    marketingIndex_URL.Marketing_Index_Method()
 
 
 

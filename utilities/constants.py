@@ -131,31 +131,37 @@ MARKETING_REMARKS_SHEET='Sheet_remarks'
 MARKETING_TOPSTICKY_URL = "C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
 MARKETING_TOPSTICKY_SHEET='Sheet_TopSticky'
 
+#
+VERIFYIMAGES_URL="https://hexahealth.com"
+#VERIFYIMAGES_URL_SHEET='Sheet_Ayush'
+
+
+#37
 MARKETING_AYUSH_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
 MARKETING_AYUSH_SHEET='Sheet_Ayush'
 
-
+#38
 MARKETING_FAQVERYTHIN_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
-MARKETING_FAQVERYTHIN_SHEET='Sheet_faqverythin'
+MARKETING_FAQVERYTHIN_SHEET='Sheet_FAQVERYTHIN'
 
 
-
+#39
 MARKETING_FAQTHIN_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
 MARKETING_FAQTHIN_SHEET='Sheet_top'
 
 
-
+#40
 MARKETING_SUPERTHIN_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
 MARKETING_SUPERTHIN_SHEET='Sheet_Ayush'
 
 
-
+#41
 MARKETING_THIN_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
 MARKETING_THIN_SHEET='Sheet_Ayush'
 
 
 
-
+#42
 MARKETING_VERYTHIN_URL="C:\\Users\\91928\\PycharmProjects\\MultiUrlsFileMarketingALLSheets.xlsx"
 MARKETING_VERYTHIN_SHEET='Sheet_Ayush'
 

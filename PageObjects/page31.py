@@ -23,10 +23,10 @@ class Marketing_Index_Class:
         self.driver = driver
 
     def open(self):
-        df = pd.read_excel(constants.MARKETING_BRAND_URL, sheet_name=constants.MARKETING_BRAND_SHEET)
-        self.urls = df.sample(2, replace=False)['URL']
+        df = pd.read_excel(constants.MARKETING_INDEX_URL, sheet_name=constants.MARKETINGINDEX_SHEET)
+        self.urls = df.sample(1, replace=False)['URL']
 
-    def marketing_brand_method(self):
+    def Marketing_Index_Method(self):
         for url in self.urls:
             self.driver.get(url)
             print([url])
@@ -71,11 +71,9 @@ class Marketing_Index_Class:
                     # thank_you = self.driver.find_element(By.XPATH, "/html/body/div/div/div/h1").text
                     # print("Thank You message is displayed")
 
-
-
-
                 except (TimeoutException, NoSuchElementException, InvalidArgumentException):
                     print("Exception with Timeout and No elements found")
+                    assert False
 
                 self.driver.back()
                 self.driver.implicitly_wait(2)
@@ -83,5 +81,6 @@ class Marketing_Index_Class:
 
 
             except (TimeoutException, NoSuchElementException, InvalidArgumentException):
+                assert False
 
                 print("Except Block-Lead failed to Generate")
