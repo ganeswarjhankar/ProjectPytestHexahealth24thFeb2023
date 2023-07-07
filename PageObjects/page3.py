@@ -44,6 +44,12 @@ class DoctorClass:
             drop2 = Select(YogaTreatment)
             drop2.select_by_index(2)
 
+            time.sleep(2)
+
+            HospitalDropdown = self.driver.find_element(By.XPATH, "//select[@id='hospitallist2']")
+            drop2 = Select(HospitalDropdown)
+            drop2.select_by_index(2)
+
             #self.driver.find_element(By.XPATH, "//*[@id='leadquery']").send_keys("Test Query check")
             #self.driver.implicitly_wait(2)
 
